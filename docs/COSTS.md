@@ -27,6 +27,6 @@ Reasoning models can use more hidden tokens, so plan on up to $0.10.
 ## The rest of the Fall season
 About 550 questions remain: around 250 in the main tournament plus about 60 MiniBench questions every two weeks. That comes to roughly $30–55 for everything.
 
-A $15–20 prepaid balance covers roughly 150–400 questions.
+The prepaid balance is $25 (loaded by the owner 2026-10-17), roughly 250–500 questions.
 
 **The spending limit is OpenRouter's prepaid balance with auto top-up off.** The bot cannot spend more than is loaded. When the balance runs out, forecasts fail and those questions score 0, which costs us nothing extra.

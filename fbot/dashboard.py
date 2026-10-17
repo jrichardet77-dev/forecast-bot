@@ -13,7 +13,7 @@ PROGRESS = [
     ("First practice batch (12 questions, 3 runs each)", "done", "Batch 20261017-1423; first results from Oct 25"),
     ("GitHub repository forecast-bot", "done", "Created by you; project uploaded Oct 17"),
     ("Metaculus account and AlmanacBot", "done", "Bot key stored as a GitHub secret"),
-    ("AI models via OpenRouter ($20 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
+    ("AI models via OpenRouter ($25 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
     ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
     ("Official forecasting switched on", "done", "Every 30 minutes, Fall tournament + MiniBench (Oct 17)"),
     ("Participation form", "owner", "Required for every entrant; confirm it is submitted"),
