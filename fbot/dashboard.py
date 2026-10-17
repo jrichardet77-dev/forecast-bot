@@ -16,7 +16,7 @@ PROGRESS = [
     ("AI models via OpenRouter ($25 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
     ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
     ("Official forecasting switched on", "done", "Every 30 minutes, Fall tournament + MiniBench (Oct 17)"),
-    ("Participation form", "owner", "Required for every entrant; confirm it is submitted"),
+    ("Participation form", "done", "Submitted by you Oct 17"),
     ("Apply for free credits for Spring 2027", "later", "Applications reopen a few weeks before January"),
 ]
 
