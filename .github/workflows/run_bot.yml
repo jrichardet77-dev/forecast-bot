@@ -21,7 +21,7 @@ permissions:
 jobs:
   forecast:
     # Scheduled runs need the BOT_ENABLED switch; a manual test run is always allowed and never submits.
-    if: ${{ github.event_name == 'workflow_dispatch' || vars.BOT_ENABLED == 'yes' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || contains(fromJSON('["yes","Yes","YES","true","True"]'), vars.BOT_ENABLED) }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

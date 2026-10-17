@@ -53,7 +53,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["tournament", "test_questions"], default="test_questions")
     mode = ap.parse_args().mode
-    publish = os.environ.get("BOT_PUBLISH") == "yes" and mode == "tournament"
+    publish = os.environ.get("BOT_PUBLISH", "").strip().lower() in ("yes", "true", "y", "1") and mode == "tournament"
+    print(f"Mode: {mode}; submitting to Metaculus: {'YES' if publish else 'NO (dry run)'}")
     check_environment(strict=True)
     bot = OurBot(research_reports_per_question=1, predictions_per_research_report=5,
                  use_research_summary_to_forecast=False, publish_reports_to_metaculus=publish,
