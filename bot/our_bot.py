@@ -59,7 +59,7 @@ class OurBot(FallTemplateBot2026):
     def __init__(self, *args, models=None, **kwargs):
         super().__init__(*args, **kwargs)
         names = [m.strip() for m in (models or os.environ.get("BOT_MODELS") or default_models()).split(",") if m.strip()]
-        self.forecast_models = [GeneralLlm(model=m, temperature=0.4, timeout=120, allowed_tries=2) for m in names]
+        self.forecast_models = [GeneralLlm(model=m, temperature=0.4, timeout=120, allowed_tries=5) for m in names]
         self._model_cycle = itertools.cycle(range(len(self.forecast_models)))
 
     def next_model(self):

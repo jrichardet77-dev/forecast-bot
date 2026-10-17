@@ -59,7 +59,7 @@ def main():
                  use_research_summary_to_forecast=False, publish_reports_to_metaculus=publish,
                  folder_to_save_reports_to=None, skip_previously_forecasted_questions=(mode == "tournament"),
                  extra_metadata_in_explanation=True,
-                 llms={k: GeneralLlm(model=v, temperature=0.3, timeout=120, allowed_tries=2)
+                 llms={k: GeneralLlm(model=v, temperature=0.3, timeout=120, allowed_tries=5)
                        for k, v in SUPPORT_LLMS.items()} if os.environ.get("OPENROUTER_API_KEY") else None)
     client = MetaculusClient()
     targets = ([client.CURRENT_AI_COMPETITION_ID, client.CURRENT_MINIBENCH_ID] if mode == "tournament"
@@ -68,7 +68,10 @@ def main():
     for t in targets:
         reports += asyncio.run(bot.forecast_on_tournament(t, return_exceptions=True))
     log_reports(reports, publish, mode)
-    bot.log_report_summary(reports)
+    try:
+        bot.log_report_summary(reports)
+    except RuntimeError as e:  # some questions failed; the rest were forecast and logged, so don't fail the whole run
+        print(f"Some questions failed: {str(e)[:300]}")
     print(f"{'PUBLISHED' if publish else 'DRY RUN (nothing submitted)'}: {len(reports)} questions")
 
 

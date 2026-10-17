@@ -42,6 +42,7 @@ jobs:
           BOT_PUBLISH: ${{ github.event_name == 'schedule' && vars.BOT_PUBLISH || 'no' }}
         run: python bot/run.py --mode ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'tournament' }}
       - name: Save the forecast log
+        if: always()
         run: |
           git config user.name "forecast-bot"
           git config user.email "noreply@github.com"
