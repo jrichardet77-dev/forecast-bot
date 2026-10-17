@@ -41,7 +41,15 @@ def log_reports(reports, published, mode):
                 w.writerow([now, r.question.page_url, type(r.question).__name__, str(r.prediction)[:300], published, ""])
 
 
+def clean_secrets():
+    """Pasted keys often carry a trailing line break, which HTTP headers reject. Trim them."""
+    for name in ("METACULUS_TOKEN", "OPENROUTER_API_KEY", "ASKNEWS_CLIENT_ID", "ASKNEWS_SECRET"):
+        if os.environ.get(name):
+            os.environ[name] = os.environ[name].strip()
+
+
 def main():
+    clean_secrets()
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["tournament", "test_questions"], default="test_questions")
     mode = ap.parse_args().mode
