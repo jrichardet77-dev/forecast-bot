@@ -22,10 +22,11 @@ from bot_helpers import check_environment  # noqa: E402
 from forecasting_tools import MetaculusClient  # noqa: E402
 from our_bot import OurBot  # noqa: E402
 
-LOG = ROOT / "data" / "official.csv"
+LOGS = {"tournament": ROOT / "data" / "official.csv", "test_questions": ROOT / "data" / "test-runs.csv"}
 
 
-def log_reports(reports, published):
+def log_reports(reports, published, mode):
+    LOG = LOGS[mode]
     LOG.parent.mkdir(exist_ok=True)
     new = not LOG.exists()
     with LOG.open("a", newline="") as f:
@@ -44,7 +45,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["tournament", "test_questions"], default="test_questions")
     mode = ap.parse_args().mode
-    publish = os.environ.get("BOT_PUBLISH") == "yes"
+    publish = os.environ.get("BOT_PUBLISH") == "yes" and mode == "tournament"
     check_environment(strict=True)
     bot = OurBot(research_reports_per_question=1, predictions_per_research_report=5,
                  use_research_summary_to_forecast=False, publish_reports_to_metaculus=publish,
@@ -56,7 +57,7 @@ def main():
     reports = []
     for t in targets:
         reports += asyncio.run(bot.forecast_on_tournament(t, return_exceptions=True))
-    log_reports(reports, publish)
+    log_reports(reports, publish, mode)
     bot.log_report_summary(reports)
     print(f"{'PUBLISHED' if publish else 'DRY RUN (nothing submitted)'}: {len(reports)} questions")
 

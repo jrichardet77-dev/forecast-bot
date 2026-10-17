@@ -22,9 +22,11 @@ from forecasting_tools import (BinaryPrediction, BinaryQuestion, GeneralLlm, Rea
 from fbot import aggregate, evaluate  # noqa: E402
 from template_main import FallTemplateBot2026  # noqa: E402
 
-# Comma-separated OpenRouter model names, e.g. "openrouter/openai/gpt-5.4,openrouter/anthropic/claude-sonnet-4.5".
-# Set in the workflow once Metaculus confirms which models our credits cover.
-DEFAULT_MODELS = "openrouter/openai/gpt-4o"
+# Comma-separated model names, e.g. "openrouter/openai/gpt-5.4,openrouter/anthropic/claude-sonnet-4.5", set as the
+# BOT_MODELS repository variable once Metaculus confirms which models our credits cover. Without it the bot uses
+# OpenRouter if a key exists, otherwise Metaculus's own LLM proxy (authorised by METACULUS_TOKEN).
+def default_models():
+    return "openrouter/openai/gpt-4o" if os.environ.get("OPENROUTER_API_KEY") else "metaculus/gpt-4o"
 
 BINARY_METHOD = """
 Work through these steps before answering:
@@ -43,7 +45,7 @@ little time left.
 class OurBot(FallTemplateBot2026):
     def __init__(self, *args, models=None, **kwargs):
         super().__init__(*args, **kwargs)
-        names = [m.strip() for m in (models or os.environ.get("BOT_MODELS", DEFAULT_MODELS)).split(",") if m.strip()]
+        names = [m.strip() for m in (models or os.environ.get("BOT_MODELS") or default_models()).split(",") if m.strip()]
         self.forecast_models = [GeneralLlm(model=m, temperature=0.4, timeout=120, allowed_tries=2) for m in names]
         self._model_cycle = itertools.cycle(range(len(self.forecast_models)))
 

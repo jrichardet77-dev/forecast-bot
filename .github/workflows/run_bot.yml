@@ -6,7 +6,13 @@ name: Forecast
 on:
   schedule:
     - cron: "*/30 * * * *"   # questions stay open 3 hours, so every 30 minutes sees each one several times
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Manual runs use only the unscored test area and never submit (previewing live tournament questions is against the rules)"
+        default: test_questions
+        type: choice
+        options: [test_questions]
 concurrency:
   group: forecast
   cancel-in-progress: false
@@ -14,7 +20,8 @@ permissions:
   contents: write
 jobs:
   forecast:
-    if: ${{ vars.BOT_ENABLED == 'yes' }}
+    # Scheduled runs need the BOT_ENABLED switch; a manual test run is always allowed and never submits.
+    if: ${{ github.event_name == 'workflow_dispatch' || vars.BOT_ENABLED == 'yes' }}
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -31,11 +38,11 @@ jobs:
           ASKNEWS_CLIENT_ID: ${{ secrets.ASKNEWS_CLIENT_ID }}
           ASKNEWS_SECRET: ${{ secrets.ASKNEWS_SECRET }}
           BOT_MODELS: ${{ vars.BOT_MODELS }}
-          BOT_PUBLISH: ${{ vars.BOT_PUBLISH }}
-        run: python bot/run.py --mode tournament
+          BOT_PUBLISH: ${{ github.event_name == 'schedule' && vars.BOT_PUBLISH || 'no' }}
+        run: python bot/run.py --mode ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'tournament' }}
       - name: Save the forecast log
         run: |
           git config user.name "forecast-bot"
           git config user.email "noreply@github.com"
-          git add data/official.csv || true
+          git add data/official.csv data/test-runs.csv || true
           git diff --cached --quiet || (git commit -m "Forecast log" && git push)
