@@ -9,14 +9,15 @@ OUT = ledger.DATA / "dashboard"
 # Project milestones; status is one of: done, owner, next, later.
 PROGRESS = [
     ("Research the competition rules and what wins", "done", "docs/RESEARCH.md"),
-    ("Practice harness: blind questions, scoring vs market", "done", "fbot/, 9 tests"),
+    ("Practice harness: blind questions, scoring vs market", "done", "Daily check at 8:52 ET"),
     ("First practice batch (12 questions, 3 runs each)", "done", "Batch 20261017-1423; first results from Oct 25"),
-    ("Competition bot on the Metaculus template", "done", "bot/; dry-run only; smoke test passes"),
     ("GitHub repository forecast-bot", "done", "Created by you; project uploaded Oct 17"),
-    ("Daily practice check", "done", "Runs every morning at 8:52 ET: scores results, adds questions"),
-    ("Approve Metaculus bot account, participation form and free credits", "owner", "Free; needs your OK"),
-    ("Dry run on Metaculus's unscored test questions", "next", "After the account exists"),
-    ("Re-check rules, then ask you to approve official entry", "later", "Nothing is submitted before that"),
+    ("Metaculus account and AlmanacBot", "done", "Bot key stored as a GitHub secret"),
+    ("AI models via OpenRouter ($20 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
+    ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
+    ("Official forecasting switched on", "done", "Every 30 minutes, Fall tournament + MiniBench (Oct 17)"),
+    ("Participation form", "owner", "Required for every entrant; confirm it is submitted"),
+    ("Apply for free credits for Spring 2027", "later", "Applications reopen a few weeks before January"),
 ]
 
 

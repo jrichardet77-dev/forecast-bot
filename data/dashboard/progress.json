@@ -7,7 +7,7 @@
  {
   "step": "Practice harness: blind questions, scoring vs market",
   "status": "done",
-  "note": "fbot/, 9 tests"
+  "note": "Daily check at 8:52 ET"
  },
  {
   "step": "First practice batch (12 questions, 3 runs each)",
@@ -15,33 +15,38 @@
   "note": "Batch 20261017-1423; first results from Oct 25"
  },
  {
-  "step": "Competition bot on the Metaculus template",
-  "status": "done",
-  "note": "bot/; dry-run only; smoke test passes"
- },
- {
   "step": "GitHub repository forecast-bot",
   "status": "done",
   "note": "Created by you; project uploaded Oct 17"
  },
  {
-  "step": "Daily practice check",
+  "step": "Metaculus account and AlmanacBot",
   "status": "done",
-  "note": "Runs every morning at 8:52 ET: scores results, adds questions"
+  "note": "Bot key stored as a GitHub secret"
  },
  {
-  "step": "Approve Metaculus bot account, participation form and free credits",
+  "step": "AI models via OpenRouter ($20 prepaid, no top-up)",
+  "status": "done",
+  "note": "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"
+ },
+ {
+  "step": "Test run on the unscored test area",
+  "status": "done",
+  "note": "9 of 9 questions forecast, nothing submitted"
+ },
+ {
+  "step": "Official forecasting switched on",
+  "status": "done",
+  "note": "Every 30 minutes, Fall tournament + MiniBench (Oct 17)"
+ },
+ {
+  "step": "Participation form",
   "status": "owner",
-  "note": "Free; needs your OK"
+  "note": "Required for every entrant; confirm it is submitted"
  },
  {
-  "step": "Dry run on Metaculus's unscored test questions",
-  "status": "next",
-  "note": "After the account exists"
- },
- {
-  "step": "Re-check rules, then ask you to approve official entry",
+  "step": "Apply for free credits for Spring 2027",
   "status": "later",
-  "note": "Nothing is submitted before that"
+  "note": "Applications reopen a few weeks before January"
  }
 ]
