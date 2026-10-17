@@ -93,3 +93,9 @@ Spring 2026: https://www.metaculus.com/notebooks/45373/spring-2026-futureeval-an
 - Models cannot reliably "forget" what they know. Search results leak outcomes, so backtests look better than reality.
 - **Our approach:** forward tests on live questions that resolve after today, scored against the market price at the moment of forecasting.
 - **Leak found in practice:** search results sometimes show market prices unasked. Those questions are flagged in `data/exposed.json` and reported separately.
+
+## Test run, 2026-10-17 (unscored test area, nothing submitted)
+- The Metaculus bot token works: the bot fetched 9 test questions (for example https://www.metaculus.com/questions/45517).
+- Every forecast failed because the old free Metaculus LLM proxy is gone. `llm-proxy.metaculus.com` no longer resolves in DNS (checked from GitHub Actions and from the development container).
+- Free LLM credit requests for Fall 2026 are closed. The participation form says applications reopen a few weeks before the next season.
+- Result: no free AI route exists until the credits reopen. Running now needs a paid API key, which is an owner spending decision.
