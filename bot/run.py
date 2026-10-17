@@ -19,8 +19,8 @@ sys.path.insert(0, str(ROOT / "bot"))
 sys.path.insert(0, str(ROOT / "bot" / "template"))
 
 from bot_helpers import check_environment  # noqa: E402
-from forecasting_tools import MetaculusClient  # noqa: E402
-from our_bot import OurBot  # noqa: E402
+from forecasting_tools import GeneralLlm, MetaculusClient  # noqa: E402
+from our_bot import SUPPORT_LLMS, OurBot  # noqa: E402
 
 LOGS = {"tournament": ROOT / "data" / "official.csv", "test_questions": ROOT / "data" / "test-runs.csv"}
 
@@ -50,7 +50,9 @@ def main():
     bot = OurBot(research_reports_per_question=1, predictions_per_research_report=5,
                  use_research_summary_to_forecast=False, publish_reports_to_metaculus=publish,
                  folder_to_save_reports_to=None, skip_previously_forecasted_questions=(mode == "tournament"),
-                 extra_metadata_in_explanation=True)
+                 extra_metadata_in_explanation=True,
+                 llms={k: GeneralLlm(model=v, temperature=0.3, timeout=120, allowed_tries=2)
+                       for k, v in SUPPORT_LLMS.items()} if os.environ.get("OPENROUTER_API_KEY") else None)
     client = MetaculusClient()
     targets = ([client.CURRENT_AI_COMPETITION_ID, client.CURRENT_MINIBENCH_ID] if mode == "tournament"
                else ["bot-testing-area"])

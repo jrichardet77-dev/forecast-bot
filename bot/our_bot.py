@@ -25,8 +25,21 @@ from template_main import FallTemplateBot2026  # noqa: E402
 # Comma-separated model names, e.g. "openrouter/openai/gpt-5.4,openrouter/anthropic/claude-sonnet-4.5", set as the
 # BOT_MODELS repository variable once Metaculus confirms which models our credits cover. Without it the bot uses
 # OpenRouter if a key exists, otherwise Metaculus's own LLM proxy (authorised by METACULUS_TOKEN).
+# Chosen 2026-10-17 from OpenRouter's live model list and prices (per million tokens, input/output):
+# gpt-5.6-luna $0.20/$1.20, deepseek-v4-pro $0.21/$0.42, claude-sonnet-5.5 $2/$10. Three families for the ensemble;
+# estimated about $0.06 per question including research (see docs/COSTS.md).
+ENSEMBLE = ("openrouter/openai/gpt-5.6-luna,openrouter/deepseek/deepseek-v4-pro,openrouter/anthropic/claude-sonnet-5.5,"
+            "openrouter/openai/gpt-5.6-luna,openrouter/deepseek/deepseek-v4-pro")
+SUPPORT_LLMS = {
+    "default": "openrouter/openai/gpt-5.6-luna",        # multiple-choice and numeric questions (template prompts)
+    "researcher": "openrouter/perplexity/sonar",         # web news search, $1/$1 per M tokens + $0.005 per search
+    "summarizer": "openrouter/openai/gpt-5-nano",
+    "parser": "openrouter/openai/gpt-5-nano",           # turns each written answer into a number
+}
+
+
 def default_models():
-    return "openrouter/openai/gpt-4o" if os.environ.get("OPENROUTER_API_KEY") else "metaculus/gpt-4o"
+    return ENSEMBLE if os.environ.get("OPENROUTER_API_KEY") else "metaculus/gpt-4o"
 
 BINARY_METHOD = """
 Work through these steps before answering:
