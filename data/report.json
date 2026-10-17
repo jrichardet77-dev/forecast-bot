@@ -1,0 +1,51 @@
+{
+ "variants": {},
+ "scored": [],
+ "postprocess": [
+  {
+   "variant": "median",
+   "n": 0,
+   "vs_market": NaN,
+   "brier": NaN,
+   "vs_champion": NaN,
+   "p_better": NaN,
+   "accept": false
+  },
+  {
+   "variant": "mean_logodds",
+   "n": 0,
+   "vs_market": NaN,
+   "brier": NaN,
+   "vs_champion": NaN,
+   "p_better": NaN,
+   "accept": false
+  },
+  {
+   "variant": "median_x1.3",
+   "n": 0,
+   "vs_market": NaN,
+   "brier": NaN,
+   "vs_champion": NaN,
+   "p_better": NaN,
+   "accept": false
+  },
+  {
+   "variant": "median_x0.8",
+   "n": 0,
+   "vs_market": NaN,
+   "brier": NaN,
+   "vs_champion": NaN,
+   "p_better": NaN,
+   "accept": false
+  },
+  {
+   "variant": "mean_logodds_x1.3",
+   "n": 0,
+   "vs_market": NaN,
+   "brier": NaN,
+   "vs_champion": NaN,
+   "p_better": NaN,
+   "accept": false
+  }
+ ]
+}

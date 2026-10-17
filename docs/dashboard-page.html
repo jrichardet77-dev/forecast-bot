@@ -1,0 +1,181 @@
+<style>
+.fb { font-family: var(--font-anthropic-sans); display: grid; gap: var(--cds-gap-lg); }
+.fb h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.fb h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.fb .note { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0; }
+.fb .takeaway { margin: 0; font-size: var(--cds-font-size-body); }
+.fb .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: var(--cds-gap-md); }
+.fb .card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); min-width: 0; }
+.fb .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+.fb .tbl { max-height: 32rem; overflow: auto; }
+.fb table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.fb th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); }
+.fb td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.fb td.num, .fb th.num { text-align: right; white-space: nowrap; }
+.fb .flag { color: var(--color-warn); }
+.fb .good { color: var(--color-ok); }
+.fb .bad { color: var(--color-bad); }
+.fb .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--cds-gap-sm); }
+.fb .steps li { display: grid; grid-template-columns: 6.5rem 1fr; gap: var(--cds-gap-sm); align-items: baseline; }
+.fb .pill { font-size: var(--cds-font-size-caption); border: 1px solid var(--color-border-line); border-radius: 999px; padding: 0 var(--cds-pad-sm); text-align: center; white-space: nowrap; }
+.fb .pill.done { color: var(--color-ok); }
+.fb .pill.owner { color: var(--color-warn); }
+.fb .pill.next, .fb .pill.later { color: var(--color-fg-muted); }
+.fb .chart { position: relative; min-height: 12rem; }
+.fb .tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 16rem; }
+.fb .legend { display: flex; gap: var(--cds-gap-md); flex-wrap: wrap; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.fb .sw { display: inline-block; width: .6rem; height: .6rem; border-radius: 50%; margin-right: .3rem; vertical-align: middle; }
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+</style>
+
+<div class="fb">
+  <header style="display:grid;gap:var(--cds-gap-xs)">
+    <h1 id="top">Forecast Bot Scoreboard</h1>
+    <p class="takeaway dash-skeleton" id="takeaway" data-source="summary" data-field="takeaway">—</p>
+  </header>
+
+  <section class="tiles" id="tiles">
+    <div class="card"><span class="note">Practice forecasts made</span><span class="big dash-skeleton" data-source="summary" data-field="made">—</span></div>
+    <div class="card"><span class="note">Resolved so far</span><span class="big dash-skeleton" data-source="summary" data-field="resolved">—</span></div>
+    <div class="card"><span class="note">Score vs market (avg, above 0 = we win)</span><span class="big dash-skeleton" data-source="scores" data-field="vs_market" data-where="method=v1">—</span></div>
+    <div class="card"><span class="note">Next result due</span><span class="big dash-skeleton" data-source="summary" data-field="next_close">—</span></div>
+  </section>
+
+  <section class="card" id="compare">
+    <h2>Our forecast vs the market</h2>
+    <p class="note">Each row is a practice question. The market price was hidden from the bot when it forecast.</p>
+    <div class="legend"><span><span class="sw" id="sw-bot"></span>Bot</span><span><span class="sw" id="sw-mkt"></span>Market at the time</span></div>
+    <div class="chart" id="dots" data-source="forecasts"></div>
+  </section>
+
+  <section class="card" id="table">
+    <h2>All forecasts</h2>
+    <p class="note">⚠ = a search result showed the market price anyway; scored separately.</p>
+    <div class="tbl">
+      <table data-source="forecasts" data-row-key="qid">
+        <thead><tr><th data-field="question">Question</th><th class="num" data-field="bot">Bot</th><th class="num" data-field="market">Market</th><th data-field="closes">Closes</th><th data-field="status">Result</th><th class="num" data-field="vs_market">Score</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="progress">
+    <h2>Project progress</h2>
+    <ul class="steps" id="steps" data-source="progress"></ul>
+  </section>
+</div>
+
+<script>
+dash.calc('summary', {
+  title: 'Practice summary',
+  description: 'Counts of practice forecasts, how many have resolved, and the next closing date.',
+  inputs: ['forecasts', 'scores'],
+  fn: (forecasts, scores) => {
+    const open = forecasts.filter(r => r.status === 'open');
+    const next = open.map(r => r.closes).sort()[0] || '';
+    const v1 = scores.find(s => s.method === 'v1') || {};
+    const resolved = forecasts.length - open.length;
+    const takeaway = resolved === 0
+      ? 'Practice has started: no questions have resolved yet, so there is no score.'
+      : (v1.vs_market > 0 ? 'So far the bot is beating the market.' : 'So far the market is ahead of the bot.');
+    return [{made: forecasts.length, resolved, next_close: next, takeaway}];
+  }
+});
+
+const fmtPct = d3.format('.0%');
+const fmtDate = s => s ? d3.utcFormat('%b %-d')(new Date(s + 'T00:00:00Z')) : '—';
+
+dash.onData(() => {
+  const sum = dash.data('summary'), sc = dash.data('scores'), fc = dash.data('forecasts'), pr = dash.data('progress');
+  const s = sum.status === 'ok' ? sum.data[0] : null;
+  document.querySelectorAll('[data-source="summary"]').forEach(el => {
+    el.classList.toggle('dash-skeleton', !s);
+    const f = el.dataset.field;
+    el.textContent = !s ? '—' : f === 'next_close' ? fmtDate(s[f]) : String(s[f]);
+  });
+  const vm = document.querySelector('[data-source="scores"]');
+  const v1 = sc.status === 'ok' ? sc.data.find(r => r.method === 'v1') : null;
+  vm.classList.toggle('dash-skeleton', sc.status !== 'ok');
+  vm.textContent = v1 && v1.vs_market !== null && v1.vs_market !== undefined ? d3.format('+.1f')(v1.vs_market) : '—';
+
+  document.getElementById('sw-bot').style.background = dash.colors[0];
+  document.getElementById('sw-mkt').style.background = dash.colors[1];
+
+  // table
+  const tbody = document.getElementById('rows');
+  tbody.textContent = '';
+  if (fc.status === 'ok') {
+    fc.data.forEach(r => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.qid;
+      const cells = [
+        (r.exposed ? '⚠ ' : '') + r.question,
+        fmtPct(r.bot), fmtPct(r.market), fmtDate(r.closes), r.status,
+        r.vs_market === null ? '' : d3.format('+.1f')(r.vs_market)
+      ];
+      cells.forEach((c, i) => {
+        const td = document.createElement('td');
+        td.textContent = c;
+        if ([1, 2, 5].includes(i)) td.className = 'num';
+        if (i === 5 && r.vs_market !== null) td.classList.add(r.vs_market >= 0 ? 'good' : 'bad');
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+  }
+
+  // progress
+  const ul = document.getElementById('steps');
+  ul.textContent = '';
+  const label = {done: 'Done', owner: 'Needs you', next: 'Next', later: 'Later'};
+  if (pr.status === 'ok') pr.data.forEach(p => {
+    const li = document.createElement('li');
+    const pill = document.createElement('span');
+    pill.className = 'pill ' + p.status; pill.textContent = label[p.status] || p.status;
+    const txt = document.createElement('span');
+    const b = document.createElement('span'); b.textContent = p.step;
+    const n = document.createElement('div'); n.className = 'note'; n.textContent = p.note;
+    txt.append(b, n); li.append(pill, txt); ul.appendChild(li);
+  });
+
+  // dot chart: one row per question, bot and market on a 0-100% axis
+  const box = document.getElementById('dots');
+  box.textContent = '';
+  if (fc.status !== 'ok') return;
+  const rows = fc.data.slice().sort((a, b) => b.market - a.market);
+  const W = box.clientWidth || 600, rowH = 42, top = 4, bottom = 28;
+  const H = top + rows.length * rowH + bottom;
+  const svg = d3.select(box).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const left = 8, right = 12;
+  const x = d3.scaleLinear([0, 1], [left, W - right]);
+  svg.append('g').selectAll('line').data([0, .25, .5, .75, 1]).join('line')
+    .attr('x1', d => x(d)).attr('x2', d => x(d)).attr('y1', top).attr('y2', H - bottom)
+    .attr('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
+  const ax = svg.append('g').attr('transform', `translate(0,${H - bottom})`)
+    .call(d3.axisBottom(x).tickValues([0, .25, .5, .75, 1]).tickFormat(fmtPct).tickSize(4));
+  ax.attr('font-size', null).attr('font-family', null);
+  ax.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+  ax.select('.domain').attr('stroke', 'var(--cds-chart-axis)');
+  ax.selectAll('.tick line').attr('stroke', 'var(--cds-chart-axis)');
+  const tip = d3.select(box).append('div').attr('class', 'tip').style('display', 'none');
+  const g = svg.append('g').selectAll('g').data(rows).join('g').attr('transform', (d, i) => `translate(0,${top + i * rowH + rowH / 2 + 6})`);
+  const maxChars = Math.max(20, Math.floor((W - left - right) / 6.6));
+  g.append('text').attr('x', left).attr('y', -11).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)')
+    .text(d => (d.exposed ? '⚠ ' : '') + (d.question.length > maxChars ? d.question.slice(0, maxChars - 1) + '…' : d.question));
+  g.append('line').attr('x1', d => x(Math.min(d.bot, d.market))).attr('x2', d => x(Math.max(d.bot, d.market)))
+    .attr('stroke', 'var(--cds-chart-muted)').attr('stroke-width', 2).attr('stroke-linecap', 'round');
+  g.append('circle').attr('cx', d => x(d.market)).attr('r', 5).attr('fill', dash.colors[1]);
+  g.append('circle').attr('cx', d => x(d.bot)).attr('r', 5).attr('fill', dash.colors[0]);
+  g.append('rect').attr('x', 0).attr('y', -rowH / 2 - 6).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+    .on('mousemove touchstart', (ev, d) => {
+      const [mx, my] = d3.pointer(ev, box);
+      tip.style('display', null).text('');
+      tip.append('div').style('color', 'var(--cds-text-secondary)').text(d.question);
+      tip.append('div').text(`Bot ${fmtPct(d.bot)} · Market ${fmtPct(d.market)}`);
+      const tw = tip.node().offsetWidth;
+      tip.style('left', Math.max(0, Math.min(mx + 10, W - tw)) + 'px').style('top', (my + 12) + 'px');
+    })
+    .on('mouseleave', () => tip.style('display', 'none'));
+});
+</script>

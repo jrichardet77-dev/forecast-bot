@@ -1,0 +1,42 @@
+[
+ {
+  "step": "Research the competition rules and what wins",
+  "status": "done",
+  "note": "docs/RESEARCH.md"
+ },
+ {
+  "step": "Practice harness: blind questions, scoring vs market",
+  "status": "done",
+  "note": "fbot/, 9 tests"
+ },
+ {
+  "step": "First practice batch (12 questions, 3 runs each)",
+  "status": "done",
+  "note": "Batch 20261017-1423; first results from Oct 25"
+ },
+ {
+  "step": "Competition bot on the Metaculus template",
+  "status": "done",
+  "note": "bot/; dry-run only; smoke test passes"
+ },
+ {
+  "step": "Create the empty GitHub repository forecast-bot",
+  "status": "owner",
+  "note": "One-minute step; lets the bot keep its records"
+ },
+ {
+  "step": "Approve Metaculus bot account, participation form and free credits",
+  "status": "owner",
+  "note": "Free; needs your OK"
+ },
+ {
+  "step": "Dry run on Metaculus's unscored test questions",
+  "status": "next",
+  "note": "After the account exists"
+ },
+ {
+  "step": "Re-check rules, then ask you to approve official entry",
+  "status": "later",
+  "note": "Nothing is submitted before that"
+ }
+]

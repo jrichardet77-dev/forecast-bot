@@ -1,8 +1,69 @@
-"""Writes DASHBOARD.md (readable in the GitHub iPhone app) and data/report.json (feeds the dashboard page)."""
+"""Dashboard data: data/report.json, DASHBOARD.md (readable in the GitHub iPhone app) and three row files in
+data/dashboard/ that the phone dashboard page loads (forecasts, scores, progress)."""
 import json
 
-from . import ledger
+from . import evaluate, ledger, scoring
+
+OUT = ledger.DATA / "dashboard"
+
+# Project milestones; status is one of: done, owner, next, later.
+PROGRESS = [
+    ("Research the competition rules and what wins", "done", "docs/RESEARCH.md"),
+    ("Practice harness: blind questions, scoring vs market", "done", "fbot/, 9 tests"),
+    ("First practice batch (12 questions, 3 runs each)", "done", "Batch 20261017-1423; first results from Oct 25"),
+    ("Competition bot on the Metaculus template", "done", "bot/; dry-run only; smoke test passes"),
+    ("Create the empty GitHub repository forecast-bot", "owner", "One-minute step; lets the bot keep its records"),
+    ("Approve Metaculus bot account, participation form and free credits", "owner", "Free; needs your OK"),
+    ("Dry run on Metaculus's unscored test questions", "next", "After the account exists"),
+    ("Re-check rules, then ask you to approve official entry", "later", "Nothing is submitted before that"),
+]
+
+
+def _exposed():
+    p = ledger.DATA / "exposed.json"
+    return {q for qs in (json.loads(p.read_text()).values() if p.exists() else []) for q in qs}
+
+
+def rows_forecasts():
+    qs, exposed = ledger.questions(), _exposed()
+    outcomes = evaluate.resolved_outcomes()
+    rows = []
+    for f in ledger.read("final"):
+        q = qs.get(f["qid"], {})
+        p, m = float(f["prob"]), float(f["market_prob"])
+        o = outcomes.get(f["qid"])
+        rows.append({"qid": f["qid"], "question": q.get("title", f["qid"]), "source": q.get("source", ""),
+                     "closes": (q.get("close_time") or "")[:10], "bot": p, "market": m, "runs": int(f["n_runs"]),
+                     "status": "open" if o is None else ("YES" if o else "NO"),
+                     "vs_market": None if o is None else round(scoring.relative_score(p, m, o), 1),
+                     "exposed": f["qid"] in exposed, "url": q.get("url", ""), "made": f["made_at"][:10]})
+    return rows
+
+
+def rows_scores(summary):
+    out = []
+    for name, v in summary["variants"].items():
+        out.append({"method": name, "resolved": v["n"], "vs_market": round(v["vs_market"], 1),
+                    "vs_market_lo": round(v["vs_market_lo"], 1), "vs_market_hi": round(v["vs_market_hi"], 1),
+                    "p_beats_market": round(v["p_beats_market"], 2), "brier": round(v["brier"], 3),
+                    "market_brier": round(v["market_brier"], 3)})
+    if not out:
+        out.append({"method": "v1", "resolved": 0, "vs_market": None, "vs_market_lo": None, "vs_market_hi": None,
+                    "p_beats_market": None, "brier": None, "market_brier": None})
+    return out
 
 
 def write(summary):
     (ledger.DATA / "report.json").write_text(json.dumps(summary, indent=1, default=str))
+    OUT.mkdir(exist_ok=True)
+    fc, sc = rows_forecasts(), rows_scores(summary)
+    (OUT / "forecasts.json").write_text(json.dumps(fc, indent=1))
+    (OUT / "scores.json").write_text(json.dumps(sc, indent=1))
+    (OUT / "progress.json").write_text(json.dumps([{"step": s, "status": st, "note": n} for s, st, n in PROGRESS],
+                                                  indent=1))
+    lines = ["# Forecast bot dashboard", "", f"Forecasts: {len(fc)}; resolved: {sum(r['status'] != 'open' for r in fc)}",
+             "", "| Question | Bot | Market | Status | vs market |", "|---|---|---|---|---|"]
+    for r in fc:
+        vm = "" if r["vs_market"] is None else f"{r['vs_market']:+.1f}"
+        lines.append(f"| {r['question'][:70]} | {r['bot']:.0%} | {r['market']:.0%} | {r['status']} | {vm} |")
+    (ledger.ROOT / "DASHBOARD.md").write_text("\n".join(lines) + "\n")
