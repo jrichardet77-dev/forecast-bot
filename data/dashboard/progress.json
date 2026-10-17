@@ -20,9 +20,14 @@
   "note": "bot/; dry-run only; smoke test passes"
  },
  {
-  "step": "Create the empty GitHub repository forecast-bot",
-  "status": "owner",
-  "note": "One-minute step; lets the bot keep its records"
+  "step": "GitHub repository forecast-bot",
+  "status": "done",
+  "note": "Created by you; project uploaded Oct 17"
+ },
+ {
+  "step": "Daily practice check",
+  "status": "done",
+  "note": "Runs every morning at 8:52 ET: scores results, adds questions"
  },
  {
   "step": "Approve Metaculus bot account, participation form and free credits",
