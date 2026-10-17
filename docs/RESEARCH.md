@@ -99,3 +99,9 @@ Spring 2026: https://www.metaculus.com/notebooks/45373/spring-2026-futureeval-an
 - Every forecast failed because the old free Metaculus LLM proxy is gone. `llm-proxy.metaculus.com` no longer resolves in DNS (checked from GitHub Actions and from the development container).
 - Free LLM credit requests for Fall 2026 are closed. The participation form says applications reopen a few weeks before the next season.
 - Result: no free AI route exists until the credits reopen. Running now needs a paid API key, which is an owner spending decision.
+
+## Test run 7, 2026-10-17: PASS (unscored test area, nothing submitted)
+- All 9 bot-testing-area questions were forecast. That includes binary, numeric, date and multiple-choice questions.
+- One of 5 runs failed on each of 2 questions (parser refusals and an ambiguous date parse). The other runs carried those questions.
+- Example (binary, US president's net worth reaching 4× by end of 2026): status quo, base rate and inside view laid out; final 1%.
+- Forecast comments go out private by default (`is_private=True` in forecasting-tools), as the rules require.

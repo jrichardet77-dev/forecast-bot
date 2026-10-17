@@ -46,5 +46,5 @@ jobs:
         run: |
           git config user.name "forecast-bot"
           git config user.email "noreply@github.com"
-          git add data/official.csv data/test-runs.csv || true
+          for f in data/official.csv data/test-runs.csv; do [ -f "$f" ] && git add "$f"; done; true
           git diff --cached --quiet || (git commit -m "Forecast log" && git push)
