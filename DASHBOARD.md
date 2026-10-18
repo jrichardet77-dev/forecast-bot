@@ -1,6 +1,6 @@
 # Forecast bot dashboard
 
-Forecasts: 12; resolved: 0
+Forecasts: 24; resolved: 0
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -16,3 +16,15 @@ Forecasts: 12; resolved: 0
 | Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | open |  |
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | open |  |
+| Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | open |  |
+| Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | open |  |
+| Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | open |  |
+| Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | open |  |
+| Mojtaba Khamenei seen in public by October 31? | 7% | 2% | open |  |
+| Will Avigdor Lieberman be the next Prime Minister of Israel? | 2% | 2% | open |  |
+| If Trump wins, will marijuana be federally rescheduled before the 2026 | 55% | 4% | open |  |
+| Russia-Ukraine peace talks by October 31, 2026? | 30% | 7% | open |  |
+| Perim Island no longer under Houthi control by October 31? | 7% | 7% | open |  |
+| US-Iran Final Nuclear Deal by November 30, 2026? | 7% | 6% | open |  |
+| Will Dan Sullivan win the Alaska Senate race in 2026? | 42% | 26% | open |  |
+| Will the Democrats win the Arizona governor race in 2026? | 82% | 92% | open |  |

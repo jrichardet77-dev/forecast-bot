@@ -15,6 +15,11 @@
   "note": "Batch 20261017-1423; first results from Oct 25"
  },
  {
+  "step": "Second practice batch (12 questions, 3 runs each)",
+  "status": "done",
+  "note": "Batch 20261018-125311; 24 practice questions open"
+ },
+ {
   "step": "GitHub repository forecast-bot",
   "status": "done",
   "note": "Created by you; project uploaded Oct 17"
@@ -37,7 +42,7 @@
  {
   "step": "Official forecasting switched on",
   "status": "done",
-  "note": "Every 30 minutes, Fall tournament + MiniBench (Oct 17)"
+  "note": "Every 30 minutes since Oct 17; 3 official forecasts published, all runs green (Oct 18)"
  },
  {
   "step": "Participation form",
