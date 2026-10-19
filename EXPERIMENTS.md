@@ -24,3 +24,4 @@ Post-processing challengers are scored automatically from the recorded runs, wit
 |---|---|---|---|---|
 | 2026-10-17 | v1 baseline, batch 20261017-1423 (12 questions) | 0 | pending | champion |
 | 2026-10-18 | v1, batch 20261018-125311 (12 questions; 5 had market prices in search results, ignored by the forecasters and logged in data/exposed.json) | 0 | pending | champion stays (fewer than 30 resolved) |
+| 2026-10-19 | daily check: no new batch (24 practice questions open) | 0 | pending | champion stays (fewer than 30 resolved) |
