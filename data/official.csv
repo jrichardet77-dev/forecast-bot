@@ -73,3 +73,4 @@ at,question_url,type,prediction,published,error
 2026-10-22T00:23:52+00:00,https://www.metaculus.com/questions/46192,DiscreteQuestion,"declared_percentiles=[Percentile(percentile=0.0, value=-0.5), Percentile(percentile=0.0019847242, value=0.5), Percentile(percentile=0.0039694484, value=1.5), Percentile(percentile=0.0059541726, value=2.5), Percentile(percentile=0.0079388967, value=3.5), Percentile(percentile=0.0099236209, value=4.5)",True,
 2026-10-22T00:23:52+00:00,https://www.metaculus.com/questions/46179,BinaryQuestion,0.040000000000000015,True,
 2026-10-22T06:01:15+00:00,https://www.metaculus.com/questions/46180,BinaryQuestion,0.6,True,
+2026-10-22T09:12:51+00:00,https://www.metaculus.com/questions/46193,BinaryQuestion,0.12,True,
