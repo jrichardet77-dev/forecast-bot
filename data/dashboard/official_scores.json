@@ -1,1 +1,14 @@
-[]
+[
+ {
+  "post_id": "46069",
+  "question": "Will the FAA type-certify the Boeing 737 MAX 10 before 2027?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-10-20",
+  "resolution": "yes",
+  "our_forecast": "93%",
+  "peer_score": 8.6,
+  "baseline_score": 71.2,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46069/"
+ }
+]
