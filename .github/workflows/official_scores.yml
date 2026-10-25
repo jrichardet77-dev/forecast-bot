@@ -1,0 +1,33 @@
+# Read-only: looks up resolutions and AlmanacBot's own scores for its official forecasts (data/official.csv)
+# and saves them to data/official_scores.csv. It never submits, edits or previews a forecast and never runs the
+# forecasting bot. Cost: free on a public repository (one short job a day).
+name: Official scores
+on:
+  schedule:
+    - cron: "37 11 * * *"   # daily, before the 8:52 ET practice check reads the file
+  workflow_dispatch:
+concurrency:
+  group: forecast            # shares the Forecast workflow's queue, so the two never push at the same time
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  scores:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Look up official results (GET requests only)
+        env:
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+        run: python -m fbot.cli official-scores
+      - name: Save the scores
+        if: always()
+        run: |
+          git config user.name "forecast-bot"
+          git config user.email "noreply@github.com"
+          [ -f data/official_scores.csv ] && git add data/official_scores.csv; true
+          git diff --cached --quiet || (git commit -m "Official scores" && git pull --rebase -q && git push)

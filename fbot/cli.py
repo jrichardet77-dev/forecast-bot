@@ -6,6 +6,8 @@
   record BATCH [--variant V] read packets/<batch>/runs/*.json, store every run and the combined forecast
   resolve                   look up outcomes for every forecast question that has not resolved yet
   report                    score everything; write DASHBOARD.md, docs/dashboard.html and data/report.json
+  official-scores           read-only: look up resolutions and AlmanacBot's scores for its official forecasts
+                            (needs METACULUS_TOKEN; runs daily in GitHub Actions) into data/official_scores.csv
 """
 import datetime as dt
 import json
@@ -14,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-from . import aggregate, dashboard, evaluate, ledger, sources
+from . import aggregate, dashboard, evaluate, ledger, official, sources
 
 ROOT = ledger.ROOT
 PACKETS = ROOT / "packets"
@@ -115,13 +117,20 @@ def cmd_report():
     print(json.dumps(s["variants"], indent=1))
 
 
+def cmd_official_scores():
+    checked, resolved = official.update()
+    print(f"checked {checked} official questions; {resolved} resolved in total")
+    print(official.summary_text(official.summary()))
+
+
 def main(argv):
     if not argv or argv[0] in ("-h", "--help"):
         print(__doc__)
         return 0
     cmd, args = argv[0], argv[1:]
     {"pool": lambda: cmd_pool(), "batch": lambda: cmd_batch(args), "record": lambda: cmd_record(args),
-     "resolve": lambda: cmd_resolve(), "report": lambda: cmd_report()}[cmd]()
+     "resolve": lambda: cmd_resolve(), "report": lambda: cmd_report(),
+     "official-scores": lambda: cmd_official_scores()}[cmd]()
     return 0
 
 

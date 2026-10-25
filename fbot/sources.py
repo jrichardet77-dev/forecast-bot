@@ -135,7 +135,7 @@ METACULUS = "https://www.metaculus.com/api"
 
 
 def metaculus_token():
-    tok = os.environ.get("METACULUS_TOKEN")
+    tok = (os.environ.get("METACULUS_TOKEN") or "").strip()
     if not tok:
         raise RuntimeError("METACULUS_TOKEN is not set (needs the owner's approval to create a bot account).")
     return tok

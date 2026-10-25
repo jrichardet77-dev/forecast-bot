@@ -1,6 +1,8 @@
 # Forecast bot dashboard
 
-Forecasts: 24; resolved: 0
+Official tournament forecasts: No official questions resolved yet.
+
+Practice forecasts: 24; resolved: 0
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|

@@ -1,8 +1,8 @@
 """Dashboard data: data/report.json, DASHBOARD.md (readable in the GitHub iPhone app) and three row files in
-data/dashboard/ that the phone dashboard page loads (forecasts, scores, progress)."""
+data/dashboard/ that the phone dashboard page loads (forecasts, scores, progress, official_scores)."""
 import json
 
-from . import evaluate, ledger, scoring
+from . import evaluate, ledger, official, scoring
 
 OUT = ledger.DATA / "dashboard"
 
@@ -18,6 +18,7 @@ PROGRESS = [
     ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
     ("Official forecasting switched on", "done", "Every 30 minutes since Oct 17; 84 official forecasts published, all runs green (Oct 25)"),
     ("Participation form", "done", "Submitted by you Oct 17"),
+    ("Official-forecast scoring", "done", "Daily read-only lookup of resolutions and AlmanacBot's scores (Oct 25)"),
     ("Apply for free credits for Spring 2027", "later", "Applications reopen a few weeks before January"),
 ]
 
@@ -64,7 +65,9 @@ def write(summary):
     (OUT / "scores.json").write_text(json.dumps(sc, indent=1))
     (OUT / "progress.json").write_text(json.dumps([{"step": s, "status": st, "note": n} for s, st, n in PROGRESS],
                                                   indent=1))
-    lines = ["# Forecast bot dashboard", "", f"Forecasts: {len(fc)}; resolved: {sum(r['status'] != 'open' for r in fc)}",
+    (OUT / "official_scores.json").write_text(json.dumps(official.dashboard_rows(), indent=1))
+    lines = ["# Forecast bot dashboard", "", "Official tournament forecasts: " + official.summary_text(official.summary()),
+             "", "Practice forecasts: " + f"{len(fc)}; resolved: {sum(r['status'] != 'open' for r in fc)}",
              "", "| Question | Bot | Market | Status | vs market |", "|---|---|---|---|---|"]
     for r in fc:
         vm = "" if r["vs_market"] is None else f"{r['vs_market']:+.1f}"

@@ -50,6 +50,11 @@
   "note": "Submitted by you Oct 17"
  },
  {
+  "step": "Official-forecast scoring",
+  "status": "done",
+  "note": "Daily read-only lookup of resolutions and AlmanacBot's scores (Oct 25)"
+ },
+ {
   "step": "Apply for free credits for Spring 2027",
   "status": "later",
   "note": "Applications reopen a few weeks before January"
