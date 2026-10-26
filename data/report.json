@@ -1,50 +1,93 @@
 {
- "variants": {},
- "scored": [],
+ "variants": {
+  "v1": {
+   "n": 2,
+   "brier": 0.49765000000000004,
+   "market_brier": 0.5151249999999999,
+   "baseline": -76.64124386929905,
+   "market_baseline": -88.72391328716985,
+   "vs_market": 8.375068240635004,
+   "vs_market_lo": -21.05647691073499,
+   "vs_market_hi": 37.806613392005,
+   "p_beats_market": 0.7478
+  }
+ },
+ "scored": [
+  {
+   "batch": "20261017-1423",
+   "made_at": "2026-10-17T14:25:50+00:00",
+   "qid": "pm:4824600",
+   "variant": "v1",
+   "prob": "0.68",
+   "market_prob": "0.605",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.4624000000000001,
+   "market_brier": 0.366025,
+   "baseline": -64.38561897747248,
+   "market_baseline": -34.00754415976217,
+   "vs_market": -21.05647691073499
+  },
+  {
+   "batch": "20261018-125311",
+   "made_at": "2026-10-18T12:55:12+00:00",
+   "qid": "pm:5340072",
+   "variant": "v1",
+   "prob": "0.27",
+   "market_prob": "0.185",
+   "n_runs": "3",
+   "outcome": 1,
+   "brier": 0.5328999999999999,
+   "market_brier": 0.664225,
+   "baseline": -88.89686876112562,
+   "market_baseline": -143.44028241457752,
+   "vs_market": 37.806613392005
+  }
+ ],
  "postprocess": [
   {
    "variant": "median",
-   "n": 0,
-   "vs_market": NaN,
-   "brier": NaN,
-   "vs_champion": NaN,
-   "p_better": NaN,
+   "n": 2,
+   "vs_market": 8.375068240635004,
+   "brier": 0.49765000000000004,
+   "vs_champion": 0.0,
+   "p_better": 0.0,
    "accept": false
   },
   {
    "variant": "mean_logodds",
-   "n": 0,
-   "vs_market": NaN,
-   "brier": NaN,
-   "vs_champion": NaN,
-   "p_better": NaN,
+   "n": 2,
+   "vs_market": 10.903859207763182,
+   "brier": 0.48676219113000935,
+   "vs_champion": 2.5287909671281805,
+   "p_better": 1.0,
    "accept": false
   },
   {
    "variant": "median_x1.3",
-   "n": 0,
-   "vs_market": NaN,
-   "brier": NaN,
-   "vs_champion": NaN,
-   "p_better": NaN,
+   "n": 2,
+   "vs_market": -10.89298923096747,
+   "brier": 0.5721718448346731,
+   "vs_champion": -19.268057471602475,
+   "p_better": 0.0,
    "accept": false
   },
   {
    "variant": "median_x0.8",
-   "n": 0,
-   "vs_market": NaN,
-   "brier": NaN,
-   "vs_champion": NaN,
-   "p_better": NaN,
+   "n": 2,
+   "vs_market": 20.434866410585435,
+   "brier": 0.446279164367054,
+   "vs_champion": 12.059798169950431,
+   "p_better": 1.0,
    "accept": false
   },
   {
    "variant": "mean_logodds_x1.3",
-   "n": 0,
-   "vs_market": NaN,
-   "brier": NaN,
-   "vs_champion": NaN,
-   "p_better": NaN,
+   "n": 2,
+   "vs_market": -7.377182492490624,
+   "brier": 0.5584480857330962,
+   "vs_champion": -15.752250733125628,
+   "p_better": 0.0,
    "accept": false
   }
  ]

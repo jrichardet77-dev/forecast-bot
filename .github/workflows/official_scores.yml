@@ -7,7 +7,7 @@ on:
     - cron: "37 11 * * *"   # daily, before the 8:52 ET practice check reads the file
   workflow_dispatch:
 concurrency:
-  group: forecast            # shares the Forecast workflow's queue, so the two never push at the same time
+  group: official-scores     # its own queue: in a shared queue GitHub would cancel a waiting run when a Forecast run queues
   cancel-in-progress: false
 permissions:
   contents: write
@@ -30,4 +30,5 @@ jobs:
           git config user.name "forecast-bot"
           git config user.email "noreply@github.com"
           [ -f data/official_scores.csv ] && git add data/official_scores.csv; true
-          git diff --cached --quiet || (git commit -m "Official scores" && git pull --rebase -q && git push)
+          git diff --cached --quiet || git commit -m "Official scores"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 10; done

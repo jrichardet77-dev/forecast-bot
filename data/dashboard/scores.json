@@ -1,12 +1,12 @@
 [
  {
   "method": "v1",
-  "resolved": 0,
-  "vs_market": null,
-  "vs_market_lo": null,
-  "vs_market_hi": null,
-  "p_beats_market": null,
-  "brier": null,
-  "market_brier": null
+  "resolved": 2,
+  "vs_market": 8.4,
+  "vs_market_lo": -21.1,
+  "vs_market_hi": 37.8,
+  "p_beats_market": 0.75,
+  "brier": 0.498,
+  "market_brier": 0.515
  }
 ]

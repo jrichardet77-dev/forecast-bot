@@ -63,8 +63,8 @@
   "bot": 0.68,
   "market": 0.605,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -21.1,
   "exposed": true,
   "url": "https://polymarket.com/market/will-aleksandar-vucic-united-serbia-win-the-most-seats-in-the-2026-serbian-parliamentary-election",
   "made": "2026-10-17"
@@ -203,8 +203,8 @@
   "bot": 0.27,
   "market": 0.185,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": 37.8,
   "exposed": true,
   "url": "https://polymarket.com/market/will-luiz-inacio-lula-da-silva-win-the-second-round-of-the-2026-brazilian-presidential-election-by-less-than-4",
   "made": "2026-10-18"

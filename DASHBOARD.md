@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 1 of 88 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
 
-Practice forecasts: 24; resolved: 0
+Practice forecasts: 24; resolved: 2
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -10,7 +10,7 @@ Practice forecasts: 24; resolved: 0
 | Will the Dome of the Rock in Jerusalem be destroyed by the end of Neta | 1% | 4% | open |  |
 | US announces end of Iranian blockade by November 30, 2026? | 12% | 19% | open |  |
 | Will there be a Hormuz agreement and the Democrats win the Senate? | 4% | 5% | open |  |
-| Will Aleksandar Vučić – United Serbia win the most seats in the 2026 S | 68% | 60% | open |  |
+| Will Aleksandar Vučić – United Serbia win the most seats in the 2026 S | 68% | 60% | NO | -21.1 |
 | US x Iran ceasefire continues through November 15? | 60% | 56% | open |  |
 | Will Likud win 25-29 seats in the 2026 Israeli legislative election? | 15% | 24% | open |  |
 | Will a Republican win the US Senate special election in Florida in 202 | 86% | 91% | open |  |
@@ -20,7 +20,7 @@ Practice forecasts: 24; resolved: 0
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | open |  |
 | Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | open |  |
 | Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | open |  |
-| Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | open |  |
+| Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | YES | +37.8 |
 | Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | open |  |
 | Mojtaba Khamenei seen in public by October 31? | 7% | 2% | open |  |
 | Will Avigdor Lieberman be the next Prime Minister of Israel? | 2% | 2% | open |  |
