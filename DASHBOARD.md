@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 1 of 90 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
 
-Practice forecasts: 24; resolved: 2
+Practice forecasts: 36; resolved: 2
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -30,3 +30,15 @@ Practice forecasts: 24; resolved: 2
 | US-Iran Final Nuclear Deal by November 30, 2026? | 7% | 6% | open |  |
 | Will Dan Sullivan win the Alaska Senate race in 2026? | 42% | 26% | open |  |
 | Will the Democrats win the Arizona governor race in 2026? | 82% | 92% | open |  |
+| Democrats win Texas and Michigan Senate election? | 38% | 57% | open |  |
+| Will the Democrats win the Minnesota Senate race in 2026? | 85% | 86% | open |  |
+| Will the ECB announce a 25 bps increase at the October 2026 meeting? | 4% | 2% | open |  |
+| Israel x Iran ceasefire continues through November 15? | 45% | 66% | open |  |
+| Will the Republicans win the South Carolina Senate race in 2026? | 80% | 78% | open |  |
+| Will the Democrats win the Ohio governor race in 2026? | 60% | 82% | open |  |
+| Will the Republican Party control the Senate after the 2026 Midterm el | 36% | 34% | open |  |
+| Russia x Ukraine ceasefire agreement by October 31, 2026? | 2% | 2% | open |  |
+| Will Dan Sullivan win re-election to Alaska's Senate seat in 2026? | 42% | 26% | open |  |
+| Fable 5.5 is released by the end of october? | 33% | 37% | open |  |
+| Will there be no Hormuz agreement? | 94% | 93% | open |  |
+| Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | open |  |

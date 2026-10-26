@@ -1,0 +1,74 @@
+[
+ {
+  "qid": "mf:h5ll5p8Ssp",
+  "prob": 0.42,
+  "saw_market_price": false,
+  "rationale": "Needs both Talarico (TX) and El-Sayed (MI) to win. Late-October TX polls show Talarico up 2-4 but narrowing, and Texas polls have historically overstated Democrats, so about 52-55%. El-Sayed leads MI averages by 2-4, so about 68%. Outcomes are positively correlated through national swing, which gives roughly 0.42."
+ },
+ {
+  "qid": "pm:630818",
+  "prob": 0.85,
+  "saw_market_price": false,
+  "rationale": "Minnesota hasn't elected a Republican senator since 2002, and the national environment leans Democratic. Flanagan leads Tafoya by 3-5 in the averages (RCP +3.4) and in every October poll, though Cook reportedly moved it to Lean D. A strong favorite, with some polling-error risk."
+ },
+ {
+  "qid": "pm:3081966",
+  "prob": 0.04,
+  "saw_market_price": true,
+  "rationale": "The ECB hiked to 2.50% in September. Analysts (FXStreet, Reuters poll) widely expect a pause on Oct 29, with the next hike in December when new projections are out. September inflation at 3.8% leaves a small hike risk. A search result showed a prediction-market price, which I discarded."
+ },
+ {
+  "qid": "pm:5339986",
+  "prob": 0.62,
+  "saw_market_price": false,
+  "rationale": "The Israel-Iran ceasefire is holding, with no reported strikes on either country's territory in October. Trump reportedly opposes restarting the war before the Nov 3 midterms, and Netanyahu has said no preemptive strike before Israel's Oct 27 election. But the US and Israel are openly threatening renewed strikes, Netanyahu is pushing for action, and talks have stalled. The Nov 3-15 window after both elections is a real risk."
+ },
+ {
+  "qid": "pm:630925",
+  "prob": 0.8,
+  "saw_market_price": true,
+  "rationale": "South Carolina is deep red, and Republicans have won every Senate race there for decades. Polls are unusually close (Graham +2-3 in the averages; one D-internal poll has Andrews +1), but red-state polling with many undecideds usually breaks toward the Republican. A search result showed market prices, which I discarded."
+ },
+ {
+  "qid": "pm:629557",
+  "prob": 0.68,
+  "saw_market_price": true,
+  "rationale": "Ohio has trended Republican, but Acton leads most October polls (Marist +7, Fox +2, RCP average +4.4), and Sabato moved the race to Lean D on Oct 22. Ohio polls have overstated Democrats before, which tempers this. A search result showed market prices, which I discarded."
+ },
+ {
+  "qid": "pm:562794",
+  "prob": 0.38,
+  "saw_market_price": true,
+  "rationale": "Republicans need to defend their majority in a midterm under a Republican president with weak approval, which historically favors the out-party. Model forecasts give Democrats 54-75% (DDHQ 56, Poliwave 57, Silver 75), with Pollsmax the outlier favoring Republicans. Many toss-ups remain (ME, IA, OH, TX, AK), so the GOP keeps a substantial chance. A search result showed a market price, which I discarded."
+ },
+ {
+  "qid": "pm:2243896",
+  "prob": 0.02,
+  "saw_market_price": false,
+  "rationale": "Five days remain. Only a local humanitarian ceasefire in Oleshky was agreed, which does not qualify as a general ceasefire. The next talks are expected around mid-November in Abu Dhabi, and Russia says the talks imply no restrictions on combat. A general ceasefire by Oct 31 is very unlikely."
+ },
+ {
+  "qid": "mf:ULun8EOAAn",
+  "prob": 0.42,
+  "saw_market_price": true,
+  "rationale": "Incumbents in red states usually win, but Peltola leads narrowly in most averages (RCP +0.8, Poliwave +1.8; NYT/Siena +7, AARP +5), and Cook rates it a toss-up. Sullivan has partisanship and a possible late GOP consolidation under ranked-choice voting on his side. Slight underdog. A search result quoted a prediction-market price, which I discarded."
+ },
+ {
+  "qid": "mf:9AztNA6qRu",
+  "prob": 0.4,
+  "saw_market_price": false,
+  "rationale": "Leakers have said a release was imminent since Oct 13 (Azure listing, partner access reports), but as of Oct 25 Anthropic's news page still shows no Fable 5.5. Repeated 'next week' rumors have slipped. Partner access often comes 1-3 weeks before launch, but only 5 days remain. My search budget ran out before I could find any news from Oct 26."
+ },
+ {
+  "qid": "pm:5572739",
+  "prob": 0.93,
+  "saw_market_price": false,
+  "rationale": "YES here means no US-Iran Hormuz agreement is announced by Nov 2. Talks have stalled for weeks. Iran's offer (reopen the strait in exchange for ending the blockade) was rejected by IRGC-linked outlets, and Trump is threatening strikes, though he also mentions a possible 'big beautiful agreement'. A formal agreement accepted by both sides within 7 days is unlikely."
+ },
+ {
+  "qid": "pm:4688838",
+  "prob": 0.07,
+  "saw_market_price": false,
+  "rationale": "Saudi-Houthi fighting is escalating, with Houthi strikes on Riyadh and Mecca-area intercepts as late as Oct 25. There is a single unconfirmed report of a $1B Iran-brokered Saudi offer and a Saudi defense minister visit to Tehran, but Riyadh officially rejects a new ceasefire. A formal mutual announcement within 5 days is unlikely."
+ }
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "qid": "mf:h5ll5p8Ssp",
+  "prob": 0.42,
+  "saw_market_price": true,
+  "rationale": "Both Talarico (TX) and El-Sayed (MI) must win per AP. Late-October polls show Talarico up ~2-4 (Emerson 48-46, Marist 47-45, TPOR 51-47; Inside Elections Toss-up) but Texas has a strong R lean and polls have underestimated Republicans there; El-Sayed leads Rogers ~D+3 in averages (Lean D). Roughly 0.52 x 0.70 with positive correlation gives ~0.42. v3: not settled, kept in 0.10-0.90. A search summary quoted market odds for Michigan; discarded."
+ },
+ {
+  "qid": "pm:630818",
+  "prob": 0.85,
+  "saw_market_price": false,
+  "rationale": "Open seat in a state Democrats have won statewide since 2006. Flanagan leads Tafoya in every recent poll (averages D+3 to D+5) in a national environment favoring Democrats; Cook rates Likely D. Risk is a polling miss in a closer-than-usual race. v3: election not yet held, kept within 0.10-0.90."
+ },
+ {
+  "qid": "pm:3081966",
+  "prob": 0.03,
+  "saw_market_price": true,
+  "rationale": "Resolves YES only on a 25bp deposit-rate hike at the Oct 28-29 ECB meeting. Reuters poll: 94 of 100 economists expect a hold at 2.50%, with a hike expected in December; FXStreet previews say October pause. Only three days remain and consensus is near-unanimous, so v3's nearly-settled case applies. A search result showed market-implied rate probabilities; discarded."
+ },
+ {
+  "qid": "pm:5339986",
+  "prob": 0.45,
+  "saw_market_price": false,
+  "rationale": "YES requires no qualifying Israel-Iran air or missile strike on either's territory through Nov 15. I found no direct Israel-Iran strike exchange reported in October, but earlier ceasefires collapsed (June exchange, MoU expiry), Netanyahu pushed for strikes and NPR/OPB report US-Israeli planning for an attack in early November after the midterms, with Iran vowing retaliation. Trump has held Israel back before, and the planning may be leverage, so roughly even with a lean toward breakdown. v3: not settled."
+ },
+ {
+  "qid": "pm:630925",
+  "prob": 0.75,
+  "saw_market_price": false,
+  "rationale": "South Carolina is a strongly Republican state (R+15 or more historically). Appointee Darline Graham leads Andrews by only ~2-3 in averages, with one D-sponsored poll showing Andrews +1, and ratings range from Toss-up to Likely R. The state's partisanship plus the usual pull of undecideds toward the home party favor the Republican, but a D-leaning environment and a weak post-runoff nominee keep real upset risk. v3: not settled."
+ },
+ {
+  "qid": "pm:629557",
+  "prob": 0.63,
+  "saw_market_price": true,
+  "rationale": "Acton leads Ramaswamy in most October polls (Marist +7, Fox +2, Verasight +1; averages D+2.5 to +3), and Sabato moved the race to Lean D on Oct 22; ActiVote shows Ramaswamy +3. Ohio's recent R lean and possible polling bias in Ohio offset part of the lead. v3: not settled. A search summary quoted prediction-market odds; discarded."
+ },
+ {
+  "qid": "pm:562794",
+  "prob": 0.35,
+  "saw_market_price": true,
+  "rationale": "Democrats need a net gain of four seats. Non-market models give Democrats 56-75% (Silver 75%, DDHQ 56%, Poliwave 57%), with PollsMax as an outlier favoring Republicans at 54.5%. Polls show Democrats narrowly ahead in TX, AK, OH, MI and others, but many seats are within polling error, so Republican control is around 35%. v3: not settled. A search summary quoted a Kalshi figure; discarded."
+ },
+ {
+  "qid": "pm:2243896",
+  "prob": 0.02,
+  "saw_market_price": false,
+  "rationale": "YES requires a general, mutually agreed Russia-Ukraine ceasefire by Oct 31. The only deal is a local humanitarian truce in Oleshky, which is explicitly excluded, and broader technical talks are scheduled for the first half of November, with Russia still demanding all of Donbas. With five days left, v3's nearly-settled case (too little time) applies."
+ },
+ {
+  "qid": "mf:ULun8EOAAn",
+  "prob": 0.4,
+  "saw_market_price": true,
+  "rationale": "Incumbent Republican senators in red states usually win, but this race has turned: Peltola leads narrowly in most averages (DDHQ 49.0-46.6, RCP 49.0-48.2), NYT/Siena shows +7, Sabato rates Lean D, and ranked-choice voting may help her. Polls are sparse and Alaska polling is noisy, and Rasmussen shows Sullivan +1, so the incumbent keeps a real chance. v3: not settled. A search summary quoted market odds; discarded."
+ },
+ {
+  "qid": "mf:9AztNA6qRu",
+  "prob": 0.28,
+  "saw_market_price": false,
+  "rationale": "YES requires an anthropic.com/news announcement of Fable 5.5 by Oct 31. Signs point to soon: Opus, Sonnet and Haiku 5.5 already shipped in Sept-Oct, a claude-fable-5-5 entry appeared in the Azure catalog Oct 13, partners reportedly have access, and The Information says a new model is coming this month. But several 'this week' and 'today' rumors (Oct 20-21) did not pan out, the family of the new model is unclear, and only five days remain. v3: not settled."
+ },
+ {
+  "qid": "pm:5572739",
+  "prob": 0.94,
+  "saw_market_price": false,
+  "rationale": "This question resolves YES if no US-Iran Hormuz agreement is announced by Nov 2. As of Oct 24-26, talks have stalled: Iran says the strait stays closed until its seven conditions are met, the US is pressing nuclear demands, and Iran called the US response insufficient, while the US is reportedly preparing post-midterm strikes. Both sides would need to announce acceptance within about seven days, so v3's nearly-settled case (too little time) applies."
+ },
+ {
+  "qid": "pm:4688838",
+  "prob": 0.05,
+  "saw_market_price": false,
+  "rationale": "YES requires both Saudi Arabia and the Houthis to announce acceptance of a general ceasefire by Oct 31. Fighting escalated after Oct 4-5, with Houthi strikes on Saudi airports as recently as Oct 25. One Israel Hayom report claims a $1B Iran-brokered offer, but Riyadh reportedly rejects a new ceasefire until territory is returned. With five days left, v3's nearly-settled case (too little time) applies."
+ }
+]

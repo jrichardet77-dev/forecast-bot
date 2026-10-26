@@ -49,3 +49,4 @@ v1 runs go in packets/<batch>/runs/, each challenger in packets/<batch>/runs/<va
 | 2026-10-24 | daily check: no new batch (24 practice questions open) | 0 | pending | champion stays (fewer than 30 resolved) |
 | 2026-10-25 | daily check: no new batch (24 practice questions open) | 0 | pending | champion stays (fewer than 30 resolved) |
 | 2026-10-26 | first 2 practice questions resolved (both had market prices leak into search; see data/exposed.json) | 2 | v1 vs market +8.4 (90% interval -21.1 to +37.8) | champion stays (fewer than 30 resolved) |
+| 2026-10-26 | batch 20261026-221344 (12 questions closing by Nov 16): v1 x3, v2/v3/v4 x3 each, v5 = v1 + 2 more runs; market sites blocked in every search, yet 8 of 12 questions still had a price reach some forecaster (news quoting odds), so only 4 are clean | 2 (earlier batches) | pending | champion stays |
