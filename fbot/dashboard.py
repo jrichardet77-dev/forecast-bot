@@ -33,6 +33,8 @@ def rows_forecasts():
     outcomes = evaluate.resolved_outcomes()
     rows = []
     for f in ledger.read("final"):
+        if f.get("variant", "v1") != "v1":  # experiment variants are compared in scores.json, not listed here
+            continue
         q = qs.get(f["qid"], {})
         p, m = float(f["prob"]), float(f["market_prob"])
         o = outcomes.get(f["qid"])
@@ -46,13 +48,22 @@ def rows_forecasts():
 
 def rows_scores(summary):
     out = []
-    for name, v in summary["variants"].items():
+    variants = dict(summary["variants"])
+    variants.update(summary.get("leak_split", {}))
+    for name, v in variants.items():
+        if name != "v1" and not v["n"]:
+            continue
         out.append({"method": name, "resolved": v["n"], "vs_market": round(v["vs_market"], 1),
                     "vs_market_lo": round(v["vs_market_lo"], 1), "vs_market_hi": round(v["vs_market_hi"], 1),
                     "p_beats_market": round(v["p_beats_market"], 2), "brier": round(v["brier"], 3),
                     "market_brier": round(v["market_brier"], 3)})
-    if not out:
-        out.append({"method": "v1", "resolved": 0, "vs_market": None, "vs_market_lo": None, "vs_market_hi": None,
+    for c in summary.get("challengers", []):
+        for r in out:
+            if r["method"] == c["variant"]:
+                r.update(vs_champion=round(c["vs_champion"], 1) if c["n"] else None,
+                         p_beats_champion=round(c["p_better"], 2) if c["n"] else None, accept=c["accept"])
+    if not any(r["method"] == "v1" for r in out):
+        out.insert(0, {"method": "v1", "resolved": 0, "vs_market": None, "vs_market_lo": None, "vs_market_hi": None,
                     "p_beats_market": None, "brier": None, "market_brier": None})
     return out
 

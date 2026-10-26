@@ -19,6 +19,23 @@ Post-processing challengers are scored automatically from the recorded runs, wit
 - shrinking ×0.8;
 - mean of log-odds plus extremizing ×1.3.
 
+## Pre-registered 2026-10-26 (practice only; owner-approved teaching plan)
+Each challenger runs on the same practice questions as v1, judged only on questions where no forecaster saw a market
+price, with the rule above (n >= 30, mean vs champion > 0, P(better) >= 0.90). Predictions are written before any
+result is known. A variant that meets the rule goes to the owner as a yes/no with its numbers and its estimated
+per-question OpenRouter cost; the live bot's prompts, models and settings are never changed here.
+
+| Variant | What changes | Prediction (2026-10-26) | Keep / drop |
+|---|---|---|---|
+| v2 base-rate-first | reference class and numeric base rate written before any current-news search; adjustments need named evidence | small gain: about 30% chance it meets the rule within 60 resolved questions | meets the rule: propose to owner; else drop at 60 resolved |
+| v3 calibration rule | probabilities kept within 0.10-0.90 unless the outcome is nearly settled | small or no gain vs market, but fewer large losses; about 25% chance it meets the rule | as above |
+| v4 what-would-make-this-wrong | a pre-mortem step before the final number | about 20% chance it meets the rule; may help most on long-shot YES questions | as above |
+| v5 five forecasters | median of 5 independent v1 runs instead of 3 | about 35% chance it meets the rule; cheapest to adopt if it does (2 more runs per question) | as above |
+
+How they run: Claude subagents on short-horizon practice batches (closing within 1-3 weeks, `batch --max-days 21`).
+v1 runs go in packets/<batch>/runs/, each challenger in packets/<batch>/runs/<variant>/. v5 is recorded with
+`record <batch> --variant v5 --with v1`, so it uses v1's three runs plus two more.
+
 ## Log
 | Date | Change | Questions resolved | Result | Decision |
 |---|---|---|---|---|

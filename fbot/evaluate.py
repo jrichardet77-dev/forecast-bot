@@ -6,6 +6,7 @@ Primary metric: relative log score vs the market price at the moment of forecast
 Acceptance rule for changes (EXPERIMENTS.md): a challenger replaces the champion only when, on the same resolved
 questions, its mean relative score vs the champion is positive with bootstrap P(better) >= 0.90 and n >= 30.
 """
+import json
 from collections import defaultdict
 
 from . import aggregate, ledger, scoring
@@ -43,7 +44,8 @@ def postprocess_table():
     market = {(f["batch"], f["qid"]): float(f["market_prob"]) for f in ledger.read("final")}
     runs = defaultdict(list)
     for r in ledger.read("runs"):
-        runs[(r["batch"], r["qid"])].append(float(r["prob"]))
+        if r.get("variant", "v1") == "v1":  # post-processing rules re-aggregate the champion's own runs
+            runs[(r["batch"], r["qid"])].append(float(r["prob"]))
     keys = [k for k in runs if k[1] in outcomes and k in market]
     table = []
     champ = {k: aggregate.combine(runs[k], CHAMPION["method"], CHAMPION["a"]) for k in keys}
@@ -60,6 +62,48 @@ def postprocess_table():
     return table
 
 
+def exposed_keys():
+    """(batch, qid) pairs where a forecaster saw a market price; those results are scored separately."""
+    p = ledger.DATA / "exposed.json"
+    data = json.loads(p.read_text()) if p.exists() else {}
+    return {(b, q) for b, qs in data.items() for q in qs}
+
+
+def _stats(rs):
+    boot = scoring.paired_bootstrap([r["vs_market"] for r in rs])
+    return {"n": len(rs), "brier": scoring.mean(r["brier"] for r in rs),
+            "market_brier": scoring.mean(r["market_brier"] for r in rs),
+            "baseline": scoring.mean(r["baseline"] for r in rs),
+            "market_baseline": scoring.mean(r["market_baseline"] for r in rs),
+            "vs_market": boot["mean"], "vs_market_lo": boot["lo"], "vs_market_hi": boot["hi"],
+            "p_beats_market": boot["p_better"]}
+
+
+def leak_split(rows):
+    """Champion results split into clean (no market price seen) and leaked."""
+    exposed = exposed_keys()
+    v1 = [r for r in rows if r["variant"] == "v1"]
+    clean = [r for r in v1 if (r["batch"], r["qid"]) not in exposed]
+    leaked = [r for r in v1 if (r["batch"], r["qid"]) in exposed]
+    return {"v1 clean": _stats(clean), "v1 leaked": _stats(leaked)}
+
+
+def variant_table(rows):
+    """Each challenger against the champion (v1) on the same clean resolved questions; acceptance rule applied."""
+    exposed = exposed_keys()
+    clean = [r for r in rows if (r["batch"], r["qid"]) not in exposed]
+    champ = {(r["batch"], r["qid"]): r for r in clean if r["variant"] == "v1"}
+    out = []
+    for v in sorted({r["variant"] for r in clean} - {"v1"}):
+        pairs = [(r, champ[(r["batch"], r["qid"])]) for r in clean
+                 if r["variant"] == v and (r["batch"], r["qid"]) in champ]
+        diffs = [scoring.relative_score(float(r["prob"]), float(c["prob"]), r["outcome"]) for r, c in pairs]
+        boot = scoring.paired_bootstrap(diffs)
+        out.append({"variant": v, "n": boot["n"], "vs_champion": boot["mean"], "p_better": boot["p_better"],
+                    "accept": boot["n"] >= MIN_N and boot["mean"] > 0 and boot["p_better"] >= MIN_P})
+    return out
+
+
 def summary():
     rows = scored_finals()
     by_variant = defaultdict(list)
@@ -74,4 +118,5 @@ def summary():
                   "market_baseline": scoring.mean(r["market_baseline"] for r in rs),
                   "vs_market": boot["mean"], "vs_market_lo": boot["lo"], "vs_market_hi": boot["hi"],
                   "p_beats_market": boot["p_better"]}
-    return {"variants": out, "scored": rows, "postprocess": postprocess_table()}
+    return {"variants": out, "leak_split": leak_split(rows), "challengers": variant_table(rows), "scored": rows,
+            "postprocess": postprocess_table()}

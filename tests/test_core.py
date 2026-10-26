@@ -101,6 +101,43 @@ class Pipeline(unittest.TestCase):
         b2 = cli.cmd_batch(["--n", "5", "--seed", "1"])
         self.assertFalse(b2_qids & {q["qid"] for q in json.loads((cli.BATCHES / f"{b2}.json").read_text())})
 
+    def test_variants_leaks_and_short_horizon(self):
+        import datetime as dt
+        pool = json.loads((ledger.DATA / "pool.json").read_text())
+        soon = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(days=10)).isoformat()
+        later = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(days=90)).isoformat()
+        for i, q in enumerate(pool):
+            q["close_time"] = soon if i < 34 else later
+        (ledger.DATA / "pool.json").write_text(json.dumps(pool))
+        batch = cli.cmd_batch(["--n", "40", "--seed", "2", "--max-days", "21"])
+        packet = json.loads((cli.PACKETS / batch / "questions.json").read_text())
+        self.assertEqual(len(packet), 34)  # the questions closing in 90 days are left out
+        runs = cli.PACKETS / batch / "runs"
+        leak = packet[0]["qid"]
+        for who, p in (("A", 0.7), ("B", 0.7), ("C", 0.7)):
+            (runs / f"{who}.json").write_text(json.dumps(
+                [{"qid": q["qid"], "prob": p, "saw_market_price": q["qid"] == leak and who == "B"} for q in packet]))
+        (runs / "v2").mkdir()
+        (runs / "v2" / "A.json").write_text(json.dumps([{"qid": q["qid"], "prob": 0.9} for q in packet]))
+        (runs / "v5").mkdir()
+        for who in ("D", "E"):
+            (runs / "v5" / f"{who}.json").write_text(json.dumps([{"qid": q["qid"], "prob": 0.95} for q in packet]))
+        cli.cmd_record([batch])
+        cli.cmd_record([batch, "--variant", "v2"])
+        cli.cmd_record([batch, "--variant", "v5", "--with", "v1"])
+        self.assertEqual(json.loads((ledger.DATA / "exposed.json").read_text())[batch], [leak])
+        finals = ledger.read("final")
+        v5 = [f for f in finals if f["variant"] == "v5"]
+        self.assertEqual({f["n_runs"] for f in v5}, {"5"})
+        self.assertAlmostEqual(float(v5[0]["prob"]), 0.7)  # median of 0.7, 0.7, 0.7, 0.95, 0.95
+        ledger.append("resolutions", [{"qid": q["qid"], "outcome": 1, "resolved_at": "t"} for q in packet])
+        s = evaluate.summary()
+        self.assertEqual((s["leak_split"]["v1 clean"]["n"], s["leak_split"]["v1 leaked"]["n"]), (33, 1))
+        ch = {c["variant"]: c for c in s["challengers"]}
+        self.assertEqual(ch["v2"]["n"], 33)  # judged on clean questions only
+        self.assertTrue(ch["v2"]["accept"])  # 0.9 beats 0.7 on 33 YES outcomes
+        self.assertFalse(ch["v5"]["accept"])  # same median as v1, so no gain
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

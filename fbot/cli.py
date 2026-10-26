@@ -1,9 +1,14 @@
 """forecast-bot command line: python3 -m fbot.cli <command>
 
   pool                      fetch open questions (Polymarket, Manifold) into data/pool.json
-  batch --n N [--seed S]    pick N new, diverse questions; write packets/<batch>/questions.json for forecasters
+  batch --n N [--seed S] [--max-days D]
+                            pick N new, diverse questions (closing within D days if given); write
+                            packets/<batch>/questions.json for forecasters
                             (market prices are kept out of the packet and stored in data/batches/<batch>.json)
-  record BATCH [--variant V] read packets/<batch>/runs/*.json, store every run and the combined forecast
+  record BATCH [--variant V] [--with W]
+                            store every run and the combined forecast. v1 reads packets/<batch>/runs/*.json; any
+                            other variant reads packets/<batch>/runs/<V>/*.json (plus W's runs with --with W).
+                            A run that reports saw_market_price is logged in data/exposed.json
   resolve                   look up outcomes for every forecast question that has not resolved yet
   report                    score everything; write DASHBOARD.md, docs/dashboard.html and data/report.json
   official-scores           read-only: look up resolutions and AlmanacBot's scores for its official forecasts
@@ -45,7 +50,17 @@ def _key(title):
 
 def cmd_batch(args):
     n, seed = _arg(args, "--n", 12, int), _arg(args, "--seed", None, int)
+    max_days = _arg(args, "--max-days", None, int)
     pool = json.loads((ledger.DATA / "pool.json").read_text())
+    if max_days is not None:
+        now = dt.datetime.now(dt.timezone.utc)
+
+        def days_left(q):
+            try:
+                return (dt.datetime.fromisoformat(q["close_time"].replace("Z", "+00:00")) - now).days
+            except (KeyError, AttributeError, ValueError):
+                return None
+        pool = [q for q in pool if days_left(q) is not None and 1 <= days_left(q) <= max_days]
     done = {f["qid"] for f in ledger.read("final")}
     rng = random.Random(seed)
     rng.shuffle(pool)
@@ -75,15 +90,36 @@ def cmd_batch(args):
     return batch
 
 
+def run_files(batch, variant, also=None):
+    """Run files for a variant: v1 lives in packets/<batch>/runs/, any other variant in runs/<variant>/."""
+    base = PACKETS / batch / "runs"
+    dirs = [base if variant == "v1" else base / variant] + ([base if also == "v1" else base / also] if also else [])
+    return [f for d in dirs for f in sorted(d.glob("*.json"))]
+
+
+def note_exposed(batch, qids):
+    """Add questions whose market price reached a forecaster to data/exposed.json (scored separately)."""
+    if not qids:
+        return
+    p = ledger.DATA / "exposed.json"
+    data = json.loads(p.read_text()) if p.exists() else {}
+    data[batch] = sorted(set(data.get(batch, [])) | set(qids))
+    p.write_text(json.dumps(data, indent=1) + "\n")
+
+
 def cmd_record(args):
-    batch, variant = args[0], _arg(args, "--variant", "v1")
+    batch, variant, also = args[0], _arg(args, "--variant", "v1"), _arg(args, "--with")
     meta = {q["qid"]: q for q in json.loads((BATCHES / f"{batch}.json").read_text())}
-    runs = {}
-    for f in sorted((PACKETS / batch / "runs").glob("*.json")):
+    runs, leaked = {}, set()
+    for f in run_files(batch, variant, also):
         for r in json.loads(f.read_text()):
             p = float(r["prob"])
             if r["qid"] in meta and 0 <= p <= 1:
-                runs.setdefault(r["qid"], []).append((f.stem, p))
+                runs.setdefault(r["qid"], []).append((f.parent.name + "/" + f.stem if f.parent.name != "runs"
+                                                      else f.stem, p))
+                if r.get("saw_market_price"):
+                    leaked.add(r["qid"])
+    note_exposed(batch, leaked)
     made = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     ledger.append("runs", [{"batch": batch, "made_at": made, "qid": q, "runner": who, "variant": variant, "prob": p}
                            for q, rs in runs.items() for who, p in rs])
@@ -92,7 +128,8 @@ def cmd_record(args):
                "prob": round(aggregate.combine([p for _, p in rs], champ["method"], champ["a"]), 4),
                "market_prob": meta[q]["market_prob"]} for q, rs in runs.items()]
     ledger.append("final", finals)
-    print(f"recorded {sum(len(r) for r in runs.values())} runs, {len(finals)} forecasts for batch {batch}")
+    print(f"recorded {sum(len(r) for r in runs.values())} runs, {len(finals)} forecasts for batch {batch} "
+          f"(variant {variant}; {len(leaked)} questions where a forecaster saw a market price)")
 
 
 def cmd_resolve():

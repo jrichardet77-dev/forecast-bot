@@ -8,5 +8,15 @@
   "p_beats_market": 0.75,
   "brier": 0.498,
   "market_brier": 0.515
+ },
+ {
+  "method": "v1 leaked",
+  "resolved": 2,
+  "vs_market": 8.4,
+  "vs_market_lo": -21.1,
+  "vs_market_hi": 37.8,
+  "p_beats_market": 0.75,
+  "brier": 0.498,
+  "market_brier": 0.515
  }
 ]

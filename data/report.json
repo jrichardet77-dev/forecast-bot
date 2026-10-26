@@ -12,6 +12,31 @@
    "p_beats_market": 0.7478
   }
  },
+ "leak_split": {
+  "v1 clean": {
+   "n": 0,
+   "brier": NaN,
+   "market_brier": NaN,
+   "baseline": NaN,
+   "market_baseline": NaN,
+   "vs_market": NaN,
+   "vs_market_lo": NaN,
+   "vs_market_hi": NaN,
+   "p_beats_market": NaN
+  },
+  "v1 leaked": {
+   "n": 2,
+   "brier": 0.49765000000000004,
+   "market_brier": 0.5151249999999999,
+   "baseline": -76.64124386929905,
+   "market_baseline": -88.72391328716985,
+   "vs_market": 8.375068240635004,
+   "vs_market_lo": -21.05647691073499,
+   "vs_market_hi": 37.806613392005,
+   "p_beats_market": 0.7478
+  }
+ },
+ "challengers": [],
  "scored": [
   {
    "batch": "20261017-1423",
