@@ -20,6 +20,10 @@ POSTPROCESS_GRID = [
     {"name": "mean_logodds_x1.3", "method": "mean_logodds", "a": 1.3},
 ]
 MIN_N, MIN_P = 30, 0.90
+# Practice challengers (Quinn review T102, 2026-10-27): judged on clean questions, counted by event cluster, never on
+# pilot batches; promotion needs 30 clusters and P(better) >= 0.975 (0.95 split across the two live challengers).
+MIN_CLUSTERS, MIN_P_CHALLENGER = 30, 0.975
+PILOT_BATCHES = {"20261026-221344"}  # mixed models (v1 runs not on Haiku); kept as a descriptive pilot only
 
 
 def resolved_outcomes():
@@ -88,19 +92,30 @@ def leak_split(rows):
     return {"v1 clean": _stats(clean), "v1 leaked": _stats(leaked)}
 
 
+def clusters():
+    """qid -> event cluster (data/clusters.json); a question without one is its own cluster."""
+    p = ledger.DATA / "clusters.json"
+    return json.loads(p.read_text()).get("clusters", {}) if p.exists() else {}
+
+
 def variant_table(rows):
-    """Each challenger against the champion (v1) on the same clean resolved questions; acceptance rule applied."""
-    exposed = exposed_keys()
-    clean = [r for r in rows if (r["batch"], r["qid"]) not in exposed]
+    """Each challenger against the champion (v1) on the same clean resolved questions, outside pilot batches.
+    Paired differences are averaged within each event cluster; the bootstrap resamples clusters."""
+    exposed, cl = exposed_keys(), clusters()
+    clean = [r for r in rows if (r["batch"], r["qid"]) not in exposed and r["batch"] not in PILOT_BATCHES]
     champ = {(r["batch"], r["qid"]): r for r in clean if r["variant"] == "v1"}
     out = []
     for v in sorted({r["variant"] for r in clean} - {"v1"}):
-        pairs = [(r, champ[(r["batch"], r["qid"])]) for r in clean
-                 if r["variant"] == v and (r["batch"], r["qid"]) in champ]
-        diffs = [scoring.relative_score(float(r["prob"]), float(c["prob"]), r["outcome"]) for r, c in pairs]
-        boot = scoring.paired_bootstrap(diffs)
-        out.append({"variant": v, "n": boot["n"], "vs_champion": boot["mean"], "p_better": boot["p_better"],
-                    "accept": boot["n"] >= MIN_N and boot["mean"] > 0 and boot["p_better"] >= MIN_P})
+        by_cluster = defaultdict(list)
+        for r in clean:
+            c = champ.get((r["batch"], r["qid"]))
+            if r["variant"] == v and c:
+                by_cluster[cl.get(r["qid"], r["qid"])].append(
+                    scoring.relative_score(float(r["prob"]), float(c["prob"]), r["outcome"]))
+        boot = scoring.paired_bootstrap([scoring.mean(d) for d in by_cluster.values()])
+        out.append({"variant": v, "n": sum(len(d) for d in by_cluster.values()), "clusters": boot["n"],
+                    "vs_champion": boot["mean"], "p_better": boot["p_better"],
+                    "accept": boot["n"] >= MIN_CLUSTERS and boot["mean"] > 0 and boot["p_better"] >= MIN_P_CHALLENGER})
     return out
 
 

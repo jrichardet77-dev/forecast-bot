@@ -137,6 +137,19 @@ class Pipeline(unittest.TestCase):
         self.assertEqual(ch["v2"]["n"], 33)  # judged on clean questions only
         self.assertTrue(ch["v2"]["accept"])  # 0.9 beats 0.7 on 33 YES outcomes
         self.assertFalse(ch["v5"]["accept"])  # same median as v1, so no gain
+        self.assertEqual(ch["v2"]["clusters"], 33)  # no clusters file: each question is its own cluster
+        clean_qids = [q["qid"] for q in packet if q["qid"] != leak]
+        (ledger.DATA / "clusters.json").write_text(json.dumps({"clusters": {q: "same-event" for q in clean_qids[:10]}}))
+        ch = {c["variant"]: c for c in evaluate.summary()["challengers"]}
+        self.assertEqual((ch["v2"]["n"], ch["v2"]["clusters"]), (33, 24))  # 10 related questions count once
+        self.assertFalse(ch["v2"]["accept"])  # 24 clusters is below the 30-cluster minimum
+        saved = set(evaluate.PILOT_BATCHES)
+        evaluate.PILOT_BATCHES.add(batch)
+        try:
+            self.assertEqual(evaluate.summary()["challengers"], [])  # pilot batches never count
+        finally:
+            evaluate.PILOT_BATCHES.clear()
+            evaluate.PILOT_BATCHES.update(saved)
 
 
 if __name__ == "__main__":

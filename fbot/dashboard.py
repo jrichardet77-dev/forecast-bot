@@ -16,7 +16,7 @@ PROGRESS = [
     ("Metaculus account and AlmanacBot", "done", "Bot key stored as a GitHub secret"),
     ("AI models via OpenRouter ($25 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
     ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
-    ("Official forecasting switched on", "done", "Every 30 minutes since Oct 17; 90 official forecasts published, all runs green (Oct 26)"),
+    ("Official forecasting switched on", "done", "Every 30 minutes since Oct 17; 95 official forecasts published, all runs green (Oct 27)"),
     ("Participation form", "done", "Submitted by you Oct 17"),
     ("Official-forecast scoring", "done", "Daily read-only lookup of resolutions and AlmanacBot's scores (Oct 25)"),
     ("Apply for free credits for Spring 2027", "later", "Applications reopen a few weeks before January"),
@@ -46,25 +46,32 @@ def rows_forecasts():
     return rows
 
 
+def _r(x, nd):
+    return None if x is None or x != x else round(x, nd)  # NaN (no data) becomes null
+
+
 def rows_scores(summary):
+    """One row per method. The headline is "v1 clean" (Quinn review T102): leaked results never enter it."""
     out = []
     variants = dict(summary["variants"])
     variants.update(summary.get("leak_split", {}))
     for name, v in variants.items():
-        if name != "v1" and not v["n"]:
+        if name not in ("v1", "v1 clean") and not v["n"]:
             continue
-        out.append({"method": name, "resolved": v["n"], "vs_market": round(v["vs_market"], 1),
-                    "vs_market_lo": round(v["vs_market_lo"], 1), "vs_market_hi": round(v["vs_market_hi"], 1),
-                    "p_beats_market": round(v["p_beats_market"], 2), "brier": round(v["brier"], 3),
-                    "market_brier": round(v["market_brier"], 3)})
+        out.append({"method": name, "resolved": v["n"], "vs_market": _r(v["vs_market"], 1),
+                    "vs_market_lo": _r(v["vs_market_lo"], 1), "vs_market_hi": _r(v["vs_market_hi"], 1),
+                    "p_beats_market": _r(v["p_beats_market"], 2), "brier": _r(v["brier"], 3),
+                    "market_brier": _r(v["market_brier"], 3)})
     for c in summary.get("challengers", []):
         for r in out:
             if r["method"] == c["variant"]:
-                r.update(vs_champion=round(c["vs_champion"], 1) if c["n"] else None,
-                         p_beats_champion=round(c["p_better"], 2) if c["n"] else None, accept=c["accept"])
-    if not any(r["method"] == "v1" for r in out):
-        out.insert(0, {"method": "v1", "resolved": 0, "vs_market": None, "vs_market_lo": None, "vs_market_hi": None,
-                    "p_beats_market": None, "brier": None, "market_brier": None})
+                r.update(vs_champion=_r(c["vs_champion"], 1) if c["n"] else None,
+                         p_beats_champion=_r(c["p_better"], 2) if c["n"] else None,
+                         clusters=c["clusters"], accept=c["accept"])
+    for name in ("v1", "v1 clean"):
+        if not any(r["method"] == name for r in out):
+            out.insert(0, {"method": name, "resolved": 0, "vs_market": None, "vs_market_lo": None,
+                           "vs_market_hi": None, "p_beats_market": None, "brier": None, "market_brier": None})
     return out
 
 

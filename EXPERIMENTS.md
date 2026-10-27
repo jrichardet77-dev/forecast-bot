@@ -31,6 +31,21 @@ Teaching never takes from Fourth & Found work.
   daily report says so in one line.
 - No new spending. The OpenRouter $25 is only for official forecasts; the live bot changes only after the owner's yes/no.
 
+## Changes from Quinn's review (T102, 2026-10-27), fixed before any challenger result exists
+- Questions where any forecaster saw a market price are excluded from every keep/drop decision, acceptance
+  statistic and clean count. They stay in a separately labeled diagnostic row ("v1 leaked") and never enter the
+  headline score (the headline is "v1 clean").
+- Related questions are grouped into event clusters (data/clusters.json), assigned by topic before scoring. New
+  batches get cluster IDs when created. Effective sample size is the number of clusters.
+- Primary metric: paired relative log score of challenger vs v1 on the same clean question, averaged within each
+  cluster. Uncertainty: bootstrap over clusters.
+- Promotion rule for challengers: at least 30 clean clusters, mean above 0 and bootstrap P(better) >= 0.975 (0.95
+  split across the two live challengers, v2 and v3). Meeting it means "propose to the owner", never automatic.
+  Results are reported with effect size, interval and cluster count.
+- Batch 20261026-221344 (v1 not on Haiku) is a descriptive pilot only and never counts toward promotion.
+- Quinn and Vesper favor replacing v3 with an aggregation challenger built from runs we already make; that swap
+  waits on the owner's yes/no (T103).
+
 ## Pre-registered 2026-10-26 (practice only; owner-approved teaching plan)
 Each challenger runs on the same practice questions as v1, judged only on questions where no forecaster saw a market
 price, with the rule above (n >= 30, mean vs champion > 0, P(better) >= 0.90). Predictions are written before any
@@ -63,3 +78,4 @@ v1 runs go in packets/<batch>/runs/, each challenger in packets/<batch>/runs/<va
 | 2026-10-26 | first 2 practice questions resolved (both had market prices leak into search; see data/exposed.json) | 2 | v1 vs market +8.4 (90% interval -21.1 to +37.8) | champion stays (fewer than 30 resolved) |
 | 2026-10-26 | batch 20261026-221344 (12 questions closing by Nov 16): v1 x3, v2/v3/v4 x3 each, v5 = v1 + 2 more runs; market sites blocked in every search, yet 8 of 12 questions still had a price reach some forecaster (news quoting odds), so only 4 are clean | 2 (earlier batches) | pending | champion stays |
 | 2026-10-26 | owner decision: lean mode (1 batch a week, v2 and v3 only, Haiku forecasters, at most 5 searches per question); v4 and v5 shelved | - | - | recorded |
+| 2026-10-27 | Quinn T102 changes applied: clean-only judging, event clusters (36 questions, 10 clusters), cluster bootstrap, P>=0.975 with 30 clusters, batch 20261026-221344 kept as pilot | 0 clean | - | rules fixed before results |

@@ -10,6 +10,16 @@
   "market_brier": 0.515
  },
  {
+  "method": "v1 clean",
+  "resolved": 0,
+  "vs_market": null,
+  "vs_market_lo": null,
+  "vs_market_hi": null,
+  "p_beats_market": null,
+  "brier": null,
+  "market_brier": null
+ },
+ {
   "method": "v1 leaked",
   "resolved": 2,
   "vs_market": 8.4,
