@@ -97,3 +97,4 @@ at,question_url,type,prediction,published,error
 2026-10-27T12:03:19+00:00,https://www.metaculus.com/questions/46206,BinaryQuestion,0.6,True,
 2026-10-27T15:15:05+00:00,https://www.metaculus.com/questions/46207,BinaryQuestion,0.17000000000000004,True,
 2026-10-28T06:35:42+00:00,https://www.metaculus.com/questions/46208,MultipleChoiceQuestion,"predicted_options=[PredictedOption(option_name='0', probability=0.4375), PredictedOption(option_name='1', probability=0.3425), PredictedOption(option_name='2', probability=0.1575), PredictedOption(option_name='3+', probability=0.0625)]",True,
+2026-10-28T09:38:43+00:00,https://www.metaculus.com/questions/46209,BinaryQuestion,0.8200000000000001,True,
