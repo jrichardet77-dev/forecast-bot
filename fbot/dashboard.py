@@ -46,6 +46,17 @@ def rows_forecasts():
     return rows
 
 
+def _clean(x):
+    """NaN means 'no data'; write it as null so report.json stays valid JSON."""
+    if isinstance(x, float) and x != x:
+        return None
+    if isinstance(x, dict):
+        return {k: _clean(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [_clean(v) for v in x]
+    return x
+
+
 def _r(x, nd):
     return None if x is None or x != x else round(x, nd)  # NaN (no data) becomes null
 
@@ -76,7 +87,7 @@ def rows_scores(summary):
 
 
 def write(summary):
-    (ledger.DATA / "report.json").write_text(json.dumps(summary, indent=1, default=str))
+    (ledger.DATA / "report.json").write_text(json.dumps(_clean(summary), indent=1, default=str, allow_nan=False))
     OUT.mkdir(exist_ok=True)
     fc, sc = rows_forecasts(), rows_scores(summary)
     (OUT / "forecasts.json").write_text(json.dumps(fc, indent=1))

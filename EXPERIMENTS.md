@@ -23,13 +23,54 @@ Post-processing challengers are scored automatically from the recorded runs, wit
 Teaching never takes from Fourth & Found work.
 - At most 1 new practice batch per week, run during the daily check on a weekend or at off-hours. No extra batches.
 - Only v2 (base rate first) and v3 (calibration 0.10-0.90) are tested. v4 and v5 are SHELVED (below); questions
-  already in flight finish and are scored as normal.
+  already in flight finish and are scored as normal. UPDATED 2026-10-28: challengers are now v2 and v6; v3 is
+  exploratory and computed without runs (see the owner decision above).
 - Practice forecasters use the cheapest adequate Claude model (Haiku) with at most 5 web searches per question.
   From batch 2 on, v1 also runs on Haiku, so v1, v2 and v3 are compared on the same model. Each weekly batch:
-  12 questions, 3 runs each of v1, v2 and v3 (9 runs).
+  12 questions, 3 runs each of v1, v2 and v3 (9 runs). From 2026-10-28: 3 runs each of v1 and v2 (6 runs); v6 and
+  v3c reuse v1's runs.
 - If the web-search allowance or usage limits run low, or a run hits a limit, that week's teaching is skipped and the
   daily report says so in one line.
 - No new spending. The OpenRouter $25 is only for official forecasts; the live bot changes only after the owner's yes/no.
+
+## Owner decision 2026-10-28: v6 replaces v3 as a challenger (T102 Quinn review, T103 Vesper brief)
+Recorded 2026-10-28 from the owner's "Yes" (relayed from the AlmanacBot monitoring session). Practice only; lean
+mode, no spending, no live-bot change, nothing on open official questions.
+
+**Champion and challengers (2 challengers):** v1 stays champion. Challengers: v2 (base rates first) and v6
+(aggregation). v3 is an exploratory sensitivity check only, never promoted; from batch 2 on it is computed as v3c
+(v1's combined forecast capped to 0.10-0.90), so it costs no forecasting runs. v4 and v5 stay shelved.
+
+**v6 pre-registration (written before any v6 score was looked at):** v6 = equal-weight mean in log-odds of the v1
+runs each question already has; no new forecasts. No weights and no extremizing now. Weights or extremizing may be
+added later only if fitted on earlier clean clusters and judged on held-out clean clusters. Prediction: about 35%
+chance v6 reaches the checkpoint ahead of v1; a small effect (+1 to +4 points) if real.
+
+**Primary metric:** paired relative log score of the challenger vs v1 on the same clean question
+(100 * ln of the challenger's probability on the outcome over v1's), averaged within each event cluster. Direction:
+higher is better. Method: bootstrap over clusters (5,000 resamples). Secondary: Brier score, per-cluster results.
+
+**Stopping rule:**
+1. Checkpoint, not promotion: at 30 clean clusters (from batch 2 on, Haiku only), report effect size, 90% interval,
+   P(better), cluster count and per-cluster results for each challenger.
+2. A challenger that is ahead at the checkpoint with P(better) >= 0.975 (0.95 split over 2 challengers) goes to a
+   confirmation stage: the next 20 fresh clean clusters, untouched until then. It must stay ahead there with
+   P(better) >= 0.90.
+3. Only after confirmation does it go to the owner as a yes/no with its numbers and estimated per-question
+   OpenRouter cost. A challenger that misses the checkpoint by 60 clean clusters is dropped and logged.
+
+**Question eligibility (fixed before any further forecasting):** practice batches leave out questions whose title
+names an election, race, vote, poll or nominee; a central bank, interest rate or bps move; or a major sports
+championship or awards show. News routinely quotes betting odds or market-implied probabilities on these.
+Implemented in `fbot/cli.py` (`eligible`); `batch --all-topics` overrides it and is not used for practice. Questions
+are never chosen by how forecasts performed.
+
+**Exposure log:** each reported exposure is saved with URL, snippet and time in data/exposures.csv. Clean audit:
+at each weekly batch, 3 questions marked clean are re-searched by hand for quoted odds. If any shows odds the
+forecasters could easily have seen, it is reclassified as exposed and the audit is logged here.
+
+**Model comparability:** from batch 2, v1 and every challenger run on Haiku with the same cutoff, search budget
+(5 per question) and scoring. Batch 20261026-221344 stays a separate descriptive pilot and is never pooled.
 
 ## Changes from Quinn's review (T102, 2026-10-27), fixed before any challenger result exists
 - Questions where any forecaster saw a market price are excluded from every keep/drop decision, acceptance
@@ -80,3 +121,4 @@ v1 runs go in packets/<batch>/runs/, each challenger in packets/<batch>/runs/<va
 | 2026-10-26 | owner decision: lean mode (1 batch a week, v2 and v3 only, Haiku forecasters, at most 5 searches per question); v4 and v5 shelved | - | - | recorded |
 | 2026-10-27 | Quinn T102 changes applied: clean-only judging, event clusters (36 questions, 10 clusters), cluster bootstrap, P>=0.975 with 30 clusters, batch 20261026-221344 kept as pilot | 0 clean | - | rules fixed before results |
 | 2026-10-28 | daily check: weekday, no batch (lean mode); 34 practice questions open | 0 clean | - | champion stays |
+| 2026-10-28 | owner yes: v6 aggregation replaces v3 as challenger; v3 exploratory (v3c, no runs); eligibility, exposure log, checkpoint plus holdout confirmation pre-registered; record double-count guard and NaN-free report | 0 clean | - | recorded before any v6 score |

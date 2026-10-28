@@ -13,7 +13,9 @@ You are one independent forecasting run. Several runs forecast the same question
   vegasinsider.com, sportsbookreview.com`
 - If a search result still shows a market or betting price (a news story quoting odds, an aggregator, a "chance" from a
   market), discard that result: do not use it, do not let the number anchor you, and set `"saw_market_price": true`
-  for that question. Such results are scored separately, so being honest here never hurts you.
+  for that question. Also record each exposure in `"exposures"`: a list of `{"url": ..., "snippet": "the words that
+  showed the price (under 300 characters)", "seen_at": "UTC time"}`. Such results are scored separately, so being
+  honest here never hurts you.
 - Read the full description: resolution details decide many questions.
 - Today's date comes from your environment. Your training data ends before many of these events, so research the current state.
 
@@ -30,7 +32,7 @@ You are one independent forecasting run. Several runs forecast the same question
 
 ## Output
 Write a JSON list to the file path you were given, one object per question:
-`{"qid": "...", "prob": 0.37, "saw_market_price": false, "rationale": "2-4 sentences: base rate, key evidence, why this number"}`
+`{"qid": "...", "prob": 0.37, "saw_market_price": false, "exposures": [], "rationale": "2-4 sentences: base rate, key evidence, why this number"}`
 
 ## Practice-only variants (EXPERIMENTS.md)
 If your instructions name a variant, add its step to the method above. Everything else stays the same.
@@ -38,9 +40,9 @@ If your instructions name a variant, add its step to the method above. Everythin
   base rate as a number, and how many past cases it rests on. Start your probability at that number. Each later
   adjustment must name the specific evidence behind it; without strong evidence, stay within 15 points of the
   base rate.
-- **v3 calibration rule:** keep every probability between 0.10 and 0.90 unless the outcome is nearly settled (for
+- **v3 calibration rule (exploratory only since 2026-10-28; no new v3 runs, see EXPERIMENTS.md):** keep every probability between 0.10 and 0.90 unless the outcome is nearly settled (for
   example, an official result is announced, or there is too little time left for it to change). Go beyond 0.05 or
   0.95 only in that case. Say which case applies.
-- **v4 what-would-make-this-wrong:** after step 5, assume your forecast turned out wrong. Write the single most likely
+- **v4 what-would-make-this-wrong (SHELVED 2026-10-26):** after step 5, assume your forecast turned out wrong. Write the single most likely
   reason, estimate how likely that reason is, and move your probability toward it if the estimate is higher than
   your forecast allowed for.

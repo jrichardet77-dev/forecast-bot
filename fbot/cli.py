@@ -61,6 +61,8 @@ def cmd_batch(args):
             except (KeyError, AttributeError, ValueError):
                 return None
         pool = [q for q in pool if days_left(q) is not None and 1 <= days_left(q) <= max_days]
+    if "--all-topics" not in args:
+        pool = [q for q in pool if eligible(q)]
     done = {f["qid"] for f in ledger.read("final")}
     rng = random.Random(seed)
     rng.shuffle(pool)
@@ -107,10 +109,39 @@ def note_exposed(batch, qids):
     p.write_text(json.dumps(data, indent=1) + "\n")
 
 
+def note_exposures(rows):
+    """Append each reported market-price exposure (snippet, URL, time) to data/exposures.csv."""
+    if not rows:
+        return
+    import csv
+    p = ledger.DATA / "exposures.csv"
+    fields = ["batch", "variant", "qid", "runner", "url", "snippet", "seen_at"]
+    new = not p.exists()
+    with p.open("a", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        if new:
+            w.writeheader()
+        w.writerows(rows)
+
+
+# Question eligibility (EXPERIMENTS.md, fixed 2026-10-28 before any further forecasting): topics where news stories
+# routinely quote betting odds or market-implied probabilities are left out of practice batches.
+INELIGIBLE = re.compile(r"\b(senate|governor|house|election|elected|midterm|primary|nominee|president(ial)?|"
+                        r"prime minister|parliament|ballot|vote|polls?|fed|ecb|central bank|interest rate|bps|"
+                        r"rate (cut|hike|increase|decrease)|super bowl|world series|nba|nfl|mlb|nhl|premier league|"
+                        r"champions league|oscars?|grammys?)\b", re.I)
+
+
+def eligible(q):
+    return not INELIGIBLE.search(q.get("title", ""))
+
+
 def cmd_record(args):
     batch, variant, also = args[0], _arg(args, "--variant", "v1"), _arg(args, "--with")
+    if any(f["batch"] == batch and f.get("variant", "v1") == variant for f in ledger.read("final")):
+        raise SystemExit(f"batch {batch} variant {variant} is already recorded; refusing to count it twice")
     meta = {q["qid"]: q for q in json.loads((BATCHES / f"{batch}.json").read_text())}
-    runs, leaked = {}, set()
+    runs, leaked, exposures = {}, set(), []
     for f in run_files(batch, variant, also):
         for r in json.loads(f.read_text()):
             p = float(r["prob"])
@@ -119,7 +150,12 @@ def cmd_record(args):
                                                       else f.stem, p))
                 if r.get("saw_market_price"):
                     leaked.add(r["qid"])
+                    for e in r.get("exposures") or [{}]:
+                        exposures.append({"batch": batch, "variant": variant, "qid": r["qid"], "runner": f.stem,
+                                          "url": e.get("url", ""), "snippet": (e.get("snippet") or "")[:300],
+                                          "seen_at": e.get("seen_at", "")})
     note_exposed(batch, leaked)
+    note_exposures(exposures)
     made = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
     ledger.append("runs", [{"batch": batch, "made_at": made, "qid": q, "runner": who, "variant": variant, "prob": p}
                            for q, rs in runs.items() for who, p in rs])

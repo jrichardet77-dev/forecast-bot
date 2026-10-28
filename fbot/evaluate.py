@@ -24,6 +24,9 @@ MIN_N, MIN_P = 30, 0.90
 # pilot batches; promotion needs 30 clusters and P(better) >= 0.975 (0.95 split across the two live challengers).
 MIN_CLUSTERS, MIN_P_CHALLENGER = 30, 0.975
 PILOT_BATCHES = {"20261026-221344"}  # mixed models (v1 runs not on Haiku); kept as a descriptive pilot only
+# Owner decision 2026-10-28 (T102/T103): challengers are v2 and v6; v3 is exploratory only. Meeting the
+# 30-cluster rule is a checkpoint; a live change also needs the same result on a fresh holdout of clean clusters.
+CHALLENGERS, EXPLORATORY = ("v2", "v6"), ("v3", "v3c", "v4", "v5")
 
 
 def resolved_outcomes():
@@ -98,6 +101,28 @@ def clusters():
     return json.loads(p.read_text()).get("clusters", {}) if p.exists() else {}
 
 
+def with_v6(rows):
+    """Add v6: equal-weight log-odds mean of the v1 runs each question already has (no new forecasts)."""
+    runs = defaultdict(list)
+    for r in ledger.read("runs"):
+        if r.get("variant", "v1") == "v1":
+            runs[(r["batch"], r["qid"])].append(float(r["prob"]))
+    extra = []
+    for r in rows:
+        if r["variant"] == "v1" and runs.get((r["batch"], r["qid"])):
+            p = aggregate.combine(runs[(r["batch"], r["qid"])], "mean_logodds", 1.0)
+            o = r["outcome"]
+            extra.append({**r, "variant": "v6", "prob": p, "brier": scoring.brier(p, o),
+                          "baseline": scoring.baseline_score(p, o),
+                          "vs_market": scoring.relative_score(p, float(r["market_prob"]), o)})
+        if r["variant"] == "v1":  # v3c: v1's own forecast capped to 0.10-0.90 (exploratory sensitivity check)
+            p, o = min(0.9, max(0.1, float(r["prob"]))), r["outcome"]
+            extra.append({**r, "variant": "v3c", "prob": p, "brier": scoring.brier(p, o),
+                          "baseline": scoring.baseline_score(p, o),
+                          "vs_market": scoring.relative_score(p, float(r["market_prob"]), o)})
+    return rows + extra
+
+
 def variant_table(rows):
     """Each challenger against the champion (v1) on the same clean resolved questions, outside pilot batches.
     Paired differences are averaged within each event cluster; the bootstrap resamples clusters."""
@@ -113,19 +138,24 @@ def variant_table(rows):
                 by_cluster[cl.get(r["qid"], r["qid"])].append(
                     scoring.relative_score(float(r["prob"]), float(c["prob"]), r["outcome"]))
         boot = scoring.paired_bootstrap([scoring.mean(d) for d in by_cluster.values()])
-        out.append({"variant": v, "n": sum(len(d) for d in by_cluster.values()), "clusters": boot["n"],
-                    "vs_champion": boot["mean"], "p_better": boot["p_better"],
-                    "accept": boot["n"] >= MIN_CLUSTERS and boot["mean"] > 0 and boot["p_better"] >= MIN_P_CHALLENGER})
+        role = "challenger" if v in CHALLENGERS else "exploratory"
+        met = role == "challenger" and boot["n"] >= MIN_CLUSTERS and boot["mean"] > 0 and boot["p_better"] >= MIN_P_CHALLENGER
+        out.append({"variant": v, "role": role, "n": sum(len(d) for d in by_cluster.values()), "clusters": boot["n"],
+                    "vs_champion": boot["mean"], "vs_champion_lo": boot["lo"], "vs_champion_hi": boot["hi"],
+                    "p_better": boot["p_better"], "accept": met,
+                    "per_cluster": {k: round(scoring.mean(d), 2) for k, d in sorted(by_cluster.items())}})
     return out
 
 
 def summary():
-    rows = scored_finals()
+    rows = with_v6(scored_finals())
     by_variant = defaultdict(list)
     for r in rows:
         by_variant[r["variant"]].append(r)
     out = {}
     for v, rs in by_variant.items():
+        if v in ("v6", "v3c"):
+            continue  # derived variants are judged only against v1 on clean questions (challengers)
         boot = scoring.paired_bootstrap([r["vs_market"] for r in rs])
         out[v] = {"n": len(rs), "brier": scoring.mean(r["brier"] for r in rs),
                   "market_brier": scoring.mean(r["market_brier"] for r in rs),
@@ -133,5 +163,5 @@ def summary():
                   "market_baseline": scoring.mean(r["market_baseline"] for r in rs),
                   "vs_market": boot["mean"], "vs_market_lo": boot["lo"], "vs_market_hi": boot["hi"],
                   "p_beats_market": boot["p_better"]}
-    return {"variants": out, "leak_split": leak_split(rows), "challengers": variant_table(rows), "scored": rows,
+    return {"variants": out, "leak_split": leak_split([r for r in rows if r["variant"] not in ("v6", "v3c")]), "challengers": variant_table(rows), "scored": rows,
             "postprocess": postprocess_table()}
