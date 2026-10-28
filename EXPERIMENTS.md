@@ -79,3 +79,4 @@ v1 runs go in packets/<batch>/runs/, each challenger in packets/<batch>/runs/<va
 | 2026-10-26 | batch 20261026-221344 (12 questions closing by Nov 16): v1 x3, v2/v3/v4 x3 each, v5 = v1 + 2 more runs; market sites blocked in every search, yet 8 of 12 questions still had a price reach some forecaster (news quoting odds), so only 4 are clean | 2 (earlier batches) | pending | champion stays |
 | 2026-10-26 | owner decision: lean mode (1 batch a week, v2 and v3 only, Haiku forecasters, at most 5 searches per question); v4 and v5 shelved | - | - | recorded |
 | 2026-10-27 | Quinn T102 changes applied: clean-only judging, event clusters (36 questions, 10 clusters), cluster bootstrap, P>=0.975 with 30 clusters, batch 20261026-221344 kept as pilot | 0 clean | - | rules fixed before results |
+| 2026-10-28 | daily check: weekday, no batch (lean mode); 34 practice questions open | 0 clean | - | champion stays |

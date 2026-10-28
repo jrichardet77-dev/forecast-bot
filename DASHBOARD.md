@@ -1,6 +1,6 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 1 of 95 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
+Official tournament forecasts: 1 of 98 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
 
 Practice forecasts: 36; resolved: 2
 
