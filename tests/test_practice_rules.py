@@ -15,9 +15,9 @@ class PracticeRules(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         root = Path(self.tmp.name)
-        self.saved = (ledger.DATA, ledger.ROOT, cli.PACKETS, cli.BATCHES, set(evaluate.PILOT_BATCHES))
+        self.saved = (ledger.DATA, ledger.ROOT, cli.PACKETS, cli.BATCHES, dashboard.OUT, set(evaluate.PILOT_BATCHES))
         ledger.DATA, cli.PACKETS, cli.BATCHES = root / "data", root / "packets", root / "data" / "batches"
-        ledger.ROOT = root
+        ledger.ROOT, dashboard.OUT = root, root / "data" / "dashboard"  # never overwrite the real dashboard files
         evaluate.PILOT_BATCHES.clear()
         ledger.DATA.mkdir()
         pool = [{"qid": f"pm:{i}", "source": "polymarket", "title": f"Will rocket number {i} launch on time?",
@@ -32,7 +32,7 @@ class PracticeRules(unittest.TestCase):
         (ledger.DATA / "pool.json").write_text(json.dumps(pool))
 
     def tearDown(self):
-        ledger.DATA, ledger.ROOT, cli.PACKETS, cli.BATCHES, pilots = self.saved
+        ledger.DATA, ledger.ROOT, cli.PACKETS, cli.BATCHES, dashboard.OUT, pilots = self.saved
         evaluate.PILOT_BATCHES.clear()
         evaluate.PILOT_BATCHES.update(pilots)
         self.tmp.cleanup()
