@@ -123,3 +123,4 @@ v1 runs go in packets/<batch>/runs/, each challenger in packets/<batch>/runs/<va
 | 2026-10-28 | daily check: weekday, no batch (lean mode); 34 practice questions open | 0 clean | - | champion stays |
 | 2026-10-28 | owner yes: v6 aggregation replaces v3 as challenger; v3 exploratory (v3c, no runs); eligibility, exposure log, checkpoint plus holdout confirmation pre-registered; record double-count guard and NaN-free report | 0 clean | - | recorded before any v6 score |
 | 2026-10-29 | daily check: weekday, no batch (lean mode); 34 practice questions open, 0 newly resolved | 0 clean | - | champion stays |
+| 2026-10-30 | daily check: 2 practice questions resolved (ECB October decision, both from the first batch and both exposed); v1 now 4 resolved, all exposed, +1.3 vs market; weekday, no batch (lean mode); 32 open | 0 clean | - | champion stays |

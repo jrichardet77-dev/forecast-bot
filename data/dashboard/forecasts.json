@@ -7,8 +7,8 @@
   "bot": 0.88,
   "market": 0.966,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": -9.3,
   "exposed": true,
   "url": "https://polymarket.com/market/will-the-ecb-announce-no-change-at-the-october-2026-meeting-20260723225848781",
   "made": "2026-10-17"
@@ -371,8 +371,8 @@
   "bot": 0.04,
   "market": 0.0165,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -2.4,
   "exposed": true,
   "url": "https://polymarket.com/market/will-the-ecb-announce-a-25-bps-increase-at-the-october-2026-meeting-20260723225848782",
   "made": "2026-10-26"

@@ -1,12 +1,12 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 1 of 102 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
+Official tournament forecasts: 1 of 106 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
 
-Practice forecasts: 36; resolved: 2
+Practice forecasts: 36; resolved: 4
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
-| Will the ECB announce no change at the October 2026 meeting? | 88% | 97% | open |  |
+| Will the ECB announce no change at the October 2026 meeting? | 88% | 97% | YES | -9.3 |
 | Will the Dome of the Rock in Jerusalem be destroyed by the end of Neta | 1% | 4% | open |  |
 | US announces end of Iranian blockade by November 30, 2026? | 12% | 19% | open |  |
 | Will there be a Hormuz agreement and the Democrats win the Senate? | 4% | 5% | open |  |
@@ -32,7 +32,7 @@ Practice forecasts: 36; resolved: 2
 | Will the Democrats win the Arizona governor race in 2026? | 82% | 92% | open |  |
 | Democrats win Texas and Michigan Senate election? | 38% | 57% | open |  |
 | Will the Democrats win the Minnesota Senate race in 2026? | 85% | 86% | open |  |
-| Will the ECB announce a 25 bps increase at the October 2026 meeting? | 4% | 2% | open |  |
+| Will the ECB announce a 25 bps increase at the October 2026 meeting? | 4% | 2% | NO | -2.4 |
 | Israel x Iran ceasefire continues through November 15? | 45% | 66% | open |  |
 | Will the Republicans win the South Carolina Senate race in 2026? | 80% | 78% | open |  |
 | Will the Democrats win the Ohio governor race in 2026? | 60% | 82% | open |  |
