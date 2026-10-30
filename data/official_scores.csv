@@ -1,20 +1,20 @@
 post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baseline_score,score_source,checked_at
-46044,"How many cultural sites in Ukraine will be damaged as of December 31, 2026, according to UNESCO?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:14:58+00:00
-46045,Which government will form after the 2026 New Zealand general election?,MultipleChoiceQuestion,closed,,,Labour-led 47%; National-led 46%; None before January 3%; Other 4%,,,,2026-10-29T12:15:00+00:00
-46060,What will be the Port of Los Angeles's total container volume during October 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:01+00:00
-46061,How many county magistrates and city mayors will the KMT win in the 2026 Taiwan local elections?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:03+00:00
-46062,What will be the largest number of Chinese aircraft violating Taiwan's air defense identification zone (ADIZ) in a single day during November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:05+00:00
-46063,"What will be the total number of people killed in US strikes on alleged drug boats as of December 1, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:06+00:00
-46064,"Will Rodrigo Duterte’s trial at the ICC open before December 1, 2026?",BinaryQuestion,closed,,,85%,,,,2026-10-29T12:15:07+00:00
-46065,"Will the U.S. Supreme Court grant certiorari in Nathan v. Alamo Heights Independent School District before January 1, 2027?",BinaryQuestion,closed,,,12%,,,,2026-10-29T12:15:09+00:00
-46066,"Will any of the Magnificent 7 make an acquisition valued at $10B or more before January 1, 2027?",BinaryQuestion,closed,,,6%,,,,2026-10-29T12:15:10+00:00
-46067,"Will the Panama Canal Authority reduce daily transit limits before January 1, 2027?",BinaryQuestion,closed,,,54%,,,,2026-10-29T12:15:11+00:00
-46068,What will the total domestic (US/Canada) box office gross be for Q4 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:12+00:00
+46044,"How many cultural sites in Ukraine will be damaged as of December 31, 2026, according to UNESCO?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:12:51+00:00
+46045,Which government will form after the 2026 New Zealand general election?,MultipleChoiceQuestion,closed,,,Labour-led 47%; National-led 46%; None before January 3%; Other 4%,,,,2026-10-30T12:12:52+00:00
+46060,What will be the Port of Los Angeles's total container volume during October 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:12:53+00:00
+46061,How many county magistrates and city mayors will the KMT win in the 2026 Taiwan local elections?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:12:55+00:00
+46062,What will be the largest number of Chinese aircraft violating Taiwan's air defense identification zone (ADIZ) in a single day during November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:12:56+00:00
+46063,"What will be the total number of people killed in US strikes on alleged drug boats as of December 1, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:12:57+00:00
+46064,"Will Rodrigo Duterte’s trial at the ICC open before December 1, 2026?",BinaryQuestion,closed,,,85%,,,,2026-10-30T12:12:59+00:00
+46065,"Will the U.S. Supreme Court grant certiorari in Nathan v. Alamo Heights Independent School District before January 1, 2027?",BinaryQuestion,closed,,,12%,,,,2026-10-30T12:13:00+00:00
+46066,"Will any of the Magnificent 7 make an acquisition valued at $10B or more before January 1, 2027?",BinaryQuestion,closed,,,6%,,,,2026-10-30T12:13:01+00:00
+46067,"Will the Panama Canal Authority reduce daily transit limits before January 1, 2027?",BinaryQuestion,closed,,,54%,,,,2026-10-30T12:13:03+00:00
+46068,What will the total domestic (US/Canada) box office gross be for Q4 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:04+00:00
 46069,Will the FAA type-certify the Boeing 737 MAX 10 before 2027?,BinaryQuestion,resolved,2026-10-20,yes,93%,8.6,71.2,metaculus,2026-10-25T15:23:25+00:00
-46070,How many vehicles will Tesla deliver in Q4 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:15+00:00
-46123,Will the 2026 World Series require a Game 6?,BinaryQuestion,closed,,,56%,,,,2026-10-29T12:15:16+00:00
-46124,"What annualized real GDP growth will the BEA report in its advance estimate for Q3 2026, released October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:17+00:00
-46125,"At its October 30, 2026 meeting, will the FDA Dermatologic and Ophthalmic Drugs Advisory Committee vote in favor of SYD-101 (atropine 0.01%) for pediatric progressive myopia?",BinaryQuestion,closed,,,40%,,,,2026-10-29T12:15:18+00:00
+46070,How many vehicles will Tesla deliver in Q4 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:05+00:00
+46123,Will the 2026 World Series require a Game 6?,BinaryQuestion,closed,,,56%,,,,2026-10-30T12:13:07+00:00
+46124,"What annualized real GDP growth will the BEA report in its advance estimate for Q3 2026, released October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:08+00:00
+46125,"At its October 30, 2026 meeting, will the FDA Dermatologic and Ophthalmic Drugs Advisory Committee vote in favor of SYD-101 (atropine 0.01%) for pediatric progressive myopia?",BinaryQuestion,closed,,,40%,,,,2026-10-30T12:13:09+00:00
 46126,"What will be the closing level of South Korea's KOSPI index on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:20+00:00
 46127,"What will CoreWeave (CRWV) stock close at on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:21+00:00
 46128,"Will the 2026 Eastern Pacific hurricane season's accumulated cyclone energy exceed 350 units as of October 29, 2026?",BinaryQuestion,closed,,,68%,,,,2026-10-29T12:15:22+00:00
@@ -24,36 +24,36 @@ post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baselin
 46132,"What will the US core PCE year-over-year inflation rate for September 2026 be, released October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:21+00:00
 46133,What cumulative total of locally acquired dengue cases in Florida in 2026 will the FDOH Week 42 Arbovirus Surveillance Report show?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:22+00:00
 46134,How many dengue cases will Singapore's NEA report for the epidemiological week ending Saturday 24 October 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:23+00:00
-46135,"Will Trump and Zelensky speak directly — by phone or in person — on October 29 or 30, 2026?",BinaryQuestion,closed,,,13%,,,,2026-10-28T12:15:25+00:00
-46136,How many 'red alert' dengue clusters (10+ cases) will Singapore's NEA list as active on 29 October 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:26+00:00
-46137,"Will the White House have a named permanent press secretary succeeding Katie Zacharia as of October 30, 2026?",BinaryQuestion,closed,,,38%,,,,2026-10-28T12:15:28+00:00
-46138,What year-over-year revenue growth rate will Amazon report for its AWS segment in Q3 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:29+00:00
-46139,"What will Argentina's country risk (riesgo país, JP Morgan EMBI+) be at the close on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:31+00:00
-46140,"How many new locally acquired dengue cases will the Week 42 FDOH arbovirus report (October 18–24, 2026) show for Florida?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:32+00:00
-46141,"What will U.S. wheat net export sales be in the USDA Weekly Export Sales report released October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:37+00:00
-46142,"How many advance votes will the NZ Electoral Commission report for Thursday 29 October 2026 (daily count, day 4 of advance voting)?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:38+00:00
-46143,"How will Amazon's stock close on October 30, 2026, the first full trading day after its Q3 report?",MultipleChoiceQuestion,closed,,,Less than $235.00 12%; $235.00 to less than $250.00 21%; $250.00 to less than $265.00 34%,,,,2026-10-29T12:15:39+00:00
-46144,What will Amazon report as its Q3 2026 net sales?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:41+00:00
-46145,"What will the Brent crude oil front-month futures settlement price be on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:42+00:00
-46146,"How many of the 18 crew still missing from the HS Dignity and Wine Trader Black Sea attacks will have their bodies recovered by October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:43+00:00
-46147,"Will the Supreme Court of India order a halt to the Special Intensive Revision of electoral rolls before October 30, 2026?",BinaryQuestion,closed,,,10%,,,,2026-10-29T12:15:45+00:00
-46148,"How many attack drones will Russia launch at Ukraine on the night of October 29–30, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:46+00:00
-46149,"Will the openai/math repository report more than 300 top-line results formalized in Lean as of October 29, 2026?",BinaryQuestion,closed,,,19%,,,,2026-10-29T12:15:47+00:00
-46150,"Will Russia and Ukraine have a Black Sea maritime ceasefire or safe-passage agreement in effect as of October 30, 2026?",BinaryQuestion,closed,,,2%,,,,2026-10-29T12:15:49+00:00
-46151,"How many named storms will the 2026 Pacific hurricane season have recorded as of October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:50+00:00
-46152,"How many Japanese educational facilities will the MHLW report as fully or partially closed due to influenza-like illness this season, cumulative through the week ending October 25, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:51+00:00
-46153,"How many of Japan's 47 prefectures will be at the influenza warning level (≥30 cases per sentinel institution) in the MHLW weekly report for the week ending October 25, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:52+00:00
-46154,"What will the official BCRA wholesale USD/ARS reference exchange rate (dólar mayorista, Comunicación A 3500) be on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:15:54+00:00
-46155,"Will Israel or the United States conduct a military strike on Iranian territory between October 29 and October 30, 2026?",BinaryQuestion,closed,,,7%,,,,2026-10-29T12:15:55+00:00
-46156,"Will the South Korean won close weaker than 1,340 per US dollar on October 29, 2026?",BinaryQuestion,closed,,,40%,,,,2026-10-29T12:15:56+00:00
-46157,"Will the United States authorize the transfer of Tomahawk cruise missiles to Ukraine by October 30, 2026?",BinaryQuestion,closed,,,2%,,,,2026-10-28T12:15:57+00:00
-46158,How many countries will ECDC's West Nile virus weekly report published around 30 October 2026 list as affected during the 2026 season?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:15:59+00:00
-46159,"Will a US halt of Ukraine arms deliveries under NATO's PURL mechanism be confirmed before November 1, 2026?",BinaryQuestion,closed,,,20%,,,,2026-10-28T12:16:00+00:00
-46160,"Will another merchant vessel be attacked in the Black Sea off Bulgaria or Romania on October 29, 2026?",BinaryQuestion,closed,,,30%,,,,2026-10-28T12:16:02+00:00
-46161,"How many AIS-visible commercial ships will the hormuz.now tracker count crossing the Strait of Hormuz on October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:16:04+00:00
-46162,"Will Kaiser Permanente and the California Nurses Association reach a tentative agreement on a new Northern California contract before October 30, 2026?",BinaryQuestion,closed,,,8%,,,,2026-10-28T12:16:05+00:00
-46163,"Will CBD COP17 in Yerevan be suspended without completing its agenda, as happened at COP16 in Cali?",BinaryQuestion,closed,,,17%,,,,2026-10-28T12:16:07+00:00
-46164,How many advance votes will have been cast in New Zealand's 2026 general election through 29 October 2026 (the fourth day of advance voting)?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:16:08+00:00
+46135,"Will Trump and Zelensky speak directly — by phone or in person — on October 29 or 30, 2026?",BinaryQuestion,closed,,,13%,,,,2026-10-30T12:13:20+00:00
+46136,How many 'red alert' dengue clusters (10+ cases) will Singapore's NEA list as active on 29 October 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:21+00:00
+46137,"Will the White House have a named permanent press secretary succeeding Katie Zacharia as of October 30, 2026?",BinaryQuestion,closed,,,38%,,,,2026-10-30T12:13:23+00:00
+46138,What year-over-year revenue growth rate will Amazon report for its AWS segment in Q3 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:24+00:00
+46139,"What will Argentina's country risk (riesgo país, JP Morgan EMBI+) be at the close on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:25+00:00
+46140,"How many new locally acquired dengue cases will the Week 42 FDOH arbovirus report (October 18–24, 2026) show for Florida?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:27+00:00
+46141,"What will U.S. wheat net export sales be in the USDA Weekly Export Sales report released October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:28+00:00
+46142,"How many advance votes will the NZ Electoral Commission report for Thursday 29 October 2026 (daily count, day 4 of advance voting)?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:30+00:00
+46143,"How will Amazon's stock close on October 30, 2026, the first full trading day after its Q3 report?",MultipleChoiceQuestion,closed,,,Less than $235.00 12%; $235.00 to less than $250.00 21%; $250.00 to less than $265.00 34%,,,,2026-10-30T12:13:31+00:00
+46144,What will Amazon report as its Q3 2026 net sales?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:32+00:00
+46145,"What will the Brent crude oil front-month futures settlement price be on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:34+00:00
+46146,"How many of the 18 crew still missing from the HS Dignity and Wine Trader Black Sea attacks will have their bodies recovered by October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:35+00:00
+46147,"Will the Supreme Court of India order a halt to the Special Intensive Revision of electoral rolls before October 30, 2026?",BinaryQuestion,closed,,,10%,,,,2026-10-30T12:13:36+00:00
+46148,"How many attack drones will Russia launch at Ukraine on the night of October 29–30, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:38+00:00
+46149,"Will the openai/math repository report more than 300 top-line results formalized in Lean as of October 29, 2026?",BinaryQuestion,closed,,,19%,,,,2026-10-30T12:13:39+00:00
+46150,"Will Russia and Ukraine have a Black Sea maritime ceasefire or safe-passage agreement in effect as of October 30, 2026?",BinaryQuestion,closed,,,2%,,,,2026-10-30T12:13:40+00:00
+46151,"How many named storms will the 2026 Pacific hurricane season have recorded as of October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:42+00:00
+46152,"How many Japanese educational facilities will the MHLW report as fully or partially closed due to influenza-like illness this season, cumulative through the week ending October 25, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:43+00:00
+46153,"How many of Japan's 47 prefectures will be at the influenza warning level (≥30 cases per sentinel institution) in the MHLW weekly report for the week ending October 25, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:44+00:00
+46154,"What will the official BCRA wholesale USD/ARS reference exchange rate (dólar mayorista, Comunicación A 3500) be on October 29, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:46+00:00
+46155,"Will Israel or the United States conduct a military strike on Iranian territory between October 29 and October 30, 2026?",BinaryQuestion,closed,,,7%,,,,2026-10-30T12:13:47+00:00
+46156,"Will the South Korean won close weaker than 1,340 per US dollar on October 29, 2026?",BinaryQuestion,closed,,,40%,,,,2026-10-30T12:13:49+00:00
+46157,"Will the United States authorize the transfer of Tomahawk cruise missiles to Ukraine by October 30, 2026?",BinaryQuestion,closed,,,2%,,,,2026-10-30T12:13:50+00:00
+46158,How many countries will ECDC's West Nile virus weekly report published around 30 October 2026 list as affected during the 2026 season?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:51+00:00
+46159,"Will a US halt of Ukraine arms deliveries under NATO's PURL mechanism be confirmed before November 1, 2026?",BinaryQuestion,closed,,,20%,,,,2026-10-30T12:13:53+00:00
+46160,"Will another merchant vessel be attacked in the Black Sea off Bulgaria or Romania on October 29, 2026?",BinaryQuestion,closed,,,30%,,,,2026-10-30T12:13:54+00:00
+46161,"How many AIS-visible commercial ships will the hormuz.now tracker count crossing the Strait of Hormuz on October 29, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:55+00:00
+46162,"Will Kaiser Permanente and the California Nurses Association reach a tentative agreement on a new Northern California contract before October 30, 2026?",BinaryQuestion,closed,,,8%,,,,2026-10-30T12:13:57+00:00
+46163,"Will CBD COP17 in Yerevan be suspended without completing its agenda, as happened at COP16 in Cali?",BinaryQuestion,closed,,,17%,,,,2026-10-30T12:13:58+00:00
+46164,How many advance votes will have been cast in New Zealand's 2026 general election through 29 October 2026 (the fourth day of advance voting)?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:13:59+00:00
 46165,"Will the Ohio Supreme Court dispose of the appeal in Borovicanin v. NCAA (No. 2026-1353) on the merits by October 30, 2026?",BinaryQuestion,closed,,,36%,,,,2026-10-28T12:16:10+00:00
 46166,"What will be the Cali Fund's total deposits received, in US dollars, as shown on the UNDP MPTF portal on October 31, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:07+00:00
 46167,"Will CNA-represented Kaiser Permanente nurses in California be on strike on October 29 or 30, 2026?",BinaryQuestion,closed,,,3%,,,,2026-10-29T12:16:08+00:00
@@ -63,14 +63,14 @@ post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baselin
 46171,"Will Lee Hwa-young's legal team have filed a retrial petition in the Ssangbangwool North Korea remittance case with the Suwon High Court as of October 31, 2026?",BinaryQuestion,closed,,,78%,,,,2026-10-29T12:16:13+00:00
 46172,Will New Zealand beat Fiji by more than 12 points in their 2026 Rugby League World Cup pool match?,BinaryQuestion,closed,,,47%,,,,2026-10-29T12:16:15+00:00
 46173,Will the Milwaukee Brewers win the 2026 World Series?,BinaryQuestion,closed,,,62%,,,,2026-10-29T12:16:16+00:00
-46174,"What will Japan's national average of influenza cases per sentinel medical institution be for the week ending October 25, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:17+00:00
-46175,"Will the USDA reopen the Columbus, New Mexico port of entry to Mexican cattle imports before October 31, 2026?",BinaryQuestion,closed,,,84%,,,,2026-10-29T12:16:18+00:00
-46176,"What will be the closing price of Bitcoin (BTC) on October 30, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:20+00:00
-46177,How many active New World screwworm cases will Mexico's Senasica dashboard report in late October 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:21+00:00
-46178,"What will the front-month Brent crude oil futures settlement price be on October 30, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:22+00:00
-46179,"Will Fernando Cerimedo be released from preventive detention in Bolivia by October 31, 2026?",BinaryQuestion,closed,,,4%,,,,2026-10-29T12:16:24+00:00
-46180,"Will Ukraine strike a Russian oil refinery between October 29 and October 31, 2026?",BinaryQuestion,closed,,,60%,,,,2026-10-29T12:16:25+00:00
-46181,How many UN member states will vote in favour of the annual TPNW resolution at the First Committee's 2026 action phase?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:26+00:00
+46174,"What will Japan's national average of influenza cases per sentinel medical institution be for the week ending October 25, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:10+00:00
+46175,"Will the USDA reopen the Columbus, New Mexico port of entry to Mexican cattle imports before October 31, 2026?",BinaryQuestion,closed,,,84%,,,,2026-10-30T12:14:11+00:00
+46176,"What will be the closing price of Bitcoin (BTC) on October 30, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:13+00:00
+46177,How many active New World screwworm cases will Mexico's Senasica dashboard report in late October 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:14+00:00
+46178,"What will the front-month Brent crude oil futures settlement price be on October 30, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:15+00:00
+46179,"Will Fernando Cerimedo be released from preventive detention in Bolivia by October 31, 2026?",BinaryQuestion,closed,,,4%,,,,2026-10-30T12:14:17+00:00
+46180,"Will Ukraine strike a Russian oil refinery between October 29 and October 31, 2026?",BinaryQuestion,closed,,,60%,,,,2026-10-30T12:14:18+00:00
+46181,How many UN member states will vote in favour of the annual TPNW resolution at the First Committee's 2026 action phase?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:19+00:00
 46182,"How many cumulative confirmed Ebola cases will the DRC's 2026 outbreak have reported as of October 31, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:27+00:00
 46184,"What will be the all-time highest close price of NVDA before January 1, 2027?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:29+00:00
 46185,Who will be the 2026 Time Person of the Year?,MultipleChoiceQuestion,closed,,,Dario Amodei 3%; Artificial Intelligence 9%; Astronaut(s) 6%,,,,2026-10-29T12:16:30+00:00
@@ -80,14 +80,14 @@ post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baselin
 46193,"Will ""None of These Candidates"" receive more votes than the winning margin in the 2026 Nevada gubernatorial election?",BinaryQuestion,closed,,,12%,,,,2026-10-29T12:16:35+00:00
 46194,Will the August-October 2026 El Niño index be 2.10°C or higher?,BinaryQuestion,closed,,,15%,,,,2026-10-29T12:16:36+00:00
 46195,"How many Swiss regions will be classified as ""Extremely Dry"" according to the Swiss drought platform on November 8, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:16:47+00:00
-46196,Will exhausted ballots exceed the winning margin in the 2026 US Senate election in Alaska?,BinaryQuestion,closed,,,58%,,,,2026-10-28T12:16:49+00:00
-46197,"Will California avoid the ""highest vote rule"" with its 2026 billionaire's tax referendum?",BinaryQuestion,closed,,,66%,,,,2026-10-28T12:16:50+00:00
-46198,What percentage of the vote will the Massachusetts initiative to repeal recreational marijuana legalization receive?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:16:51+00:00
-46199,Will the winner of Alaska's 2026 gubernatorial election receive fewer votes in the first round than another candidate?,BinaryQuestion,closed,,,63%,,,,2026-10-28T12:16:53+00:00
-46200,Will Donald Trump attend UFC 334?,BinaryQuestion,closed,,,35%,,,,2026-10-28T12:16:54+00:00
-46201,How many nine-dart finishes will there be in the 2026 Grand Slam of Darts?,MultipleChoiceQuestion,closed,,,0 51%; 1 33%; 2 12%; 3+ 4%,,,,2026-10-28T12:16:56+00:00
-46202,"How many EU member states will the AI Act National Implementation tracker classify as having clear market surveillance and notifying authorities on December 1, 2026?",MultipleChoiceQuestion,closed,,,≤9 55%; 10 or 11 27%; 12 or 13 12%; 14 or 15 5%,,,,2026-10-28T12:16:58+00:00
-46203,How many mass shootings will the U.S. experience in November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-28T12:16:59+00:00
+46196,Will exhausted ballots exceed the winning margin in the 2026 US Senate election in Alaska?,BinaryQuestion,closed,,,58%,,,,2026-10-30T12:14:30+00:00
+46197,"Will California avoid the ""highest vote rule"" with its 2026 billionaire's tax referendum?",BinaryQuestion,closed,,,66%,,,,2026-10-30T12:14:31+00:00
+46198,What percentage of the vote will the Massachusetts initiative to repeal recreational marijuana legalization receive?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:33+00:00
+46199,Will the winner of Alaska's 2026 gubernatorial election receive fewer votes in the first round than another candidate?,BinaryQuestion,closed,,,63%,,,,2026-10-30T12:14:34+00:00
+46200,Will Donald Trump attend UFC 334?,BinaryQuestion,closed,,,35%,,,,2026-10-30T12:14:35+00:00
+46201,How many nine-dart finishes will there be in the 2026 Grand Slam of Darts?,MultipleChoiceQuestion,closed,,,0 51%; 1 33%; 2 12%; 3+ 4%,,,,2026-10-30T12:14:37+00:00
+46202,"How many EU member states will the AI Act National Implementation tracker classify as having clear market surveillance and notifying authorities on December 1, 2026?",MultipleChoiceQuestion,closed,,,≤9 55%; 10 or 11 27%; 12 or 13 12%; 14 or 15 5%,,,,2026-10-30T12:14:38+00:00
+46203,How many mass shootings will the U.S. experience in November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:39+00:00
 46204,"What will be the Powerball Advertised Jackpot on December 31, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:47+00:00
 46205,Will the SPARC tokamak announce it has achieved first plasma before 2027?,BinaryQuestion,closed,,,2%,,,,2026-10-29T12:16:48+00:00
 46206,"Will Argentina's Senate pass the 'Super RIGI' bill before January 1, 2027?",BinaryQuestion,closed,,,60%,,,,2026-10-29T12:16:49+00:00
@@ -97,7 +97,11 @@ post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baselin
 46222,How many seats will PP and Vox collectively receive in the 2026 Spanish general election?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:55+00:00
 46228,What percent of Americans will oppose the Iran War on the eve of Election Day 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:56+00:00
 46229,What will Democrats' lead be in the congressional generic ballot on the eve of Election Day 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-10-29T12:16:57+00:00
-46277,"Will the Global Protest Tracker report any protests in India or Pakistan with 10,000+ participants starting in November or December 2026?",BinaryQuestion,closed,,,43%,,,,2026-10-29T12:16:58+00:00
-46278,Which will occur next with respect to the FDA's review of deramiocel for muscular dystrophy?,MultipleChoiceQuestion,closed,,,"FDA Approval 20%; New complete response letter 64%; Neither occurs before November 23, 2026 16%",,,,2026-10-29T12:17:00+00:00
-46279,"How will the Agit Kabayel vs. Nelson Hysa fight end on November 28, 2026?",MultipleChoiceQuestion,closed,,,Kabayel wins by KO/TKO/stoppage in rounds 1–3 11%; Kabayel wins by KO/TKO/stoppage in rounds 4–6 28%,,,,2026-10-29T12:17:01+00:00
-46280,Will the Official Loch Ness Monster Sightings Register report a sighting for November 2026?,BinaryQuestion,closed,,,17%,,,,2026-10-29T12:17:02+00:00
+46277,"Will the Global Protest Tracker report any protests in India or Pakistan with 10,000+ participants starting in November or December 2026?",BinaryQuestion,closed,,,43%,,,,2026-10-30T12:14:50+00:00
+46278,Which will occur next with respect to the FDA's review of deramiocel for muscular dystrophy?,MultipleChoiceQuestion,closed,,,"FDA Approval 20%; New complete response letter 64%; Neither occurs before November 23, 2026 16%",,,,2026-10-30T12:14:51+00:00
+46279,"How will the Agit Kabayel vs. Nelson Hysa fight end on November 28, 2026?",MultipleChoiceQuestion,closed,,,Kabayel wins by KO/TKO/stoppage in rounds 1–3 11%; Kabayel wins by KO/TKO/stoppage in rounds 4–6 28%,,,,2026-10-30T12:14:53+00:00
+46280,Will the Official Loch Ness Monster Sightings Register report a sighting for November 2026?,BinaryQuestion,closed,,,17%,,,,2026-10-30T12:14:54+00:00
+46281,"What will be the nationwide wastewater detection category of enterovirus D68 on December 1, 2026?",MultipleChoiceQuestion,closed,,,High 44%; Medium 31%; Low 18%; Other 8%,,,,2026-10-30T12:14:55+00:00
+46282,What will be the Caldara–Iacoviello Geopolitical Risk Index for November 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:57+00:00
+46283,What will be the 2-party Gallagher disproportionality index for North Carolina's House races in 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:58+00:00
+46284,What will be the largest difference in margin among swing seats in the 2026 United States Senate election?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-10-30T12:14:59+00:00
