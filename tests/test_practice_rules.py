@@ -47,6 +47,11 @@ class PracticeRules(unittest.TestCase):
         self.assertEqual(len(qids), 36)
         self.assertNotIn("pm:senate", qids)
         self.assertNotIn("pm:ecb", qids)
+        for title in ("Will Republicans win Kansas, and lose Alaska?", "Will Nithya Raman Beat Karen Bass?",
+                      "Will Trump endorse John Cornyn for TX-Sen?", "Will Jakob Glesnes win 2026 MLS Defender of the Year?",
+                      "If Trump wins, will there be an attempt on his life by midterms?"):
+            self.assertFalse(cli.eligible({"title": title}), title)
+        self.assertTrue(cli.eligible({"title": "France declares state of siege by November 15, 2026?"}))
 
     def test_record_refuses_double_count_and_logs_exposures(self):
         batch, packet = self._batch()

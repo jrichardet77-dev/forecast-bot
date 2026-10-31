@@ -126,10 +126,13 @@ def note_exposures(rows):
 
 # Question eligibility (EXPERIMENTS.md, fixed 2026-10-28 before any further forecasting): topics where news stories
 # routinely quote betting odds or market-implied probabilities are left out of practice batches.
-INELIGIBLE = re.compile(r"\b(senate|governor|house|election|elected|midterm|primary|nominee|president(ial)?|"
-                        r"prime minister|parliament|ballot|vote|polls?|fed|ecb|central bank|interest rate|bps|"
+INELIGIBLE = re.compile(r"\b(senate|governor|house|elections?|elected|district|mid ?terms?|primary|nominee|president(ial)?|"
+                        r"prime minister|parliament|ballot|votes?|voters?|polls?|fed|ecb|central bank|interest rates?|bps|"
                         r"rate (cut|hike|increase|decrease)|super bowl|world series|nba|nfl|mlb|nhl|premier league|"
-                        r"champions league|oscars?|grammys?)\b", re.I)
+                        r"champions league|oscars?|grammys?|"
+                        # added 2026-10-31: party/race wording and awards slipped through the first list
+                        r"republicans?|democrats?|gop|mayor(al)?|sen|beat|defeat|mls|mvp|of the year|awards?|"
+                        r"trophy|ballon d'or|margin|kalshi|win [a-z]{2}-?\d+)\b", re.I)
 
 
 def eligible(q):

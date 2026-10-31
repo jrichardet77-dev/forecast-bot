@@ -64,6 +64,11 @@ names an election, race, vote, poll or nominee; a central bank, interest rate or
 championship or awards show. News routinely quotes betting odds or market-implied probabilities on these.
 Implemented in `fbot/cli.py` (`eligible`); `batch --all-topics` overrides it and is not used for practice. Questions
 are never chosen by how forecasts performed.
+Amended 2026-10-31, before any forecast of batch 2 (20261031-125505): the word list missed plurals and party/race
+wording ("Republicans win Kansas", "votes", "interest rates", "margin of victory", "North Carolina's 9th District",
+"mid terms") and awards ("MLS Defender of the Year"). Those words were added and a regression test pins them. Two
+draft batches drawn with the old list were deleted unforecast; only the clean draw was kept (7 eligible questions,
+not 12, because election week fills the short-horizon pool).
 
 **Exposure log:** each reported exposure is saved with URL, snippet and time in data/exposures.csv. Clean audit:
 at each weekly batch, 3 questions marked clean are re-searched by hand for quoted odds. If any shows odds the
