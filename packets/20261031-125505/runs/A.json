@@ -1,0 +1,62 @@
+[
+  {
+    "qid": "pm:6369333",
+    "prob": 0.87,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Resolves Yes unless the US makes a qualifying strike (air or surface-to-surface missile) that directly impacts Iranian land by 11:59 PM Iran time on Nov 2. Base rate for a US strike in any given 3-day window during this conflict is meaningful, but Trump pledged on Oct 8 not to attack Iran before the Nov 3 midterms, and talks in Doha/Islamabad were restarting Oct 31. The main risk is the reported plan for a short strike round as soon as Nov 4, which falls after the window, and any incident that escalates quickly. No ceasefire is in force per trackers, but the question does not depend on that."
+  },
+  {
+    "qid": "pm:4319440",
+    "prob": 0.1,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Anthropic publicly filed its Form S-1 on Oct 26, 2026, and applied to list on Nasdaq as ANT, but the filing has no price range or share count and no listing date. Reports point to a pre-Thanksgiving listing, which is after Nov 15 in most readings. A typical timetable (public filing, roadshow, pricing, first trade) makes trading by Nov 15 unlikely, though not impossible. Base rate for a large IPO trading within about three weeks of a public S-1 with no price range is low."
+  },
+  {
+    "qid": "pm:5880852",
+    "prob": 0.03,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "A state of siege under Article 36 has not been declared in metropolitan France since 1961 (Algeria), and the search found no 2026 decree declaring one. Unrest on Oct 17-18, 2026 led to talk of the state of emergency, which does not count. A new law of Aug 16, 2026 created an etat d'alerte de sécurité nationale, which sources describe as a separate regime, so it should not qualify unless it is reclassified as a state of siege. Low base rate and no sign of a decree."
+  },
+  {
+    "qid": "pm:6044505",
+    "prob": 0.06,
+    "saw_market_price": true,
+    "exposures": [
+      {
+        "url": "http://polymarket.copilot.markets/event/nato-x-russia-military-clash-in-2025/nato-x-russia-military-clash-by-october-31-2026",
+        "snippet": "NATO x Russia military clash by...? Predictions & Odds 2026 (page title; a search result for a market-odds site)",
+        "seen_at": "2026-10-31 (exact UTC time not recorded)"
+      },
+      {
+        "url": "https://polysays.com/event/nato-x-russia-military-clash-in-2025",
+        "snippet": "NATO x Russia military clash by...?: Odds, News &... (page title; odds site). The same result text says $6,727,696 has traded on the market as of September 9, 2026.",
+        "seen_at": "2026-10-31 (exact UTC time not recorded)"
+      }
+    ],
+    "rationale": "Base rate for a direct kinetic NATO-Russia engagement in a two-week window is low: since 2022 there have been many incidents, sabotage and drone incursions, but few direct exchanges of fire. The Oct 2026 reporting shows warnings (NATO's commander on Oct 12), sabotage claims and July-August incidents with no direct engagement. Qualifying shoot-downs of non-munition drones are possible but uncommon. I did not use the market figures; the two odds-site results were discarded and only the general news was used. The search returned those two market-site results despite the blocked_domains list, since the mirror domains were not on it."
+  },
+  {
+    "qid": "pm:668591",
+    "prob": 0.08,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "The Nov 19, 2026 date was reaffirmed by Take-Two in August 2026 and again in later coverage, with marketing expected this summer and the CEO saying there would be no further delay. Yes requires an official delay announcement or no US release by Nov 19. Base rate for a AAA title announcing a delay within a month of a reaffirmed launch date is low, though GTA VI has already slipped twice, and the next Take-Two earnings report in early November could carry news. Some coverage is dated inconsistently, so this is not fully verified."
+  },
+  {
+    "qid": "mf:sf9wxu6w5b",
+    "prob": 0.02,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Resolves Yes only if war is declared between two or more superpowers before the GTA 6 release (currently Nov 19, 2026). Formal declarations of war between major powers are extremely rare, and I found no sign of one in the news. The question's broad wording (implicit declarations, no human troops needed) raises the chance a little, but the window is about three weeks and the status quo is no war between major powers. I did not run a search for this question."
+  },
+  {
+    "qid": "pm:6361051",
+    "prob": 0.13,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "The US reinstated its naval blockade of Iran on July 13, 2026, and CENTCOM and Hegseth said it can continue indefinitely. As of Oct 31, reports describe talks restarting in Doha after Qatari mediation, with a reported preliminary framework, but no official US announcement. Iran insists the US lift the blockade first while Washington wants nuclear steps first, a sequencing dispute that makes a qualifying general end announcement in two days unlikely. Trump's incentive to lower oil prices before the midterms and the fast-moving talks keep the chance from being very low."
+  }
+]

@@ -12,6 +12,7 @@ PROGRESS = [
     ("Practice harness: blind questions, scoring vs market", "done", "Daily check at 8:52 ET"),
     ("First practice batch (12 questions, 3 runs each)", "done", "Batch 20261017-1423; first results from Oct 25"),
     ("Second practice batch (12 questions, 3 runs each)", "done", "Batch 20261018-125311; 24 practice questions open"),
+    ("Weekly practice batch 2 (7 questions, v1 and v2 on Haiku)", "done", "Batch 20261031-125505; 2 of 7 exposed; clean audit passed (Oct 31)"),
     ("GitHub repository forecast-bot", "done", "Created by you; project uploaded Oct 17"),
     ("Metaculus account and AlmanacBot", "done", "Bot key stored as a GitHub secret"),
     ("AI models via OpenRouter ($25 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),

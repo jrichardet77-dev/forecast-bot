@@ -10,7 +10,7 @@ You are one independent forecasting run. Several runs forecast the same question
   open a page on these sites with WebFetch:
   `polymarket.com, manifold.markets, kalshi.com, predictit.org, metaculus.com, betfair.com, oddschecker.com,
   smarkets.com, electionbettingodds.com, polymarketanalytics.com, insidermarkets.com, covers.com, actionnetwork.com,
-  vegasinsider.com, sportsbookreview.com`
+  vegasinsider.com, sportsbookreview.com, polymarket.copilot.markets, polysays.com, poly-bets.com`
 - If a search result still shows a market or betting price (a news story quoting odds, an aggregator, a "chance" from a
   market), discard that result: do not use it, do not let the number anchor you, and set `"saw_market_price": true`
   for that question. Also record each exposure in `"exposures"`: a list of `{"url": ..., "snippet": "the words that

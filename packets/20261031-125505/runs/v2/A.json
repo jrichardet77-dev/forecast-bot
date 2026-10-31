@@ -1,0 +1,51 @@
+[
+  {
+    "qid": "pm:6369333",
+    "prob": 0.88,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: short-window survival of declared or de facto ceasefires between major militaries (about 0.85, a weak base rate from general recall). Resolves NO only on a US air or surface-to-surface strike on Iran by Nov 2, 2026 (IRST). Evidence: no US strikes on Iran reported since early September; Trump said no strikes before the Nov 3 midterms; reports say the US warned allies of possible strikes as early as Nov 4, which is after the window. Mediation via Qatar and Pakistan is ongoing. Strongest argument against: a pre-midterm strike or an Iranian provocation in Hormuz could trigger a qualifying strike, and the three-day dispute period could matter. Net: slightly above base rate."
+  },
+  {
+    "qid": "pm:4319440",
+    "prob": 0.03,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: large private tech companies listing within a given two-week window with no public S-1 (about 0.02, from general recall). Here the S-1 was publicly filed Oct 26, 2026, and reports say a mid-November IPO is on track, with trading possibly starting Nov 16 or Nov 19-20. Nov 15, 2026 is a Sunday, so the listing would need to be by Friday Nov 13, which is earlier than any reported date. Strongest argument against: the reported dates conflict and an earlier pricing is possible. Net: low."
+  },
+  {
+    "qid": "pm:5880852",
+    "prob": 0.02,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: Article 36 states of siege under the 1958 French Constitution, which are essentially absent in the modern Fifth Republic (base rate about 0.01 for a two-week window). Searches found no state-of-siege decree in 2026. The October 17-18, 2026 riots led to talk of emergency powers, but no decree was reported. A new 'etat d'alerte de sécurité nationale' regime created by an August 2026 law is a different legal regime and should not count, though the 'same essential powers' clause adds slight resolver risk. Net: near base rate."
+  },
+  {
+    "qid": "pm:6044505",
+    "prob": 0.10,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: use-of-force incidents between NATO and Russian forces in a two-week window since 2022 (base rate about 0.05, from general recall of few clear cases). 2026 shows a higher rate of NATO jets shooting down drones over the Baltics and Romania (June 8, August 16, September 15), roughly monthly. However, most are unattributed or only suspected Russian, and the criteria require a clash between NATO and Russian military forces, so many would not count. Strongest argument against: the drone shootdowns mostly fail the attribution requirement. Net: raised from base rate by the incident frequency."
+  },
+  {
+    "qid": "pm:668591",
+    "prob": 0.05,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: AAA game release dates that were already delayed once, with an announcement of a further delay in the final weeks before the date (base rate about 0.08, from general recall). Take-Two's SEC filings and its CEO, Strauss Zelnick, have reaffirmed a November 19, 2026 release, and reports say no further delay is expected. Take-Two's fiscal Q2 earnings call in early November is the main risk point for a new announcement. Strongest argument against: the game has already slipped twice, so another slip is not impossible. Net: slightly below base rate due to reaffirmation."
+  },
+  {
+    "qid": "mf:sf9wxu6w5b",
+    "prob": 0.03,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: formal war declarations or open wars between great powers in a roughly three-week window (base rate about 0.005 or lower). Current conflicts (US-Iran, Russia-Ukraine, NATO-Russia drone incidents) do not clearly involve two superpowers in a declared war. The poll's resolution is loose ('implicit' declarations count), and the ongoing US-Iran war creates some resolver ambiguity, so I set the value a bit above base rate. Also, the question closes Nov 18, so it covers a short window before any GTA release."
+  },
+  {
+    "qid": "pm:6361051",
+    "prob": 0.07,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: announced US blockade or sanctions measures ending clearly within about three weeks (base rate about 0.10, from general recall). The current blockade was reinstated July 13-14, 2026, and CENTCOM said on Oct 16 that it had halted Iranian crude exports. Iran wants the blockade lifted first; Qatari and Pakistani mediation and a Vance letter have reportedly been well received, but Trump's stated position is continued pressure and possible strikes after the midterms. A qualifying announcement must be a clear general end, not a partial exemption. Net: below base rate."
+  }
+]

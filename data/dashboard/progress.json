@@ -20,6 +20,11 @@
   "note": "Batch 20261018-125311; 24 practice questions open"
  },
  {
+  "step": "Weekly practice batch 2 (7 questions, v1 and v2 on Haiku)",
+  "status": "done",
+  "note": "Batch 20261031-125505; 2 of 7 exposed; clean audit passed (Oct 31)"
+ },
+ {
   "step": "GitHub repository forecast-bot",
   "status": "done",
   "note": "Created by you; project uploaded Oct 17"
@@ -42,7 +47,7 @@
  {
   "step": "Official forecasting switched on",
   "status": "done",
-  "note": "Every 30 minutes since Oct 17; 108 official forecasts published, all runs green (Oct 30)"
+  "note": "Every 30 minutes since Oct 17; 110 official forecasts published, all runs green; 49 resolved (Oct 31)"
  },
  {
   "step": "Participation form",
@@ -52,7 +57,7 @@
  {
   "step": "Official-forecast scoring",
   "status": "done",
-  "note": "Daily read-only lookup of resolutions and AlmanacBot's scores (Oct 25)"
+  "note": "Daily read-only lookup since Oct 25; 49 of 110 resolved, average peer score +0.8, baseline +25.5 (Oct 31)"
  },
  {
   "step": "Apply for free credits for Spring 2027",

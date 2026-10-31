@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 1 of 106 official questions resolved; average peer score +8.6 (1 scored); average baseline score +71.2 (1 scored).
+Official tournament forecasts: 49 of 110 official questions resolved; average peer score +0.8 (48 scored); average baseline score +25.5 (48 scored).
 
-Practice forecasts: 36; resolved: 4
+Practice forecasts: 43; resolved: 4
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -42,3 +42,10 @@ Practice forecasts: 36; resolved: 4
 | Fable 5.5 is released by the end of october? | 33% | 37% | open |  |
 | Will there be no Hormuz agreement? | 94% | 93% | open |  |
 | Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | open |  |
+| US x Iran ceasefire continues through November 2? | 87% | 93% | open |  |
+| Will Anthropic IPO by November 15, 2026? | 10% | 1% | open |  |
+| France declares state of siege (martial law) by November 15, 2026? | 2% | 1% | open |  |
+| NATO x Russia military clash by November 15, 2026? | 7% | 5% | open |  |
+| GTA 6 launch postponed again? | 8% | 4% | open |  |
+| Will WW3 happen before GTA6? | 2% | 2% | open |  |
+| US announces end of Iranian blockade by November 2, 2026? | 8% | 8% | open |  |
