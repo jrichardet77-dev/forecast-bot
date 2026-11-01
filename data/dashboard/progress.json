@@ -46,8 +46,8 @@
  },
  {
   "step": "Official forecasting switched on",
-  "status": "done",
-  "note": "Every 30 minutes since Oct 17; 110 official forecasts published, all runs green; 49 resolved (Oct 31)"
+  "status": "owner",
+  "note": "Every 30 minutes since Oct 17; 111 questions forecast; since Oct 31 15:04 UTC new forecasts fail: OpenRouter key limit reached (402). Waiting on owner (Nov 1)"
  },
  {
   "step": "Participation form",
@@ -57,7 +57,7 @@
  {
   "step": "Official-forecast scoring",
   "status": "done",
-  "note": "Daily read-only lookup since Oct 25; 49 of 110 resolved, average peer score +0.8, baseline +25.5 (Oct 31)"
+  "note": "Daily read-only lookup since Oct 25; 58 of 110 resolved, average peer score +0.2, baseline +24.5 (Nov 1)"
  },
  {
   "step": "Apply for free credits for Spring 2027",

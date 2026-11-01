@@ -444,6 +444,18 @@
   "url": "https://www.metaculus.com/questions/46158/"
  },
  {
+  "post_id": "46159",
+  "question": "Will a US halt of Ukraine arms deliveries under NATO's PURL mechanism be confirmed before November 1, 2026?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-11-01",
+  "resolution": "no",
+  "our_forecast": "20%",
+  "peer_score": 1.9,
+  "baseline_score": 58.9,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46159/"
+ },
+ {
   "post_id": "46160",
   "question": "Will another merchant vessel be attacked in the Black Sea off Bulgaria or Romania on October 29, 2026?",
   "type": "BinaryQuestion",
@@ -478,6 +490,18 @@
   "baseline_score": 79.8,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46162/"
+ },
+ {
+  "post_id": "46163",
+  "question": "Will CBD COP17 in Yerevan be suspended without completing its agenda, as happened at COP16 in Cali?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-10-31",
+  "resolution": "no",
+  "our_forecast": "17%",
+  "peer_score": 3.8,
+  "baseline_score": 59.0,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46163/"
  },
  {
   "post_id": "46164",
@@ -564,6 +588,54 @@
   "url": "https://www.metaculus.com/questions/46170/"
  },
  {
+  "post_id": "46171",
+  "question": "Will Lee Hwa-young's legal team have filed a retrial petition in the Ssangbangwool North Korea remittance case with the Suwon High Court as of October 31, 2026?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-11-01",
+  "resolution": "no",
+  "our_forecast": "78%",
+  "peer_score": -15.5,
+  "baseline_score": -97.5,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46171/"
+ },
+ {
+  "post_id": "46172",
+  "question": "Will New Zealand beat Fiji by more than 12 points in their 2026 Rugby League World Cup pool match?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-10-31",
+  "resolution": "yes",
+  "our_forecast": "47%",
+  "peer_score": -10.6,
+  "baseline_score": -7.1,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46172/"
+ },
+ {
+  "post_id": "46173",
+  "question": "Will the Milwaukee Brewers win the 2026 World Series?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-10-29",
+  "resolution": "yes",
+  "our_forecast": "62%",
+  "peer_score": 3.1,
+  "baseline_score": 26.7,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46173/"
+ },
+ {
+  "post_id": "46174",
+  "question": "What will Japan's national average of influenza cases per sentinel medical institution be for the week ending October 25, 2026?",
+  "type": "NumericQuestion",
+  "resolved": "2026-10-30",
+  "resolution": "9.49",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": 33.1,
+  "baseline_score": 15.7,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46174/"
+ },
+ {
   "post_id": "46175",
   "question": "Will the USDA reopen the Columbus, New Mexico port of entry to Mexican cattle imports before October 31, 2026?",
   "type": "BinaryQuestion",
@@ -586,5 +658,41 @@
   "baseline_score": 17.1,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46176/"
+ },
+ {
+  "post_id": "46177",
+  "question": "How many active New World screwworm cases will Mexico's Senasica dashboard report in late October 2026?",
+  "type": "NumericQuestion",
+  "resolved": "2026-10-28",
+  "resolution": "2037.0",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -34.6,
+  "baseline_score": 16.0,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46177/"
+ },
+ {
+  "post_id": "46178",
+  "question": "What will the front-month Brent crude oil futures settlement price be on October 30, 2026?",
+  "type": "NumericQuestion",
+  "resolved": "2026-10-30",
+  "resolution": "113.43",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -11.1,
+  "baseline_score": 10.8,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46178/"
+ },
+ {
+  "post_id": "46179",
+  "question": "Will Fernando Cerimedo be released from preventive detention in Bolivia by October 31, 2026?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-11-01",
+  "resolution": "no",
+  "our_forecast": "4%",
+  "peer_score": 5.7,
+  "baseline_score": 90.9,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46179/"
  }
 ]
