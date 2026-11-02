@@ -694,5 +694,17 @@
   "baseline_score": 90.9,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46179/"
+ },
+ {
+  "post_id": "46180",
+  "question": "Will Ukraine strike a Russian oil refinery between October 29 and October 31, 2026?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-10-30",
+  "resolution": "yes",
+  "our_forecast": "60%",
+  "peer_score": 1.5,
+  "baseline_score": 23.3,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46180/"
  }
 ]

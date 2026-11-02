@@ -133,8 +133,8 @@
   "bot": 0.85,
   "market": 0.9025,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": -6.0,
   "exposed": false,
   "url": "https://polymarket.com/market/will-there-be-no-next-google-gemini-pro-model-release-by-november-1-2026",
   "made": "2026-10-17"
@@ -497,8 +497,8 @@
   "bot": 0.07,
   "market": 0.0585,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -1.2,
   "exposed": false,
   "url": "https://polymarket.com/market/saudi-houthi-ceasefire-agreement-announced-by-october-31",
   "made": "2026-10-26"

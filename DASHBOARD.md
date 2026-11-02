@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 58 of 110 official questions resolved; average peer score +0.2 (57 scored); average baseline score +24.5 (57 scored).
+Official tournament forecasts: 59 of 110 official questions resolved; average peer score +0.2 (58 scored); average baseline score +24.5 (58 scored).
 
-Practice forecasts: 43; resolved: 9
+Practice forecasts: 43; resolved: 11
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -15,7 +15,7 @@ Practice forecasts: 43; resolved: 9
 | Will Likud win 25-29 seats in the 2026 Israeli legislative election? | 15% | 24% | YES | -44.9 |
 | Will a Republican win the US Senate special election in Florida in 202 | 86% | 91% | open |  |
 | Will the mail-in ballot restriction go into effect for the 2026 electi | 2% | 10% | open |  |
-| Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | open |  |
+| Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | YES | -6.0 |
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | open |  |
 | Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | open |  |
@@ -41,7 +41,7 @@ Practice forecasts: 43; resolved: 9
 | Will Dan Sullivan win re-election to Alaska's Senate seat in 2026? | 42% | 26% | open |  |
 | Fable 5.5 is released by the end of october? | 33% | 37% | NO | +6.6 |
 | Will there be no Hormuz agreement? | 94% | 93% | open |  |
-| Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | open |  |
+| Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | NO | -1.2 |
 | US x Iran ceasefire continues through November 2? | 87% | 93% | open |  |
 | Will Anthropic IPO by November 15, 2026? | 10% | 1% | open |  |
 | France declares state of siege (martial law) by November 15, 2026? | 2% | 1% | open |  |
