@@ -2,19 +2,19 @@
 
 Official tournament forecasts: 59 of 110 official questions resolved; average peer score +0.2 (58 scored); average baseline score +24.5 (58 scored).
 
-Practice forecasts: 43; resolved: 11
+Practice forecasts: 43; resolved: 17
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
 | Will the ECB announce no change at the October 2026 meeting? | 88% | 97% | YES | -9.3 |
 | Will the Dome of the Rock in Jerusalem be destroyed by the end of Neta | 1% | 4% | open |  |
 | US announces end of Iranian blockade by November 30, 2026? | 12% | 19% | open |  |
-| Will there be a Hormuz agreement and the Democrats win the Senate? | 4% | 5% | open |  |
+| Will there be a Hormuz agreement and the Democrats win the Senate? | 4% | 5% | NO | +1.2 |
 | Will Aleksandar Vučić – United Serbia win the most seats in the 2026 S | 68% | 60% | NO | -21.1 |
-| US x Iran ceasefire continues through November 15? | 60% | 56% | open |  |
+| US x Iran ceasefire continues through November 15? | 60% | 56% | NO | -10.7 |
 | Will Likud win 25-29 seats in the 2026 Israeli legislative election? | 15% | 24% | YES | -44.9 |
 | Will a Republican win the US Senate special election in Florida in 202 | 86% | 91% | open |  |
-| Will the mail-in ballot restriction go into effect for the 2026 electi | 2% | 10% | open |  |
+| Will the mail-in ballot restriction go into effect for the 2026 electi | 2% | 10% | NO | +9.0 |
 | Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | YES | -6.0 |
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | open |  |
@@ -25,7 +25,7 @@ Practice forecasts: 43; resolved: 11
 | Mojtaba Khamenei seen in public by October 31? | 7% | 2% | NO | -5.1 |
 | Will Avigdor Lieberman be the next Prime Minister of Israel? | 2% | 2% | open |  |
 | If Trump wins, will marijuana be federally rescheduled before the 2026 | 55% | 4% | open |  |
-| Russia-Ukraine peace talks by October 31, 2026? | 30% | 7% | open |  |
+| Russia-Ukraine peace talks by October 31, 2026? | 30% | 7% | NO | -28.4 |
 | Perim Island no longer under Houthi control by October 31? | 7% | 7% | NO | +0.4 |
 | US-Iran Final Nuclear Deal by November 30, 2026? | 7% | 6% | open |  |
 | Will Dan Sullivan win the Alaska Senate race in 2026? | 42% | 26% | open |  |
@@ -40,7 +40,7 @@ Practice forecasts: 43; resolved: 11
 | Russia x Ukraine ceasefire agreement by October 31, 2026? | 2% | 2% | NO | -0.4 |
 | Will Dan Sullivan win re-election to Alaska's Senate seat in 2026? | 42% | 26% | open |  |
 | Fable 5.5 is released by the end of october? | 33% | 37% | NO | +6.6 |
-| Will there be no Hormuz agreement? | 94% | 93% | open |  |
+| Will there be no Hormuz agreement? | 94% | 93% | YES | +1.6 |
 | Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | NO | -1.2 |
 | US x Iran ceasefire continues through November 2? | 87% | 93% | open |  |
 | Will Anthropic IPO by November 15, 2026? | 10% | 1% | open |  |
@@ -48,4 +48,4 @@ Practice forecasts: 43; resolved: 11
 | NATO x Russia military clash by November 15, 2026? | 7% | 5% | open |  |
 | GTA 6 launch postponed again? | 8% | 4% | open |  |
 | Will WW3 happen before GTA6? | 2% | 2% | open |  |
-| US announces end of Iranian blockade by November 2, 2026? | 8% | 8% | open |  |
+| US announces end of Iranian blockade by November 2, 2026? | 8% | 8% | NO | +0.5 |

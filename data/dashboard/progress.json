@@ -47,7 +47,7 @@
  {
   "step": "Official forecasting switched on",
   "status": "owner",
-  "note": "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 39 questions missed so far. Waiting on owner (Nov 2)"
+  "note": "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 63 questions missed so far. Waiting on owner (Nov 3)"
  },
  {
   "step": "Participation form",
@@ -57,7 +57,7 @@
  {
   "step": "Official-forecast scoring",
   "status": "done",
-  "note": "Daily read-only lookup since Oct 25; 59 of 110 resolved, average peer score +0.2, baseline +24.5 (Nov 2)"
+  "note": "Daily read-only lookup since Oct 25; 59 of 110 resolved, average peer score +0.2, baseline +24.5 (Nov 3)"
  },
  {
   "step": "Apply for free credits for Spring 2027",
