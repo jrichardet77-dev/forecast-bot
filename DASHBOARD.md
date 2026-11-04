@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 59 of 110 official questions resolved; average peer score +0.2 (58 scored); average baseline score +24.5 (58 scored).
+Official tournament forecasts: 61 of 110 official questions resolved; average peer score -0.3 (60 scored); average baseline score +24.8 (60 scored).
 
-Practice forecasts: 43; resolved: 17
+Practice forecasts: 43; resolved: 24
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -13,7 +13,7 @@ Practice forecasts: 43; resolved: 17
 | Will Aleksandar Vučić – United Serbia win the most seats in the 2026 S | 68% | 60% | NO | -21.1 |
 | US x Iran ceasefire continues through November 15? | 60% | 56% | NO | -10.7 |
 | Will Likud win 25-29 seats in the 2026 Israeli legislative election? | 15% | 24% | YES | -44.9 |
-| Will a Republican win the US Senate special election in Florida in 202 | 86% | 91% | open |  |
+| Will a Republican win the US Senate special election in Florida in 202 | 86% | 91% | YES | -5.4 |
 | Will the mail-in ballot restriction go into effect for the 2026 electi | 2% | 10% | NO | +9.0 |
 | Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | YES | -6.0 |
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
@@ -29,14 +29,14 @@ Practice forecasts: 43; resolved: 17
 | Perim Island no longer under Houthi control by October 31? | 7% | 7% | NO | +0.4 |
 | US-Iran Final Nuclear Deal by November 30, 2026? | 7% | 6% | open |  |
 | Will Dan Sullivan win the Alaska Senate race in 2026? | 42% | 26% | open |  |
-| Will the Democrats win the Arizona governor race in 2026? | 82% | 92% | open |  |
-| Democrats win Texas and Michigan Senate election? | 38% | 57% | open |  |
-| Will the Democrats win the Minnesota Senate race in 2026? | 85% | 86% | open |  |
+| Will the Democrats win the Arizona governor race in 2026? | 82% | 92% | YES | -12.0 |
+| Democrats win Texas and Michigan Senate election? | 38% | 57% | YES | -40.1 |
+| Will the Democrats win the Minnesota Senate race in 2026? | 85% | 86% | YES | -0.6 |
 | Will the ECB announce a 25 bps increase at the October 2026 meeting? | 4% | 2% | NO | -2.4 |
 | Israel x Iran ceasefire continues through November 15? | 45% | 66% | open |  |
-| Will the Republicans win the South Carolina Senate race in 2026? | 80% | 78% | open |  |
-| Will the Democrats win the Ohio governor race in 2026? | 60% | 82% | open |  |
-| Will the Republican Party control the Senate after the 2026 Midterm el | 36% | 34% | open |  |
+| Will the Republicans win the South Carolina Senate race in 2026? | 80% | 78% | NO | -9.5 |
+| Will the Democrats win the Ohio governor race in 2026? | 60% | 82% | YES | -31.8 |
+| Will the Republican Party control the Senate after the 2026 Midterm el | 36% | 34% | NO | -2.3 |
 | Russia x Ukraine ceasefire agreement by October 31, 2026? | 2% | 2% | NO | -0.4 |
 | Will Dan Sullivan win re-election to Alaska's Senate seat in 2026? | 42% | 26% | open |  |
 | Fable 5.5 is released by the end of october? | 33% | 37% | NO | +6.6 |

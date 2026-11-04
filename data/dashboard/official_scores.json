@@ -706,5 +706,29 @@
   "baseline_score": 23.3,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46180/"
+ },
+ {
+  "post_id": "46181",
+  "question": "How many UN member states will vote in favour of the annual TPNW resolution at the First Committee's 2026 action phase?",
+  "type": "DiscreteQuestion",
+  "resolved": "2026-10-27",
+  "resolution": "below_lower_bound",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -34.6,
+  "baseline_score": 0.6,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46181/"
+ },
+ {
+  "post_id": "46191",
+  "question": "Who will be the largest Republican donor in the 2026 cycle, as of Election Day?",
+  "type": "MultipleChoiceQuestion",
+  "resolved": "2026-11-03",
+  "resolution": "Elon Musk",
+  "our_forecast": "Ben Horowitz & Marc Andreessen 2%; Elon Musk 80%; Jeff & Janine Yass 4%",
+  "peer_score": 1.7,
+  "baseline_score": 69.0,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46191/"
  }
 ]
