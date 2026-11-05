@@ -17,9 +17,9 @@ PROGRESS = [
     ("Metaculus account and AlmanacBot", "done", "Bot key stored as a GitHub secret"),
     ("AI models via OpenRouter ($25 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
     ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
-    ("Official forecasting switched on", "owner", "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 71 questions missed so far. Waiting on owner (Nov 4)"),
+    ("Official forecasting switched on", "owner", "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 76 questions missed so far. Waiting on owner (Nov 5)"),
     ("Participation form", "done", "Submitted by you Oct 17"),
-    ("Official-forecast scoring", "done", "Daily read-only lookup since Oct 25; 61 of 110 resolved, average peer score -0.3, baseline +24.8 (Nov 4)"),
+    ("Official-forecast scoring", "done", "Daily read-only lookup since Oct 25; 65 of 110 resolved, average peer score -0.8, baseline +25.4 (Nov 5)"),
     ("Apply for free credits for Spring 2027", "later", "Applications reopen a few weeks before January"),
 ]
 

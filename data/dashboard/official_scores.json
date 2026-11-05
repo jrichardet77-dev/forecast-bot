@@ -730,5 +730,53 @@
   "baseline_score": 69.0,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46191/"
+ },
+ {
+  "post_id": "46192",
+  "question": "What percentage of voters will support Edgewater, Florida's 2026 referendum to ban data centers?",
+  "type": "DiscreteQuestion",
+  "resolved": "2026-11-04",
+  "resolution": "77.0",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -8.2,
+  "baseline_score": 39.9,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46192/"
+ },
+ {
+  "post_id": "46193",
+  "question": "Will \"None of These Candidates\" receive more votes than the winning margin in the 2026 Nevada gubernatorial election?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-11-04",
+  "resolution": "no",
+  "our_forecast": "12%",
+  "peer_score": 22.9,
+  "baseline_score": 75.8,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46193/"
+ },
+ {
+  "post_id": "46228",
+  "question": "What percent of Americans will oppose the Iran War on the eve of Election Day 2026?",
+  "type": "DiscreteQuestion",
+  "resolved": "2026-11-04",
+  "resolution": "56.5",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -39.2,
+  "baseline_score": -26.9,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46228/"
+ },
+ {
+  "post_id": "46229",
+  "question": "What will Democrats' lead be in the congressional generic ballot on the eve of Election Day 2026?",
+  "type": "DiscreteQuestion",
+  "resolved": "2026-11-04",
+  "resolution": "8.8",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -9.8,
+  "baseline_score": 48.8,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46229/"
  }
 ]

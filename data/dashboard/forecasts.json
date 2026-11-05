@@ -189,8 +189,8 @@
   "bot": 0.48,
   "market": 0.4139,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -12.0,
   "exposed": true,
   "url": "https://manifold.markets/EvanDaniel/republicans-win-at-least-one-of-mem",
   "made": "2026-10-18"

@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 61 of 110 official questions resolved; average peer score -0.3 (60 scored); average baseline score +24.8 (60 scored).
+Official tournament forecasts: 65 of 110 official questions resolved; average peer score -0.8 (64 scored); average baseline score +25.4 (64 scored).
 
-Practice forecasts: 43; resolved: 24
+Practice forecasts: 43; resolved: 25
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -19,7 +19,7 @@ Practice forecasts: 43; resolved: 24
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | open |  |
 | Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | open |  |
-| Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | open |  |
+| Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | NO | -12.0 |
 | Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | YES | +37.8 |
 | Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | open |  |
 | Mojtaba Khamenei seen in public by October 31? | 7% | 2% | NO | -5.1 |
