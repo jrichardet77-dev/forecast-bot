@@ -1,15 +1,15 @@
 {
  "variants": {
   "v1": {
-   "n": 25,
-   "brier": 0.158448,
-   "market_brier": 0.13062233880000002,
-   "baseline": 33.667447034955536,
-   "market_baseline": 44.414287284453806,
-   "vs_market": -7.449142018867859,
-   "vs_market_lo": -12.870648241701423,
-   "vs_market_hi": -2.0760402263095554,
-   "p_beats_market": 0.0118
+   "n": 26,
+   "brier": 0.15236923076923078,
+   "market_brier": 0.12626450115384616,
+   "baseline": 36.106597742612955,
+   "market_baseline": 45.769244046842864,
+   "vs_market": -6.697636042524938,
+   "vs_market_lo": -12.104270119320173,
+   "vs_market_hi": -1.2362658731395753,
+   "p_beats_market": 0.02
   },
   "v2": {
    "n": 11,
@@ -58,15 +58,15 @@
  },
  "leak_split": {
   "v1 clean": {
-   "n": 12,
-   "brier": 0.10334166666666667,
-   "market_brier": 0.07911491666666667,
-   "baseline": 53.27108375227593,
-   "market_baseline": 64.15816422915795,
-   "vs_market": -7.546349137080001,
-   "vs_market_lo": -14.848859721343873,
-   "vs_market_hi": -1.342932586108783,
-   "p_beats_market": 0.016
+   "n": 13,
+   "brier": 0.09542307692307692,
+   "market_brier": 0.07436135076923077,
+   "baseline": 56.64141311241227,
+   "market_baseline": 65.34931798895884,
+   "vs_market": -6.035859713762457,
+   "vs_market_lo": -13.103747640408228,
+   "vs_market_hi": 0.18141352167422242,
+   "p_beats_market": 0.056
   },
   "v1 leaked": {
    "n": 13,
@@ -98,11 +98,11 @@
   {
    "variant": "v3c",
    "role": "exploratory",
-   "n": 9,
-   "clusters": 6,
-   "vs_champion": -1.5604161695622143,
-   "vs_champion_lo": -2.737486647860626,
-   "vs_champion_hi": -0.5464970470498464,
+   "n": 10,
+   "clusters": 7,
+   "vs_champion": -2.55403969305771,
+   "vs_champion_lo": -4.51869389102375,
+   "vs_champion_hi": -0.8690735335820298,
    "p_better": 0.0,
    "accept": false,
    "per_cluster": {
@@ -111,18 +111,19 @@
     "iran-conflict-2026": -1.83,
     "israel-politics": 0.0,
     "russia-ukraine-2026": 0.0,
+    "us-cannabis-policy": -8.52,
     "us-midterms-2026": -4.26
    }
   },
   {
    "variant": "v6",
    "role": "challenger",
-   "n": 9,
-   "clusters": 6,
-   "vs_champion": -0.1306103627142319,
-   "vs_champion_lo": -2.1925349208346145,
-   "vs_champion_hi": 2.0163964845967848,
-   "p_better": 0.4568,
+   "n": 10,
+   "clusters": 7,
+   "vs_champion": -0.11195173946934163,
+   "vs_champion_lo": -1.8430186084620135,
+   "vs_champion_hi": 1.7694887603846343,
+   "p_better": 0.4542,
    "accept": false,
    "per_cluster": {
     "ai-model-releases": -2.51,
@@ -130,6 +131,7 @@
     "iran-conflict-2026": -3.81,
     "israel-politics": 5.13,
     "russia-ukraine-2026": 2.44,
+    "us-cannabis-policy": 0.0,
     "us-midterms-2026": 0.7
    }
   }
@@ -254,6 +256,21 @@
    "baseline": 76.55347463629771,
    "market_baseline": 85.19988371124462,
    "vs_market": -5.993234072267384
+  },
+  {
+   "batch": "20261017-1423",
+   "made_at": "2026-10-17T14:25:50+00:00",
+   "qid": "mf:FVxau0fRjkPttsb73rGU",
+   "variant": "v1",
+   "prob": "0.02",
+   "market_prob": "0.1316",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.0004,
+   "market_brier": 0.01731856,
+   "baseline": 97.08536543404836,
+   "market_baseline": 79.64316310656952,
+   "vs_market": 12.090013366048074
   },
   {
    "batch": "20261018-125311",
@@ -1366,6 +1383,36 @@
    "vs_market": -5.993234072267384
   },
   {
+   "batch": "20261017-1423",
+   "made_at": "2026-10-17T14:25:50+00:00",
+   "qid": "mf:FVxau0fRjkPttsb73rGU",
+   "variant": "v6",
+   "prob": 0.020000000000000004,
+   "market_prob": "0.1316",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.0004000000000000002,
+   "market_brier": 0.01731856,
+   "baseline": 97.08536543404836,
+   "market_baseline": 79.64316310656952,
+   "vs_market": 12.090013366048074
+  },
+  {
+   "batch": "20261017-1423",
+   "made_at": "2026-10-17T14:25:50+00:00",
+   "qid": "mf:FVxau0fRjkPttsb73rGU",
+   "variant": "v3c",
+   "prob": 0.1,
+   "market_prob": "0.1316",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.010000000000000002,
+   "market_brier": 0.01731856,
+   "baseline": 84.79969065549501,
+   "market_baseline": 79.64316310656952,
+   "vs_market": 3.5742325320173935
+  },
+  {
    "batch": "20261018-125311",
    "made_at": "2026-10-18T12:55:12+00:00",
    "qid": "mf:qcUZAqI8qn",
@@ -1879,47 +1926,47 @@
  "postprocess": [
   {
    "variant": "median",
-   "n": 25,
-   "vs_market": -7.449142018867859,
-   "brier": 0.158448,
+   "n": 26,
+   "vs_market": -6.697636042524938,
+   "brier": 0.15236923076923078,
    "vs_champion": 0.0,
    "p_better": 0.0,
    "accept": false
   },
   {
    "variant": "mean_logodds",
-   "n": 25,
-   "vs_market": -6.525321025019406,
-   "brier": 0.15533700349676577,
-   "vs_champion": 0.9238209938484533,
-   "p_better": 0.8276,
+   "n": 26,
+   "vs_market": -5.809346625362964,
+   "brier": 0.14937788797765938,
+   "vs_champion": 0.8882894171619744,
+   "p_better": 0.8298,
    "accept": false
   },
   {
    "variant": "median_x1.3",
-   "n": 25,
-   "vs_market": -9.579208536304936,
-   "brier": 0.16736617916936358,
-   "vs_champion": -2.1300665174370756,
-   "p_better": 0.2264,
+   "n": 26,
+   "vs_market": -8.706729342122058,
+   "brier": 0.1609328645859265,
+   "vs_champion": -2.009093299597119,
+   "p_better": 0.2278,
    "accept": false
   },
   {
    "variant": "median_x0.8",
-   "n": 25,
-   "vs_market": -7.381297838459731,
-   "brier": 0.15479304285395,
-   "vs_champion": 0.06784418040812833,
-   "p_better": 0.489,
+   "n": 26,
+   "vs_market": -6.721958631905746,
+   "brier": 0.148909117318853,
+   "vs_champion": -0.024322589380808095,
+   "p_better": 0.4662,
    "accept": false
   },
   {
    "variant": "mean_logodds_x1.3",
-   "n": 25,
-   "vs_market": -8.470048000115739,
-   "brier": 0.16485784737195877,
-   "vs_champion": -1.0209059812478793,
-   "p_better": 0.3588,
+   "n": 26,
+   "vs_market": -7.640228826555523,
+   "brier": 0.1585210070884219,
+   "vs_champion": -0.9425927840305839,
+   "p_better": 0.3676,
    "accept": false
   }
  ]

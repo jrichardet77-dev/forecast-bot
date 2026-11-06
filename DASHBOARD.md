@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 65 of 110 official questions resolved; average peer score -0.8 (64 scored); average baseline score +25.4 (64 scored).
 
-Practice forecasts: 43; resolved: 25
+Practice forecasts: 43; resolved: 26
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@ Practice forecasts: 43; resolved: 25
 | Will the mail-in ballot restriction go into effect for the 2026 electi | 2% | 10% | NO | +9.0 |
 | Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | YES | -6.0 |
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
-| If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | open |  |
+| If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | NO | +12.1 |
 | Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | open |  |
 | Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | NO | -12.0 |
 | Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | YES | +37.8 |

@@ -161,8 +161,8 @@
   "bot": 0.02,
   "market": 0.1316,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": 12.1,
   "exposed": false,
   "url": "https://manifold.markets/Athena/if-trump-wins-the-2024-us-president",
   "made": "2026-10-17"
