@@ -1,24 +1,24 @@
 [
  {
   "method": "v1",
-  "resolved": 26,
+  "resolved": 27,
   "vs_market": -6.7,
-  "vs_market_lo": -12.1,
-  "vs_market_hi": -1.2,
+  "vs_market_lo": -11.7,
+  "vs_market_hi": -1.4,
   "p_beats_market": 0.02,
-  "brier": 0.152,
-  "market_brier": 0.126
+  "brier": 0.147,
+  "market_brier": 0.122
  },
  {
   "method": "v2",
-  "resolved": 11,
-  "vs_market": -4.5,
-  "vs_market_lo": -13.5,
-  "vs_market_hi": 3.5,
-  "p_beats_market": 0.2,
-  "brier": 0.122,
-  "market_brier": 0.102,
-  "vs_champion": 0.0,
+  "resolved": 12,
+  "vs_market": -4.8,
+  "vs_market_lo": -12.7,
+  "vs_market_hi": 2.6,
+  "p_beats_market": 0.16,
+  "brier": 0.114,
+  "market_brier": 0.094,
+  "vs_champion": -1.2,
   "p_beats_champion": 0.0,
   "clusters": 1,
   "accept": false
@@ -55,13 +55,13 @@
  },
  {
   "method": "v1 clean",
-  "resolved": 13,
-  "vs_market": -6.0,
-  "vs_market_lo": -13.1,
-  "vs_market_hi": 0.2,
-  "p_beats_market": 0.06,
-  "brier": 0.095,
-  "market_brier": 0.074
+  "resolved": 14,
+  "vs_market": -6.1,
+  "vs_market_lo": -12.8,
+  "vs_market_hi": -0.2,
+  "p_beats_market": 0.04,
+  "brier": 0.09,
+  "market_brier": 0.069
  },
  {
   "method": "v1 leaked",

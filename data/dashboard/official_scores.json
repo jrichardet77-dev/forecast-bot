@@ -720,6 +720,18 @@
   "url": "https://www.metaculus.com/questions/46181/"
  },
  {
+  "post_id": "46182",
+  "question": "How many cumulative confirmed Ebola cases will the DRC's 2026 outbreak have reported as of October 31, 2026?",
+  "type": "NumericQuestion",
+  "resolved": "2026-11-01",
+  "resolution": "10467.0",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -33.5,
+  "baseline_score": 21.1,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46182/"
+ },
+ {
   "post_id": "46191",
   "question": "Who will be the largest Republican donor in the 2026 cycle, as of Election Day?",
   "type": "MultipleChoiceQuestion",
@@ -754,6 +766,18 @@
   "baseline_score": 75.8,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46193/"
+ },
+ {
+  "post_id": "46194",
+  "question": "Will the August-October 2026 El Ni\u00f1o index be 2.10\u00b0C or higher?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-11-06",
+  "resolution": "no",
+  "our_forecast": "15%",
+  "peer_score": 60.6,
+  "baseline_score": 59.7,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46194/"
  },
  {
   "post_id": "46228",

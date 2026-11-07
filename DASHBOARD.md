@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 65 of 110 official questions resolved; average peer score -0.8 (64 scored); average baseline score +25.4 (64 scored).
+Official tournament forecasts: 67 of 110 official questions resolved; average peer score -0.4 (66 scored); average baseline score +25.9 (66 scored).
 
-Practice forecasts: 43; resolved: 26
+Practice forecasts: 55; resolved: 27
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -42,10 +42,22 @@ Practice forecasts: 43; resolved: 26
 | Fable 5.5 is released by the end of october? | 33% | 37% | NO | +6.6 |
 | Will there be no Hormuz agreement? | 94% | 93% | YES | +1.6 |
 | Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | NO | -1.2 |
-| US x Iran ceasefire continues through November 2? | 87% | 93% | open |  |
+| US x Iran ceasefire continues through November 2? | 87% | 93% | YES | -6.3 |
 | Will Anthropic IPO by November 15, 2026? | 10% | 1% | open |  |
 | France declares state of siege (martial law) by November 15, 2026? | 2% | 1% | open |  |
 | NATO x Russia military clash by November 15, 2026? | 7% | 5% | open |  |
 | GTA 6 launch postponed again? | 8% | 4% | open |  |
 | Will WW3 happen before GTA6? | 2% | 2% | open |  |
 | US announces end of Iranian blockade by November 2, 2026? | 8% | 8% | NO | +0.5 |
+| Will GTA 6 come out on November 19, 2026? | 88% | 96% | open |  |
+| Will NASA livestream of the August 12, 2026 total solar eclipse exceed | 25% | 15% | open |  |
+| Will Microsoft Office (or Microsoft 365) still be active on 10 Nov. 20 | 97% | 99% | open |  |
+| Will Anthropic IPO by Nov 20? | 40% | 46% | open |  |
+| CI2026: Will either China, India, or the US sign the 35 by 35 pledge a | 15% | 43% | open |  |
+| Will the U.S. use a nuclear weapon against Iran’s Pickaxe Mountain bet | 1% | 2% | open |  |
+| CI2026: Will the next ECOFIN decide to include novel tobacco products  | 30% | 8% | open |  |
+| Will Anthropic IPO by November 20, 2026? | 40% | 48% | open |  |
+| Will Gemini Carbon be released between November 9 and November 15, 202 | 10% | 80% | open |  |
+| GTA VI to release by November 19, 2026? | 88% | 96% | open |  |
+| US announces end of Iranian blockade by November 15, 2026? | 7% | 6% | open |  |
+| T Coronae Borealis reaches magnitude 5.0 before November 11th, 2026? | 2% | 4% | open |  |

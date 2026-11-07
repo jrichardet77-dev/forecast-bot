@@ -25,6 +25,11 @@
   "note": "Batch 20261031-125505; 2 of 7 exposed; clean audit passed (Oct 31)"
  },
  {
+  "step": "Weekly practice batch 3 (12 questions, v1 and v2 on Haiku)",
+  "status": "done",
+  "note": "Batch 20261107-135350; 0 of 12 exposed; clean audit passed (Nov 7)"
+ },
+ {
   "step": "GitHub repository forecast-bot",
   "status": "done",
   "note": "Created by you; project uploaded Oct 17"
@@ -47,7 +52,7 @@
  {
   "step": "Official forecasting switched on",
   "status": "owner",
-  "note": "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 82 questions missed so far. Waiting on owner (Nov 6)"
+  "note": "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 82 questions missed so far. Waiting on owner (Nov 7)"
  },
  {
   "step": "Participation form",
@@ -57,7 +62,7 @@
  {
   "step": "Official-forecast scoring",
   "status": "done",
-  "note": "Daily read-only lookup since Oct 25; 65 of 110 resolved, average peer score -0.8, baseline +25.4 (Nov 5)"
+  "note": "Daily read-only lookup since Oct 25; 67 of 110 resolved, average peer score -0.4, baseline +25.9 (Nov 7)"
  },
  {
   "step": "Apply for free credits for Spring 2027",

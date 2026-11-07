@@ -13,13 +13,14 @@ PROGRESS = [
     ("First practice batch (12 questions, 3 runs each)", "done", "Batch 20261017-1423; first results from Oct 25"),
     ("Second practice batch (12 questions, 3 runs each)", "done", "Batch 20261018-125311; 24 practice questions open"),
     ("Weekly practice batch 2 (7 questions, v1 and v2 on Haiku)", "done", "Batch 20261031-125505; 2 of 7 exposed; clean audit passed (Oct 31)"),
+    ("Weekly practice batch 3 (12 questions, v1 and v2 on Haiku)", "done", "Batch 20261107-135350; 0 of 12 exposed; clean audit passed (Nov 7)"),
     ("GitHub repository forecast-bot", "done", "Created by you; project uploaded Oct 17"),
     ("Metaculus account and AlmanacBot", "done", "Bot key stored as a GitHub secret"),
     ("AI models via OpenRouter ($25 prepaid, no top-up)", "done", "Luna x2, DeepSeek x2, Sonnet x1; Sonar research"),
     ("Test run on the unscored test area", "done", "9 of 9 questions forecast, nothing submitted"),
-    ("Official forecasting switched on", "owner", "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 82 questions missed so far. Waiting on owner (Nov 6)"),
+    ("Official forecasting switched on", "owner", "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 82 questions missed so far. Waiting on owner (Nov 7)"),
     ("Participation form", "done", "Submitted by you Oct 17"),
-    ("Official-forecast scoring", "done", "Daily read-only lookup since Oct 25; 65 of 110 resolved, average peer score -0.8, baseline +25.4 (Nov 5)"),
+    ("Official-forecast scoring", "done", "Daily read-only lookup since Oct 25; 67 of 110 resolved, average peer score -0.4, baseline +25.9 (Nov 7)"),
     ("Apply for free credits for Spring 2027", "later", "Applications reopen a few weeks before January"),
 ]
 

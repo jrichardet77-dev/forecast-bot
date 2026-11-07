@@ -1,0 +1,86 @@
+[
+  {
+    "qid": "mf:gPA98L9uQS",
+    "prob": 0.95,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: major AAA releases with a firm date set about a year ahead and still held within 2-3 weeks of launch. Base rate roughly 0.9 (a judgment from general experience, not a counted dataset). Evidence: Rockstar's newswire confirms Thursday Nov 19, 2026 for PS5 and Xbox Series X/S; PS5 digital pre-load opens Nov 10 and code-in-box copies reach retailers from Nov 12, which makes a late slip unlikely. Strongest argument against: Rockstar has already delayed twice (2025 window, then May 26, 2026, then Nov 19), so a last-minute move is not impossible. Searches used: 1 (blocked market domains)."
+  },
+  {
+    "qid": "mf:0ROph5dhut",
+    "prob": 0.3,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: NASA livestreams of total solar eclipses. Benchmarks in the question: 2017 reported at 2-3 million simultaneous views (vague), 2024 at 1,458,212 peak, so about 1 of 2 cleared 2 million. Base rate roughly 0.5 before adjustment. Adjusted down because the 2026 path is mostly outside the US (Iceland, Spain, Greenland), which the question itself notes. Searches found no post-event NASA peak figure; one preview cites a 15 million target, but it conflicts with the question's 2024 figure and is unreliable. Strongest argument for YES: wider carriage (reports of NASA+ and other platform distribution) could push the peak above 2 million. Searches used: 1."
+  },
+  {
+    "qid": "mf:ZhSyLhtQ0Q",
+    "prob": 0.98,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: established enterprise software suites (Microsoft Office/Microsoft 365) being shut down within a few days of a question date. Base rate effectively near 1.0 with no such shutdowns in practice. The question has no description, so the only uncertainty is how 'active' is read; the product is clearly live and no discontinuation was found. No search needed for a question this basic. Searches used: 0."
+  },
+  {
+    "qid": "mf:dLEZL5CLgc",
+    "prob": 0.3,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: large private tech companies trading on a US exchange within about two weeks, where a public S-1 exists but no price range is set yet. Base rate roughly 0.2 (judgment, few comparable cases). Evidence for YES: Anthropic filed a public S-1 on Oct 26, an amended S-1/A on Nov 2 added Q3 results, and press reports (unverified trackers) put the roadshow in the week of Nov 9 and the listing in the week of Nov 16. Evidence against: as of Nov 7 EDGAR shows no price range or share count, which normally must be filed before a roadshow launches and pricing. Searches used: 2."
+  },
+  {
+    "qid": "mf:Ip08yCSC5n",
+    "prob": 0.15,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: big-three countries (China, India, US) signing voluntary COP presidency pledges. Base rate roughly 0.15-0.2 (judgment). Evidence: India said on Nov 3 that it will not sign the COP31 35-by-35 electrification pledge; the US has withdrawn from the agreement and is sending no official delegation; China's position was not found in any source. The pledge is voluntary, which supports some chance China signs, but nothing points to an announcement by Nov 20. Searches used: 1."
+  },
+  {
+    "qid": "mf:OSEPdpUIRP",
+    "prob": 0.02,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: nuclear weapons use in armed conflicts since 1945 (zero cases in about 80 years), so the base rate for any given week is far below 1%. Evidence: Trump has explicitly ruled out a nuclear weapon and said conventional options are sufficient; Rubio said no decision has been made on new strikes; the claim traces to an unverified commentator post; nuclear analysts call a U.S. nuclear strike highly unlikely. Some uncertainty remains because the US is in an active conflict with Iran and a strike on Pickaxe Mountain is discussed. Searches used: 1."
+  },
+  {
+    "qid": "mf:6sRCQIuNqn",
+    "prob": 0.15,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: EU tax directives requiring unanimity in the Council, where a contested file reaches a general approach or political agreement at a specific ECOFIN meeting. Base rate roughly 0.15-0.25 (judgment). Evidence against: the Tobacco Taxation Directive was pulled from the June agenda for lack of unanimity; Sweden is expected to oppose the package; the pouch minimum and minimum rates are still unsettled in the Presidency compromise text. Evidence for: the Presidency text includes a pouch minimum and a separate e-liquid minimum, so a deal that covers vapes and pouches is on the table for Nov 9. Searches used: 1."
+  },
+  {
+    "qid": "pm:6066698",
+    "prob": 0.3,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Same underlying event as mf:dLEZL5CLgc (Anthropic listed and open for trading by 11:59 PM ET on the listed date, with the date needed by Nov 20). Reference class and base rate as above (about 0.2). Evidence and counter-evidence as above: public S-1 filed Oct 26, amended Nov 2, roadshow reported for the week of Nov 9, but no price range or share count in the filing as of Nov 7. The official-filing resolution source would confirm any listing directly. Searches used: 2 (shared with the other Anthropic question)."
+  },
+  {
+    "qid": "pm:6365364",
+    "prob": 0.3,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: Google model codenames reported in testing becoming publicly available within a specific one-week window. Base rate roughly 0.05-0.1 for a single week (judgment). Adjusted up on specific evidence: Google officially announced Gemini 4 Carbon on Oct 28 with staged access, starting with a subset of cyber defenders. Gemini 4 Argon went from defenders-only (Sept 30) to public (Oct 13), 13 days later, and the same gap applied to Carbon would land around Nov 10, inside the window. Against: the rollout to broader partners is not dated, Carbon was not public as of Nov 5, and a longer gap is common. The official name 'Gemini 4 Carbon' matches the naming rule. Searches used: 1."
+  },
+  {
+    "qid": "mf:UNllLhtsAQ",
+    "prob": 0.95,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Same event as mf:gPA98L9uQS (GTA VI releasing on or before Nov 19, 2026), with no early-release risk worth weighting. Reference class and base rate as above (about 0.9 for a firm date with pre-loads live). Evidence: Rockstar's Nov 19 date stands; pre-load from Nov 10 and retail copies from Nov 12 indicate the launch is operationally set. Argument against: two prior delays. Searches used: 1 (shared with the other GTA question)."
+  },
+  {
+    "qid": "pm:6282802",
+    "prob": 0.15,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: US coercive naval measures (blockades) ending by a formal official announcement within a roughly 8-day window during active talks. Base rate roughly 0.1 (judgment). Evidence for YES: a previous blockade was lifted on June 18 after a June 14 deal; Vance and Witkoff urge a deal; reports describe a Qatari draft with a two-day bridge in which the US lifts its port blockade on day one. Evidence against: as of Nov 7 Trump has not decided between a deal, strikes or continued pressure; Rubio, Bessent, Ratcliffe favor keeping the blockade; Iran says the blockade must end first, so a clear official end is contested; reports suggest a larger strike after the midterms. A partial or conditional move would not qualify. Searches used: 2."
+  },
+  {
+    "qid": "mf:gq5RCCO6PN",
+    "prob": 0.02,
+    "saw_market_price": false,
+    "exposures": [],
+    "rationale": "Reference class: T CrB outbursts, which have been predicted as 'soon' for years, and several predicted windows have already lapsed. Base rate of an outburst in any given few-day window is low, around 0.02-0.03 (judgment). Any real outburst would likely peak well above magnitude 5 (historical peaks 2-3), so the question is nearly the same as 'does an outburst start by Nov 10'. Evidence: a current Wikipedia-based summary says no nova has been observed as of November 2026, and no outburst report was found. Searches used: 1."
+  }
+]

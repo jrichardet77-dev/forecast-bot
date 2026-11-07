@@ -1,0 +1,86 @@
+[
+ {
+  "qid": "mf:gPA98L9uQS",
+  "prob": 0.93,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: AAA titles with a firm date under two weeks out that already slipped twice; slipping this late is rare, base rate of release on the date about 0.92-0.95. Rockstar's own newswire and X post (set for Thursday Nov 19, 2026) confirm the date, and no official third delay was found; 2027 delay claims are unsubstantiated. Main risk: a last-minute delay or a non-Nov-19 release date. Verify the exact Nov 19 release-time window for the resolution."
+ },
+ {
+  "qid": "mf:0ROph5dhut",
+  "prob": 0.25,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: NASA eclipse broadcasts. 2017 reported 2-3M (range); 2024 officially 1.46M peak. Base rate for exceeding 2M about 0.35, with only one clearly-above precedent. Event was Aug 12, 2026 in Europe/Iceland, outside the US, which the description says may depress interest. Searches found no official 2026 peak figure; a telescopeadvisor 15M claim refers to a pre-event expectation for 2024 and is unreliable. Moved down from base on the 2024 comparison; strongest case against is the 2017 precedent and NASA's large reach."
+ },
+ {
+  "qid": "mf:ZhSyLhtQ0Q",
+  "prob": 0.98,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: major SaaS products remaining active on a given date; base rate about 0.99+. No shutdown or discontinuation news was checked by search (no search run for this question); the 'still active' wording and the 3-day window make a NO extremely unlikely. Small residual for resolution ambiguity."
+ },
+ {
+  "qid": "mf:dLEZL5CLgc",
+  "prob": 0.3,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Pre-search base rate for large private tech firms listing within about two weeks with no public S-1 was about 0.02. Search found Anthropic's public S-1 filed Oct 26, 2026, with an application to list as ANT on Nasdaq, so I moved up on that specific evidence. Secondary trackers and Bloomberg-sourced reporting put the roadshow as early as the week of Nov 9 and listing in the week of Nov 16, but as of Nov 7 no price range or pricing date is confirmed, and the tracker dates conflict. Strongest case against: the window is tight and no price range has been filed yet."
+ },
+ {
+  "qid": "mf:Ip08yCSC5n",
+  "prob": 0.1,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: major emitters signing voluntary COP pledges; base rate about 0.20 for any of three large economies. Search found India has publicly refused to sign the 35-by-35 pledge, the US is no longer in the COP process, and no source reported a China position or intent to sign. The pledge is a presidency target inside the non-negotiated Action Agenda. China is the only plausible route to YES, so I set it at 0.10."
+ },
+ {
+  "qid": "pm:6066698",
+  "prob": 0.3,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Same underlying event as the Manifold Anthropic question, with the Polymarket wording: shares listed and open for trading by 11:59 PM ET on the listed date (Nov 20). Pre-search base about 0.02 for no public S-1; the public S-1 filed Oct 26 with a Nasdaq ANT application moves it up. Roadshow timing reports (week of Nov 9) and tracker listing estimates (week of Nov 16) are unverified and conflicting; no price range as of Nov 7. Strongest case against: tight window and no pricing set. Kept equal to the Manifold version."
+ },
+ {
+  "qid": "pm:6365364",
+  "prob": 0.2,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: codenamed Google frontier models from leaks reaching public release within a given one-week window; base rate about 0.08. Search found Gemini 4 Carbon announced Oct 28, 2026, with access limited to cyber defenders and Fairwind partners; Google gave no public date, only 'soon'. Precedent: Gemini 4 Argon went from Fairwind access (Sep 30) to broad access (Oct 13), about 13 days, which would put a Carbon analogue near Nov 10, inside the window. That is speculation, not a Google commitment, and one outlet's claim of an Oct 28 public release conflicts with Google-sourced coverage. Raised from base on the Argon precedent."
+ },
+ {
+  "qid": "pm:6282802",
+  "prob": 0.15,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: US coercive maritime measures formally ended within a given one-week window; base rate about 0.08. The US did lift the blockade once before (June 18, 2026, under a 60-day MOU) and reimposed it in July. Search as of Nov 6-7 shows the blockade still in force, Trump saying a decision is 'coming soon' with advisers split, and Qatar and Pakistan working on an interim arrangement in which the blockade would end in return for Iran halting shipping attacks. Iran says Hormuz stays shut until the blockade ends. Raised modestly on the interim-deal reporting; the criteria need an unambiguous official announcement."
+ },
+ {
+  "qid": "mf:gq5RCCO6PN",
+  "prob": 0.01,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: predicted T CrB outbursts described as 'soon' since 2023; per-week hazard about 1-2%, and the window is about four days. Search found no eruption as of Nov 7, 2026, and recent analyses say the timing is uncertain (possibly around Dec 2026). The star also enters solar conjunction in late November, so an eruption would be hard to observe. If it erupts, mag 5 is near-certain given past peaks of mag 2-3."
+ },
+ {
+  "qid": "mf:OSEPdpUIRP",
+  "prob": 0.01,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: nuclear detonations in combat; there have been none since 1945, so base rate is near zero (about 0.002). Search found no confirmed or officially planned nuclear strike as of Nov 7. Trump has said he would not use nuclear weapons, and reports of a planned strike (MOAB, conventional bunker-busters) and the Carlson claim are unverified. Raised slightly from base for the active rhetoric and reports of Iranian iodine distribution; experts call a nuclear strike highly unlikely."
+ },
+ {
+  "qid": "mf:UNllLhtsAQ",
+  "prob": 0.94,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Same event as the Nov 19 Manifold question, but this one resolves YES for release on or before Nov 19, so an earlier release also counts; it closes later (Nov 26). Reference class for a firm date under two weeks out after two delays: release on date about 0.92-0.95. Rockstar's official announcement sets Thursday Nov 19, 2026, and no official further delay was found. Slightly above the Nov 19-only version because early release counts."
+ },
+ {
+  "qid": "mf:6sRCQIuNqn",
+  "prob": 0.3,
+  "saw_market_price": false,
+  "exposures": [],
+  "rationale": "Reference class: EU tax directive files decided at a single ECOFIN meeting (unanimity required); base rate about 0.15 for an explicit decision on a named scope item. Search found the Irish presidency pushing for a November ECOFIN deal, and the Council text sets a minimum excise on nicotine pouches (vapes and pouches are within the revision's scope). Sweden objects to a minimum above EUR 20/kg, Spain has reservations, and the pouch rate is still disputed. Raised from base on the presidency push; main case against is the unanimity hurdle and the directive's long stall."
+ }
+]
