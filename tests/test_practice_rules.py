@@ -49,7 +49,8 @@ class PracticeRules(unittest.TestCase):
         self.assertNotIn("pm:ecb", qids)
         for title in ("Will Republicans win Kansas, and lose Alaska?", "Will Nithya Raman Beat Karen Bass?",
                       "Will Trump endorse John Cornyn for TX-Sen?", "Will Jakob Glesnes win 2026 MLS Defender of the Year?",
-                      "If Trump wins, will there be an attempt on his life by midterms?"):
+                      "If Trump wins, will there be an attempt on his life by midterms?",
+                      "Will Nancy Pelosi run for reelection in 2026?"):
             self.assertFalse(cli.eligible({"title": title}), title)
         self.assertTrue(cli.eligible({"title": "France declares state of siege by November 15, 2026?"}))
 
