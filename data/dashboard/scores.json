@@ -1,13 +1,13 @@
 [
  {
   "method": "v1",
-  "resolved": 27,
-  "vs_market": -6.7,
-  "vs_market_lo": -11.7,
-  "vs_market_hi": -1.4,
-  "p_beats_market": 0.02,
-  "brier": 0.147,
-  "market_brier": 0.122
+  "resolved": 28,
+  "vs_market": -3.3,
+  "vs_market_lo": -10.4,
+  "vs_market_hi": 4.5,
+  "p_beats_market": 0.21,
+  "brier": 0.17,
+  "market_brier": 0.15
  },
  {
   "method": "v2",
@@ -55,13 +55,13 @@
  },
  {
   "method": "v1 clean",
-  "resolved": 14,
-  "vs_market": -6.1,
-  "vs_market_lo": -12.8,
-  "vs_market_hi": -0.2,
-  "p_beats_market": 0.04,
-  "brier": 0.09,
-  "market_brier": 0.069
+  "resolved": 15,
+  "vs_market": 0.2,
+  "vs_market_lo": -10.1,
+  "vs_market_hi": 12.7,
+  "p_beats_market": 0.47,
+  "brier": 0.135,
+  "market_brier": 0.125
  },
  {
   "method": "v1 leaked",

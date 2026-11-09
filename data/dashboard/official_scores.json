@@ -780,6 +780,18 @@
   "url": "https://www.metaculus.com/questions/46194/"
  },
  {
+  "post_id": "46195",
+  "question": "How many Swiss regions will be classified as \"Extremely Dry\" according to the Swiss drought platform on November 8, 2026?",
+  "type": "DiscreteQuestion",
+  "resolved": "2026-11-08",
+  "resolution": "below_lower_bound",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": -9.6,
+  "baseline_score": 0.8,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46195/"
+ },
+ {
   "post_id": "46228",
   "question": "What percent of Americans will oppose the Iran War on the eve of Election Day 2026?",
   "type": "DiscreteQuestion",

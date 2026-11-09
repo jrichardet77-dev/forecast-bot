@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 67 of 110 official questions resolved; average peer score -0.4 (66 scored); average baseline score +25.9 (66 scored).
+Official tournament forecasts: 68 of 110 official questions resolved; average peer score -0.5 (67 scored); average baseline score +25.5 (67 scored).
 
-Practice forecasts: 55; resolved: 27
+Practice forecasts: 55; resolved: 28
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -18,7 +18,7 @@ Practice forecasts: 55; resolved: 27
 | Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | YES | -6.0 |
 | Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | NO | +12.1 |
-| Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | open |  |
+| Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | YES | +87.5 |
 | Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | NO | -12.0 |
 | Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | YES | +37.8 |
 | Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | open |  |

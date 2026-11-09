@@ -175,8 +175,8 @@
   "bot": 0.12,
   "market": 0.05,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": 87.5,
   "exposed": false,
   "url": "https://manifold.markets/Marnix/will-elon-musk-and-donald-trump-pub",
   "made": "2026-10-18"
