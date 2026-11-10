@@ -52,7 +52,7 @@
  {
   "step": "Official forecasting switched on",
   "status": "owner",
-  "note": "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 91 questions missed so far. Waiting on owner (Nov 9)"
+  "note": "Every 30 minutes since Oct 17; 110 questions forecast; since Oct 31 15:04 UTC every new question fails: OpenRouter key limit reached (402); 97 questions missed so far. Waiting on owner (Nov 10)"
  },
  {
   "step": "Participation form",

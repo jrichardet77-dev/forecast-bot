@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 68 of 110 official questions resolved; average peer score -0.5 (67 scored); average baseline score +25.5 (67 scored).
 
-Practice forecasts: 55; resolved: 28
+Practice forecasts: 55; resolved: 30
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -24,7 +24,7 @@ Practice forecasts: 55; resolved: 28
 | Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | open |  |
 | Mojtaba Khamenei seen in public by October 31? | 7% | 2% | NO | -5.1 |
 | Will Avigdor Lieberman be the next Prime Minister of Israel? | 2% | 2% | open |  |
-| If Trump wins, will marijuana be federally rescheduled before the 2026 | 55% | 4% | open |  |
+| If Trump wins, will marijuana be federally rescheduled before the 2026 | 55% | 4% | NO | -76.0 |
 | Russia-Ukraine peace talks by October 31, 2026? | 30% | 7% | NO | -28.4 |
 | Perim Island no longer under Houthi control by October 31? | 7% | 7% | NO | +0.4 |
 | US-Iran Final Nuclear Deal by November 30, 2026? | 7% | 6% | open |  |
@@ -55,7 +55,7 @@ Practice forecasts: 55; resolved: 28
 | Will Anthropic IPO by Nov 20? | 40% | 46% | open |  |
 | CI2026: Will either China, India, or the US sign the 35 by 35 pledge a | 15% | 43% | open |  |
 | Will the U.S. use a nuclear weapon against Iran’s Pickaxe Mountain bet | 1% | 2% | open |  |
-| CI2026: Will the next ECOFIN decide to include novel tobacco products  | 30% | 8% | open |  |
+| CI2026: Will the next ECOFIN decide to include novel tobacco products  | 30% | 8% | NO | -27.3 |
 | Will Anthropic IPO by November 20, 2026? | 40% | 48% | open |  |
 | Will Gemini Carbon be released between November 9 and November 15, 202 | 10% | 80% | open |  |
 | GTA VI to release by November 19, 2026? | 88% | 96% | open |  |

@@ -1,26 +1,26 @@
 {
  "variants": {
   "v1": {
-   "n": 28,
-   "brier": 0.16974642857142858,
-   "market_brier": 0.14967068857142857,
-   "baseline": 29.028246536070725,
-   "market_baseline": 33.81406513806058,
-   "vs_market": -3.317276670640605,
-   "vs_market_lo": -10.424602089410124,
-   "vs_market_hi": 4.466451040719597,
-   "p_beats_market": 0.2146
+   "n": 30,
+   "brier": 0.17151333333333335,
+   "market_brier": 0.13995335233333334,
+   "baseline": 28.204442546083317,
+   "market_baseline": 37.64067546269567,
+   "vs_market": -6.540698241256802,
+   "vs_market_lo": -14.407767819994481,
+   "vs_market_hi": 1.5854654444727254,
+   "p_beats_market": 0.093
   },
   "v2": {
-   "n": 12,
-   "brier": 0.11403333333333333,
-   "market_brier": 0.09392552166666668,
-   "baseline": 49.069388013388725,
-   "market_baseline": 56.056605519049306,
-   "vs_market": -4.8431701140077275,
-   "vs_market_lo": -12.715575812310396,
-   "vs_market_hi": 2.586879210003597,
-   "p_beats_market": 0.1564
+   "n": 13,
+   "brier": 0.11006923076923078,
+   "market_brier": 0.08719278923076924,
+   "baseline": 49.79453124867541,
+   "market_baseline": 58.51152637360158,
+   "vs_market": -6.042160593797363,
+   "vs_market_lo": -13.798852664804075,
+   "vs_market_hi": 1.1172751721863243,
+   "p_beats_market": 0.0852
   },
   "v3": {
    "n": 10,
@@ -58,15 +58,15 @@
  },
  "leak_split": {
   "v1 clean": {
-   "n": 15,
-   "brier": 0.13545333333333334,
-   "market_brier": 0.12497332066666668,
-   "baseline": 40.690515477560204,
-   "market_baseline": 40.422307500283104,
-   "vs_market": 0.18590760325330258,
-   "vs_market_lo": -10.12293657593341,
-   "vs_market_hi": 12.735196723131756,
-   "p_beats_market": 0.4678
+   "n": 17,
+   "brier": 0.1426058823529412,
+   "market_brier": 0.11073065294117647,
+   "baseline": 37.86471209034836,
+   "market_baseline": 46.397708971730616,
+   "vs_market": -5.914622730056917,
+   "vs_market_lo": -17.92670470014413,
+   "vs_market_hi": 7.492749691575197,
+   "p_beats_market": 0.2262
   },
   "v1 leaked": {
    "n": 13,
@@ -84,54 +84,57 @@
   {
    "variant": "v2",
    "role": "challenger",
-   "n": 2,
-   "clusters": 1,
-   "vs_champion": -1.1628431082133641,
+   "n": 3,
+   "clusters": 2,
+   "vs_champion": 2.8682220202408955,
    "vs_champion_lo": -1.1628431082133641,
-   "vs_champion_hi": -1.1628431082133641,
-   "p_better": 0.0,
+   "vs_champion_hi": 6.899287148695155,
+   "p_better": 0.7478,
    "accept": false,
    "per_cluster": {
+    "ecofin-tobacco-2026": 6.9,
     "iran-conflict-2026": -1.16
    }
   },
   {
    "variant": "v3c",
    "role": "exploratory",
-   "n": 12,
-   "clusters": 7,
-   "vs_champion": -2.286082138031067,
-   "vs_champion_lo": -4.166650903013054,
-   "vs_champion_hi": -0.664028645834747,
+   "n": 14,
+   "clusters": 8,
+   "vs_champion": -1.4680855686502663,
+   "vs_champion_lo": -2.416454476955522,
+   "vs_champion_hi": -0.525976481235964,
    "p_better": 0.0,
    "accept": false,
    "per_cluster": {
     "ai-model-releases": 0.0,
+    "ecofin-tobacco-2026": 0.0,
     "houthis-red-sea": -3.28,
     "iran-conflict-2026": -1.37,
     "israel-politics": 0.0,
     "russia-ukraine-2026": 0.0,
-    "us-cannabis-policy": -8.52,
+    "us-cannabis-policy": -4.26,
     "us-midterms-2026": -2.84
    }
   },
   {
    "variant": "v6",
    "role": "challenger",
-   "n": 12,
-   "clusters": 7,
-   "vs_champion": 1.2786408267491842,
-   "vs_champion_lo": -1.2209534900656198,
-   "vs_champion_hi": 4.113431147423748,
-   "p_better": 0.7726,
+   "n": 14,
+   "clusters": 8,
+   "vs_champion": 1.9393255950959747,
+   "vs_champion_lo": -0.4296593582313669,
+   "vs_champion_hi": 4.350265185518648,
+   "p_better": 0.914,
    "accept": false,
    "per_cluster": {
     "ai-model-releases": -2.51,
+    "ecofin-tobacco-2026": 3.0,
     "houthis-red-sea": -2.74,
     "iran-conflict-2026": -2.85,
     "israel-politics": 5.13,
     "russia-ukraine-2026": 2.44,
-    "us-cannabis-policy": 0.0,
+    "us-cannabis-policy": 3.57,
     "us-midterms-2026": 9.47
    }
   }
@@ -331,6 +334,21 @@
    "baseline": 89.53026213333067,
    "market_baseline": 96.86437559647169,
    "vs_market": -5.083620068882941
+  },
+  {
+   "batch": "20261018-125311",
+   "made_at": "2026-10-18T12:55:12+00:00",
+   "qid": "mf:Bn76fB9rYXMkHsbCs9kZ",
+   "variant": "v1",
+   "prob": "0.55",
+   "market_prob": "0.0377",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.30250000000000005,
+   "market_brier": 0.0014212899999999997,
+   "baseline": -15.200309344505003,
+   "market_baseline": 94.45586338694507,
+   "vs_market": -76.00786695979899
   },
   {
    "batch": "20261018-125311",
@@ -1188,6 +1206,36 @@
    "vs_market": 0.5449604767564689
   },
   {
+   "batch": "20261107-135350",
+   "made_at": "2026-11-07T13:56:07+00:00",
+   "qid": "mf:6sRCQIuNqn",
+   "variant": "v1",
+   "prob": "0.3",
+   "market_prob": "0.08",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.09,
+   "market_brier": 0.0064,
+   "baseline": 48.542682717024164,
+   "market_baseline": 87.97057662822883,
+   "vs_market": -27.329333499968143
+  },
+  {
+   "batch": "20261107-135350",
+   "made_at": "2026-11-07T13:56:07+00:00",
+   "qid": "mf:6sRCQIuNqn",
+   "variant": "v2",
+   "prob": "0.25",
+   "market_prob": "0.08",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.0625,
+   "market_brier": 0.0064,
+   "baseline": 58.49625007211562,
+   "market_baseline": 87.97057662822883,
+   "vs_market": -20.430046351272992
+  },
+  {
    "batch": "20261017-1423",
    "made_at": "2026-10-17T14:25:50+00:00",
    "qid": "pm:3081965",
@@ -1576,6 +1624,36 @@
    "baseline": 84.79969065549501,
    "market_baseline": 96.86437559647169,
    "vs_market": -8.36260235118202
+  },
+  {
+   "batch": "20261018-125311",
+   "made_at": "2026-10-18T12:55:12+00:00",
+   "qid": "mf:Bn76fB9rYXMkHsbCs9kZ",
+   "variant": "v6",
+   "prob": 0.5167163255942852,
+   "market_prob": "0.0377",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.2669957611356593,
+   "market_brier": 0.0014212899999999997,
+   "baseline": -4.905783434834277,
+   "market_baseline": 94.45586338694507,
+   "vs_market": -68.8722453503094
+  },
+  {
+   "batch": "20261018-125311",
+   "made_at": "2026-10-18T12:55:12+00:00",
+   "qid": "mf:Bn76fB9rYXMkHsbCs9kZ",
+   "variant": "v3c",
+   "prob": 0.55,
+   "market_prob": "0.0377",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.30250000000000005,
+   "market_brier": 0.0014212899999999997,
+   "baseline": -15.200309344505003,
+   "market_baseline": 94.45586338694507,
+   "vs_market": -76.00786695979899
   },
   {
    "batch": "20261018-125311",
@@ -2026,52 +2104,82 @@
    "baseline": 84.79969065549501,
    "market_baseline": 87.18436485093179,
    "vs_market": -1.652930195121058
+  },
+  {
+   "batch": "20261107-135350",
+   "made_at": "2026-11-07T13:56:07+00:00",
+   "qid": "mf:6sRCQIuNqn",
+   "variant": "v6",
+   "prob": 0.2787084555905237,
+   "market_prob": "0.08",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.07767840321765493,
+   "market_brier": 0.0064,
+   "baseline": 52.8654416530963,
+   "market_baseline": 87.97057662822883,
+   "vs_market": -24.33302533118943
+  },
+  {
+   "batch": "20261107-135350",
+   "made_at": "2026-11-07T13:56:07+00:00",
+   "qid": "mf:6sRCQIuNqn",
+   "variant": "v3c",
+   "prob": 0.3,
+   "market_prob": "0.08",
+   "n_runs": "3",
+   "outcome": 0,
+   "brier": 0.09,
+   "market_brier": 0.0064,
+   "baseline": 48.542682717024164,
+   "market_baseline": 87.97057662822883,
+   "vs_market": -27.329333499968143
   }
  ],
  "postprocess": [
   {
    "variant": "median",
-   "n": 28,
-   "vs_market": -3.3172766706406036,
-   "brier": 0.16974642857142858,
+   "n": 30,
+   "vs_market": -6.540698241256802,
+   "brier": 0.17151333333333335,
    "vs_champion": 0.0,
    "p_better": 0.0,
    "accept": false
   },
   {
    "variant": "mean_logodds",
-   "n": 28,
-   "vs_market": -1.526474539808232,
-   "brier": 0.16467605466675908,
-   "vs_champion": 1.790802130832372,
-   "p_better": 0.9268,
-   "accept": false
+   "n": 30,
+   "vs_market": -4.531551926537644,
+   "brier": 0.16518678983408558,
+   "vs_champion": 2.0091463147191573,
+   "p_better": 0.9678,
+   "accept": true
   },
   {
    "variant": "median_x1.3",
-   "n": 28,
-   "vs_market": -6.911655989788282,
-   "brier": 0.18055865205470528,
-   "vs_champion": -3.5943793191476785,
-   "p_better": 0.105,
+   "n": 30,
+   "vs_market": -9.77494348214531,
+   "brier": 0.18123098106144206,
+   "vs_champion": -3.2342452408885083,
+   "p_better": 0.1246,
    "accept": false
   },
   {
    "variant": "median_x0.8",
-   "n": 28,
-   "vs_market": -2.3291332722088405,
-   "brier": 0.1640945365832743,
-   "vs_champion": 0.9881433984317632,
-   "p_better": 0.6502,
+   "n": 30,
+   "vs_market": -5.725247802617639,
+   "brier": 0.1666565176766623,
+   "vs_champion": 0.8154504386391622,
+   "p_better": 0.6338,
    "accept": false
   },
   {
    "variant": "mean_logodds_x1.3",
-   "n": 28,
-   "vs_market": -4.58855190947517,
-   "brier": 0.17625778521474747,
-   "vs_champion": -1.2712752388345658,
-   "p_better": 0.3054,
+   "n": 30,
+   "vs_market": -7.185289797714972,
+   "brier": 0.1752696493611648,
+   "vs_champion": -0.6445915564581716,
+   "p_better": 0.4066,
    "accept": false
   }
  ]
