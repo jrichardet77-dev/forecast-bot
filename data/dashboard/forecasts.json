@@ -721,8 +721,8 @@
   "bot": 0.1,
   "market": 0.805,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": -208.6,
   "exposed": false,
   "url": "https://polymarket.com/market/will-gemini-carbon-be-released-between-november-9-and-november-15-2026",
   "made": "2026-11-07"

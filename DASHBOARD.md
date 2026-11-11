@@ -1,8 +1,8 @@
 # Forecast bot dashboard
 
-Official tournament forecasts: 68 of 110 official questions resolved; average peer score -0.5 (67 scored); average baseline score +25.5 (67 scored).
+Official tournament forecasts: 71 of 110 official questions resolved; average peer score +0.3 (70 scored); average baseline score +26.6 (70 scored).
 
-Practice forecasts: 55; resolved: 30
+Practice forecasts: 55; resolved: 31
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -57,7 +57,7 @@ Practice forecasts: 55; resolved: 30
 | Will the U.S. use a nuclear weapon against Iran’s Pickaxe Mountain bet | 1% | 2% | open |  |
 | CI2026: Will the next ECOFIN decide to include novel tobacco products  | 30% | 8% | NO | -27.3 |
 | Will Anthropic IPO by November 20, 2026? | 40% | 48% | open |  |
-| Will Gemini Carbon be released between November 9 and November 15, 202 | 10% | 80% | open |  |
+| Will Gemini Carbon be released between November 9 and November 15, 202 | 10% | 80% | YES | -208.6 |
 | GTA VI to release by November 19, 2026? | 88% | 96% | open |  |
 | US announces end of Iranian blockade by November 15, 2026? | 7% | 6% | open |  |
 | T Coronae Borealis reaches magnitude 5.0 before November 11th, 2026? | 2% | 4% | open |  |

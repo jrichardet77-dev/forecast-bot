@@ -792,6 +792,30 @@
   "url": "https://www.metaculus.com/questions/46195/"
  },
  {
+  "post_id": "46197",
+  "question": "Will California avoid the \"highest vote rule\" with its 2026 billionaire's tax referendum?",
+  "type": "BinaryQuestion",
+  "resolved": "2026-11-10",
+  "resolution": "yes",
+  "our_forecast": "66%",
+  "peer_score": -14.5,
+  "baseline_score": 35.3,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46197/"
+ },
+ {
+  "post_id": "46198",
+  "question": "What percentage of the vote will the Massachusetts initiative to repeal recreational marijuana legalization receive?",
+  "type": "DiscreteQuestion",
+  "resolved": "2026-11-10",
+  "resolution": "24.0",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": 8.7,
+  "baseline_score": 24.0,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46198/"
+ },
+ {
   "post_id": "46228",
   "question": "What percent of Americans will oppose the Iran War on the eve of Election Day 2026?",
   "type": "DiscreteQuestion",
@@ -814,5 +838,17 @@
   "baseline_score": 48.8,
   "score_source": "metaculus",
   "url": "https://www.metaculus.com/questions/46229/"
+ },
+ {
+  "post_id": "46284",
+  "question": "What will be the largest difference in margin among swing seats in the 2026 United States Senate election?",
+  "type": "NumericQuestion",
+  "resolved": "2026-11-10",
+  "resolution": "above_upper_bound",
+  "our_forecast": "distribution (see official.csv)",
+  "peer_score": 59.6,
+  "baseline_score": 95.9,
+  "score_source": "metaculus",
+  "url": "https://www.metaculus.com/questions/46284/"
  }
 ]
