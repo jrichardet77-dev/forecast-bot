@@ -62,7 +62,7 @@
  {
   "step": "Official-forecast scoring",
   "status": "done",
-  "note": "Daily read-only lookup since Oct 25; 68 of 110 resolved, average peer score -0.5, baseline +25.5 (Nov 9)"
+  "note": "Daily read-only lookup since Oct 25; 71 of 110 resolved, average peer score +0.3, baseline +26.6 (Nov 11)"
  },
  {
   "step": "Apply for free credits for Spring 2027",
