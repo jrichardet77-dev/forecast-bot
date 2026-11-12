@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 71 of 110 official questions resolved; average peer score +0.3 (70 scored); average baseline score +26.6 (70 scored).
 
-Practice forecasts: 55; resolved: 31
+Practice forecasts: 55; resolved: 33
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@ Practice forecasts: 55; resolved: 31
 | Will the Democrats win the Ohio governor race in 2026? | 60% | 82% | YES | -31.8 |
 | Will the Republican Party control the Senate after the 2026 Midterm el | 36% | 34% | NO | -2.3 |
 | Russia x Ukraine ceasefire agreement by October 31, 2026? | 2% | 2% | NO | -0.4 |
-| Will Dan Sullivan win re-election to Alaska's Senate seat in 2026? | 42% | 26% | open |  |
+| Will Dan Sullivan win re-election to Alaska's Senate seat in 2026? | 42% | 26% | NO | -24.4 |
 | Fable 5.5 is released by the end of october? | 33% | 37% | NO | +6.6 |
 | Will there be no Hormuz agreement? | 94% | 93% | YES | +1.6 |
 | Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | NO | -1.2 |
@@ -60,4 +60,4 @@ Practice forecasts: 55; resolved: 31
 | Will Gemini Carbon be released between November 9 and November 15, 202 | 10% | 80% | YES | -208.6 |
 | GTA VI to release by November 19, 2026? | 88% | 96% | open |  |
 | US announces end of Iranian blockade by November 15, 2026? | 7% | 6% | open |  |
-| T Coronae Borealis reaches magnitude 5.0 before November 11th, 2026? | 2% | 4% | open |  |
+| T Coronae Borealis reaches magnitude 5.0 before November 11th, 2026? | 2% | 4% | NO | +2.6 |

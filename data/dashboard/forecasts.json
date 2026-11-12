@@ -455,8 +455,8 @@
   "bot": 0.42,
   "market": 0.26,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -24.4,
   "exposed": true,
   "url": "https://manifold.markets/Plant/will-dan-sullivan-win-reelection-to",
   "made": "2026-10-26"
@@ -763,8 +763,8 @@
   "bot": 0.02,
   "market": 0.0449,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": 2.6,
   "exposed": false,
   "url": "https://manifold.markets/EstMtz/t-coronae-borealis-reaches-magnitud-SpAug080pQ",
   "made": "2026-11-07"
