@@ -637,8 +637,8 @@
   "bot": 0.97,
   "market": 0.9875,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": -1.8,
   "exposed": false,
   "url": "https://manifold.markets/AvneeshSrivastava/will-microsoft-office-or-microsoft",
   "made": "2026-11-07"

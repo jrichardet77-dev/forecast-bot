@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 71 of 110 official questions resolved; average peer score +0.3 (70 scored); average baseline score +26.6 (70 scored).
 
-Practice forecasts: 55; resolved: 33
+Practice forecasts: 55; resolved: 34
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -51,7 +51,7 @@ Practice forecasts: 55; resolved: 33
 | US announces end of Iranian blockade by November 2, 2026? | 8% | 8% | NO | +0.5 |
 | Will GTA 6 come out on November 19, 2026? | 88% | 96% | open |  |
 | Will NASA livestream of the August 12, 2026 total solar eclipse exceed | 25% | 15% | open |  |
-| Will Microsoft Office (or Microsoft 365) still be active on 10 Nov. 20 | 97% | 99% | open |  |
+| Will Microsoft Office (or Microsoft 365) still be active on 10 Nov. 20 | 97% | 99% | YES | -1.8 |
 | Will Anthropic IPO by Nov 20? | 40% | 46% | open |  |
 | CI2026: Will either China, India, or the US sign the 35 by 35 pledge a | 15% | 43% | open |  |
 | Will the U.S. use a nuclear weapon against Iran’s Pickaxe Mountain bet | 1% | 2% | open |  |
