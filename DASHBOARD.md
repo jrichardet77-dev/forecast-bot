@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 71 of 110 official questions resolved; average peer score +0.3 (70 scored); average baseline score +26.6 (70 scored).
 
-Practice forecasts: 55; resolved: 36
+Practice forecasts: 67; resolved: 36
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -61,3 +61,15 @@ Practice forecasts: 55; resolved: 36
 | GTA VI to release by November 19, 2026? | 88% | 96% | open |  |
 | US announces end of Iranian blockade by November 15, 2026? | 7% | 6% | open |  |
 | T Coronae Borealis reaches magnitude 5.0 before November 11th, 2026? | 2% | 4% | NO | +2.6 |
+| Will Anthropic IPO on November 20, 2026? | 10% | 4% | open |  |
+| Will NVIDIA be the largest company in the world by market cap on Novem | 5% | 3% | open |  |
+| Russia x Ukraine ceasefire agreement by November 30, 2026? | 4% | 4% | open |  |
+| Will there be a US federal shutdown in November 2026? | 2% | 4% | open |  |
+| Will Claude Fable 5.5 be released before Nov 16? | 3% | 2% | open |  |
+| Will OpenAI announce a massively recursive model, a new mechinterp sys | 5% | 4% | open |  |
+| Will WTI Crude Oil (WTI) hit (HIGH) $100 in November? | 12% | 23% | open |  |
+| GPT Astra 6.1+ Released By End of November 2026? | 3% | 95% | open |  |
+| CI2026: Will the World Economic Forum elect Christine Lagarde in Novem | 15% | 72% | open |  |
+| Will Anthropic IPO by November 19, 2026? | 62% | 94% | open |  |
+| Will Anthropic IPO by November 25, 2026? | 78% | 98% | open |  |
+| Will Anthropic announce a solution to the Navier-Stokes Millennium pro | 2% | 3% | open |  |
