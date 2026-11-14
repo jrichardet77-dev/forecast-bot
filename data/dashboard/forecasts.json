@@ -147,8 +147,8 @@
   "bot": 0.25,
   "market": 0.215,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -4.6,
   "exposed": false,
   "url": "https://polymarket.com/market/will-bernadette-wilson-win-the-2026-alaska-governor-election",
   "made": "2026-10-17"
@@ -217,8 +217,8 @@
   "bot": 0.66,
   "market": 0.786,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "YES",
+  "vs_market": -17.5,
   "exposed": true,
   "url": "https://polymarket.com/market/will-jonathan-kreiss-tomkins-win-the-2026-alaska-governor-election",
   "made": "2026-10-18"

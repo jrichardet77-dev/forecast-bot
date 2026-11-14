@@ -50,7 +50,9 @@ class PracticeRules(unittest.TestCase):
         for title in ("Will Republicans win Kansas, and lose Alaska?", "Will Nithya Raman Beat Karen Bass?",
                       "Will Trump endorse John Cornyn for TX-Sen?", "Will Jakob Glesnes win 2026 MLS Defender of the Year?",
                       "If Trump wins, will there be an attempt on his life by midterms?",
-                      "Will Nancy Pelosi run for reelection in 2026?"):
+                      "Will Nancy Pelosi run for reelection in 2026?",
+                      'Will anyone get me to use the letter "e" in a comment on this market? [Convince the Machine #35]',
+                      "2026 a nightmare year for Trump?", "Will Julie Anne Genter win Wellington Bays in 2026?"):
             self.assertFalse(cli.eligible({"title": title}), title)
         self.assertTrue(cli.eligible({"title": "France declares state of siege by November 15, 2026?"}))
 

@@ -132,7 +132,9 @@ INELIGIBLE = re.compile(r"\b(senate|governor|house|elections?|re-?elections?|ele
                         r"champions league|oscars?|grammys?|"
                         # added 2026-10-31: party/race wording and awards slipped through the first list
                         r"republicans?|democrats?|gop|mayor(al)?|sen|beat|defeat|mls|mvp|of the year|awards?|"
-                        r"trophy|ballon d'or|margin|kalshi|win [a-z]{2}-?\d+)\b", re.I)
+                        r"trophy|ballon d'or|margin|kalshi|win [a-z]{2}-?\d+|"
+                        # added 2026-11-14: self-referential or subjective markets have no checkable outcome
+                        r"convince the machine|this market|nightmare|referendums?|win [\w' ]+ in 20\d\d)\b", re.I)
 
 
 def eligible(q):

@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 71 of 110 official questions resolved; average peer score +0.3 (70 scored); average baseline score +26.6 (70 scored).
 
-Practice forecasts: 55; resolved: 34
+Practice forecasts: 55; resolved: 36
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -16,12 +16,12 @@ Practice forecasts: 55; resolved: 34
 | Will a Republican win the US Senate special election in Florida in 202 | 86% | 91% | YES | -5.4 |
 | Will the mail-in ballot restriction go into effect for the 2026 electi | 2% | 10% | NO | +9.0 |
 | Will there be no next Google Gemini Pro model release by November 1, 2 | 85% | 90% | YES | -6.0 |
-| Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | open |  |
+| Will Bernadette Wilson win the 2026 Alaska governor election? | 25% | 22% | NO | -4.6 |
 | If Trump wins the 2024 US presidential election, will cannabis be decr | 2% | 13% | NO | +12.1 |
 | Will Elon Musk and Donald Trump publicly support different candidates  | 12% | 5% | YES | +87.5 |
 | Republicans win at least one of ME/MN/NC Senate seats in 2026? | 48% | 41% | NO | -12.0 |
 | Will Luiz Inácio Lula da Silva win the second round of the 2026 Brazil | 27% | 18% | YES | +37.8 |
-| Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | open |  |
+| Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election? | 66% | 79% | YES | -17.5 |
 | Mojtaba Khamenei seen in public by October 31? | 7% | 2% | NO | -5.1 |
 | Will Avigdor Lieberman be the next Prime Minister of Israel? | 2% | 2% | open |  |
 | If Trump wins, will marijuana be federally rescheduled before the 2026 | 55% | 4% | NO | -76.0 |
