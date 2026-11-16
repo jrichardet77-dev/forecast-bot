@@ -2,7 +2,7 @@
 
 Official tournament forecasts: 71 of 110 official questions resolved; average peer score +0.3 (70 scored); average baseline score +26.6 (70 scored).
 
-Practice forecasts: 67; resolved: 36
+Practice forecasts: 67; resolved: 40
 
 | Question | Bot | Market | Status | vs market |
 |---|---|---|---|---|
@@ -43,9 +43,9 @@ Practice forecasts: 67; resolved: 36
 | Will there be no Hormuz agreement? | 94% | 93% | YES | +1.6 |
 | Saudi-Houthi ceasefire agreement announced by October 31? | 7% | 6% | NO | -1.2 |
 | US x Iran ceasefire continues through November 2? | 87% | 93% | YES | -6.3 |
-| Will Anthropic IPO by November 15, 2026? | 10% | 1% | open |  |
-| France declares state of siege (martial law) by November 15, 2026? | 2% | 1% | open |  |
-| NATO x Russia military clash by November 15, 2026? | 7% | 5% | open |  |
+| Will Anthropic IPO by November 15, 2026? | 10% | 1% | NO | -9.3 |
+| France declares state of siege (martial law) by November 15, 2026? | 2% | 1% | NO | -0.9 |
+| NATO x Russia military clash by November 15, 2026? | 7% | 5% | NO | -2.4 |
 | GTA 6 launch postponed again? | 8% | 4% | open |  |
 | Will WW3 happen before GTA6? | 2% | 2% | open |  |
 | US announces end of Iranian blockade by November 2, 2026? | 8% | 8% | NO | +0.5 |
@@ -59,7 +59,7 @@ Practice forecasts: 67; resolved: 36
 | Will Anthropic IPO by November 20, 2026? | 40% | 48% | open |  |
 | Will Gemini Carbon be released between November 9 and November 15, 202 | 10% | 80% | YES | -208.6 |
 | GTA VI to release by November 19, 2026? | 88% | 96% | open |  |
-| US announces end of Iranian blockade by November 15, 2026? | 7% | 6% | open |  |
+| US announces end of Iranian blockade by November 15, 2026? | 7% | 6% | NO | -0.5 |
 | T Coronae Borealis reaches magnitude 5.0 before November 11th, 2026? | 2% | 4% | NO | +2.6 |
 | Will Anthropic IPO on November 20, 2026? | 10% | 4% | open |  |
 | Will NVIDIA be the largest company in the world by market cap on Novem | 5% | 3% | open |  |

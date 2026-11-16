@@ -525,8 +525,8 @@
   "bot": 0.1,
   "market": 0.012,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -9.3,
   "exposed": false,
   "url": "https://polymarket.com/market/will-anthropic-ipo-by-november-15-2026",
   "made": "2026-10-31"
@@ -539,8 +539,8 @@
   "bot": 0.02,
   "market": 0.011,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -0.9,
   "exposed": true,
   "url": "https://polymarket.com/market/france-declares-state-of-siege-by-november-15-2026",
   "made": "2026-10-31"
@@ -553,8 +553,8 @@
   "bot": 0.07,
   "market": 0.047,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -2.4,
   "exposed": true,
   "url": "https://polymarket.com/market/nato-x-russia-military-clash-by-november-15-2026",
   "made": "2026-10-31"
@@ -749,8 +749,8 @@
   "bot": 0.07,
   "market": 0.065,
   "runs": 3,
-  "status": "open",
-  "vs_market": null,
+  "status": "NO",
+  "vs_market": -0.5,
   "exposed": false,
   "url": "https://polymarket.com/market/us-announces-end-of-iranian-blockade-by-november-15-2026",
   "made": "2026-11-07"
