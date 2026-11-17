@@ -3,9 +3,9 @@
 # Cost: GitHub Actions is free for public repositories; a private repository gets 2,000 free minutes a month and
 # simply stops (no charge) at the limit unless a payment method and spending limit are added. Do not add one.
 name: Forecast
+# RETIRED 2026-11-17: the owner stopped participating, so the 30-minute schedule was removed.
+# To restart, put back:  schedule: [ { cron: "*/30 * * * *" } ]
 on:
-  schedule:
-    - cron: "*/30 * * * *"   # questions stay open 3 hours, so every 30 minutes sees each one several times
   workflow_dispatch:
     inputs:
       mode:

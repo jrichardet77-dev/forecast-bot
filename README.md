@@ -21,7 +21,13 @@ A forecasting bot being built to compete in Metaculus's AI benchmark tournaments
 - **Changes**: kept only when they beat the current champion on the same questions (rule in EXPERIMENTS.md).
 
 ## Status
-- Practice mode: no Metaculus account, no official predictions.
-- Submitting to Metaculus needs the owner's approval, a bot account and a token. The rules must also be re-checked before any entry.
+- **Retired (November 17, 2026). We are no longer participating.**
+  - AlmanacBot competed in the Fall 2026 Metaculus FutureEval bot tournament from October 17, 2026.
+  - He stopped forecasting when the $25 of prepaid OpenRouter credit ran out. The owner decided not to add more.
+  - Final standing at retirement: 110 questions predicted, 70 scored, average peer score 0.26.
+- Forecasts already submitted stay on Metaculus and will be scored as their questions resolve.
+- The scheduled Forecast workflow is turned off: it no longer runs on a timer and never submits.
+- The daily practice check is switched off.
+- The read-only Official scores job still runs once a day, so final results keep being recorded.
 
 Tests: `python3 tests/test_core.py`
