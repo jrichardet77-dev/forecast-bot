@@ -1,13 +1,13 @@
 post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baseline_score,score_source,checked_at
-46044,"How many cultural sites in Ukraine will be damaged as of December 31, 2026, according to UNESCO?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:52:42+00:00
-46045,Which government will form after the 2026 New Zealand general election?,MultipleChoiceQuestion,closed,,,Labour-led 47%; National-led 46%; None before January 3%; Other 4%,,,,2026-11-23T22:52:43+00:00
+46044,"How many cultural sites in Ukraine will be damaged as of December 31, 2026, according to UNESCO?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:01+00:00
+46045,Which government will form after the 2026 New Zealand general election?,MultipleChoiceQuestion,closed,,,Labour-led 47%; National-led 46%; None before January 3%; Other 4%,,,,2026-11-24T21:28:02+00:00
 46060,What will be the Port of Los Angeles's total container volume during October 2026?,NumericQuestion,resolved,2026-11-23,above_upper_bound,distribution (see official.csv),29.8,52.6,metaculus,2026-11-23T22:52:44+00:00
-46061,How many county magistrates and city mayors will the KMT win in the 2026 Taiwan local elections?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:52:46+00:00
-46062,What will be the largest number of Chinese aircraft violating Taiwan's air defense identification zone (ADIZ) in a single day during November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:52:47+00:00
-46063,"What will be the total number of people killed in US strikes on alleged drug boats as of December 1, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:52:48+00:00
-46064,"Will Rodrigo Duterte’s trial at the ICC open before December 1, 2026?",BinaryQuestion,closed,,,85%,,,,2026-11-23T22:52:49+00:00
-46065,"Will the U.S. Supreme Court grant certiorari in Nathan v. Alamo Heights Independent School District before January 1, 2027?",BinaryQuestion,closed,,,12%,,,,2026-11-23T22:52:51+00:00
-46066,"Will any of the Magnificent 7 make an acquisition valued at $10B or more before January 1, 2027?",BinaryQuestion,closed,,,6%,,,,2026-11-23T22:52:52+00:00
+46061,How many county magistrates and city mayors will the KMT win in the 2026 Taiwan local elections?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:03+00:00
+46062,What will be the largest number of Chinese aircraft violating Taiwan's air defense identification zone (ADIZ) in a single day during November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:04+00:00
+46063,"What will be the total number of people killed in US strikes on alleged drug boats as of December 1, 2026?",DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:06+00:00
+46064,"Will Rodrigo Duterte’s trial at the ICC open before December 1, 2026?",BinaryQuestion,closed,,,85%,,,,2026-11-24T21:28:07+00:00
+46065,"Will the U.S. Supreme Court grant certiorari in Nathan v. Alamo Heights Independent School District before January 1, 2027?",BinaryQuestion,closed,,,12%,,,,2026-11-24T21:28:08+00:00
+46066,"Will any of the Magnificent 7 make an acquisition valued at $10B or more before January 1, 2027?",BinaryQuestion,closed,,,6%,,,,2026-11-24T21:28:09+00:00
 46067,"Will the Panama Canal Authority reduce daily transit limits before January 1, 2027?",BinaryQuestion,closed,,,54%,,,,2026-11-23T22:52:53+00:00
 46068,What will the total domestic (US/Canada) box office gross be for Q4 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:52:55+00:00
 46069,Will the FAA type-certify the Boeing 737 MAX 10 before 2027?,BinaryQuestion,resolved,2026-10-20,yes,93%,8.6,71.2,metaculus,2026-10-25T15:23:25+00:00
@@ -89,21 +89,21 @@ post_id,title,type,status,resolved_at,resolution,our_forecast,peer_score,baselin
 46202,"How many EU member states will the AI Act National Implementation tracker classify as having clear market surveillance and notifying authorities on December 1, 2026?",MultipleChoiceQuestion,closed,,,≤9 55%; 10 or 11 27%; 12 or 13 12%; 14 or 15 5%,,,,2026-11-23T22:53:25+00:00
 46203,How many mass shootings will the U.S. experience in November 2026?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:53:27+00:00
 46204,"What will be the Powerball Advertised Jackpot on December 31, 2026?",NumericQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:53:28+00:00
-46205,Will the SPARC tokamak announce it has achieved first plasma before 2027?,BinaryQuestion,closed,,,2%,,,,2026-11-23T22:53:29+00:00
-46206,"Will Argentina's Senate pass the 'Super RIGI' bill before January 1, 2027?",BinaryQuestion,closed,,,60%,,,,2026-11-22T18:38:28+00:00
-46207,Will the Brent crude futures price reach at least $130 per barrel in the final quarter of 2026?,BinaryQuestion,closed,,,17%,,,,2026-11-22T18:38:30+00:00
-46208,How many US banks will fail in November or December 2026?,MultipleChoiceQuestion,closed,,,0 44%; 1 34%; 2 16%; 3+ 6%,,,,2026-11-22T18:38:31+00:00
-46209,Will the Japanese Diet enact a law reducing the number of seats in the House of Representatives before 2027?,BinaryQuestion,closed,,,82%,,,,2026-11-22T18:38:33+00:00
-46222,How many seats will PP and Vox collectively receive in the 2026 Spanish general election?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-22T18:38:34+00:00
+46205,Will the SPARC tokamak announce it has achieved first plasma before 2027?,BinaryQuestion,closed,,,2%,,,,2026-11-24T21:28:21+00:00
+46206,"Will Argentina's Senate pass the 'Super RIGI' bill before January 1, 2027?",BinaryQuestion,closed,,,60%,,,,2026-11-24T21:28:22+00:00
+46207,Will the Brent crude futures price reach at least $130 per barrel in the final quarter of 2026?,BinaryQuestion,closed,,,17%,,,,2026-11-24T21:28:23+00:00
+46208,How many US banks will fail in November or December 2026?,MultipleChoiceQuestion,closed,,,0 44%; 1 34%; 2 16%; 3+ 6%,,,,2026-11-24T21:28:25+00:00
+46209,Will the Japanese Diet enact a law reducing the number of seats in the House of Representatives before 2027?,BinaryQuestion,closed,,,82%,,,,2026-11-24T21:28:26+00:00
+46222,How many seats will PP and Vox collectively receive in the 2026 Spanish general election?,DiscreteQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:27+00:00
 46228,What percent of Americans will oppose the Iran War on the eve of Election Day 2026?,DiscreteQuestion,resolved,2026-11-04,56.5,distribution (see official.csv),-39.2,-26.9,metaculus,2026-11-05T12:28:25+00:00
 46229,What will Democrats' lead be in the congressional generic ballot on the eve of Election Day 2026?,DiscreteQuestion,resolved,2026-11-04,8.8,distribution (see official.csv),-9.8,48.8,metaculus,2026-11-05T12:28:26+00:00
-46277,"Will the Global Protest Tracker report any protests in India or Pakistan with 10,000+ participants starting in November or December 2026?",BinaryQuestion,closed,,,43%,,,,2026-11-22T18:38:36+00:00
-46278,Which will occur next with respect to the FDA's review of deramiocel for muscular dystrophy?,MultipleChoiceQuestion,closed,,,"FDA Approval 20%; New complete response letter 64%; Neither occurs before November 23, 2026 16%",,,,2026-11-22T18:38:37+00:00
-46279,"How will the Agit Kabayel vs. Nelson Hysa fight end on November 28, 2026?",MultipleChoiceQuestion,closed,,,Kabayel wins by KO/TKO/stoppage in rounds 1–3 11%; Kabayel wins by KO/TKO/stoppage in rounds 4–6 28%,,,,2026-11-22T18:38:39+00:00
-46280,Will the Official Loch Ness Monster Sightings Register report a sighting for November 2026?,BinaryQuestion,closed,,,17%,,,,2026-11-22T18:38:40+00:00
-46281,"What will be the nationwide wastewater detection category of enterovirus D68 on December 1, 2026?",MultipleChoiceQuestion,closed,,,High 44%; Medium 31%; Low 18%; Other 8%,,,,2026-11-23T22:53:40+00:00
-46282,What will be the Caldara–Iacoviello Geopolitical Risk Index for November 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:53:41+00:00
-46283,What will be the 2-party Gallagher disproportionality index for North Carolina's House races in 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-11-23T22:53:42+00:00
+46277,"Will the Global Protest Tracker report any protests in India or Pakistan with 10,000+ participants starting in November or December 2026?",BinaryQuestion,closed,,,43%,,,,2026-11-24T21:28:29+00:00
+46278,Which will occur next with respect to the FDA's review of deramiocel for muscular dystrophy?,MultipleChoiceQuestion,resolved,2026-11-23,New complete response letter,"FDA Approval 20%; New complete response letter 64%; Neither occurs before November 23, 2026 16%",22.7,54.2,metaculus,2026-11-24T21:28:30+00:00
+46279,"How will the Agit Kabayel vs. Nelson Hysa fight end on November 28, 2026?",MultipleChoiceQuestion,closed,,,Kabayel wins by KO/TKO/stoppage in rounds 1–3 11%; Kabayel wins by KO/TKO/stoppage in rounds 4–6 28%,,,,2026-11-24T21:28:31+00:00
+46280,Will the Official Loch Ness Monster Sightings Register report a sighting for November 2026?,BinaryQuestion,closed,,,17%,,,,2026-11-24T21:28:32+00:00
+46281,"What will be the nationwide wastewater detection category of enterovirus D68 on December 1, 2026?",MultipleChoiceQuestion,closed,,,High 44%; Medium 31%; Low 18%; Other 8%,,,,2026-11-24T21:28:34+00:00
+46282,What will be the Caldara–Iacoviello Geopolitical Risk Index for November 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:35+00:00
+46283,What will be the 2-party Gallagher disproportionality index for North Carolina's House races in 2026?,NumericQuestion,closed,,,distribution (see official.csv),,,,2026-11-24T21:28:36+00:00
 46284,What will be the largest difference in margin among swing seats in the 2026 United States Senate election?,NumericQuestion,resolved,2026-11-10,above_upper_bound,distribution (see official.csv),59.6,95.9,metaculus,2026-11-11T12:29:44+00:00
 46285,"Will any of these AI companies (Lovable, DeepSeek, or Perplexity) have a funding round in November 2026?",BinaryQuestion,closed,,,7%,,,,2026-11-23T22:53:44+00:00
 46286,"Will November 2026 be the warmest November on record, according to Copernicus?",BinaryQuestion,closed,,,24%,,,,2026-11-23T22:53:45+00:00
